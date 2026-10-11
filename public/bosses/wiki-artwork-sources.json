@@ -1,0 +1,107 @@
+{
+  "checked": "2026-10-05",
+  "artwork": "Jagex",
+  "sourceLicense": "OSRS Wiki CC BY-NC-SA; underlying game artwork belongs to Jagex",
+  "sources": [
+    {
+      "name": "Aberrant Spectre",
+      "file": "/bosses/aberrant-spectre-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Aberrant_spectre.png"
+    },
+    {
+      "name": "Basilisk Knight",
+      "file": "/bosses/basilisk-knight-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Basilisk_Knight.png"
+    },
+    {
+      "name": "Black Dragon",
+      "file": "/bosses/black-dragon-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Black_dragon.png"
+    },
+    {
+      "name": "Bloodveld",
+      "file": "/bosses/bloodveld-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Bloodveld.png"
+    },
+    {
+      "name": "Brutal Black Dragon",
+      "file": "/bosses/brutal-black-dragon-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Brutal_black_dragon.png"
+    },
+    {
+      "name": "Demonic Gorilla",
+      "file": "/bosses/demonic-gorilla-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Demonic_gorilla.png"
+    },
+    {
+      "name": "Fire Giant",
+      "file": "/bosses/fire-giant-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Fire_giant.png"
+    },
+    {
+      "name": "Fragment of Seren",
+      "file": "/bosses/fragment-of-seren-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Fragment_of_Seren.png"
+    },
+    {
+      "name": "Galvek",
+      "file": "/bosses/galvek-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Galvek.png"
+    },
+    {
+      "name": "Gargoyle",
+      "file": "/bosses/gargoyle-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Gargoyle.png"
+    },
+    {
+      "name": "Glough",
+      "file": "/bosses/glough-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Glough.png"
+    },
+    {
+      "name": "Greater Demon",
+      "file": "/bosses/greater-demon-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Greater_demon.png"
+    },
+    {
+      "name": "Hellhound",
+      "file": "/bosses/hellhound-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Hellhound.png"
+    },
+    {
+      "name": "Kurask",
+      "file": "/bosses/kurask-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Kurask.png"
+    },
+    {
+      "name": "Wyrm",
+      "file": "/bosses/wyrm-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Wyrm.png"
+    },
+    {
+      "name": "Lizardman Shaman",
+      "file": "/bosses/lizardman-shaman-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Lizardman_shaman_(1).png"
+    },
+    {
+      "name": "Skeletal Wyvern",
+      "file": "/bosses/skeletal-wyvern-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Skeletal_Wyvern.png"
+    },
+    {
+      "name": "Giants",
+      "file": "/bosses/giants-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Hill_Giant.png"
+    },
+    {
+      "name": "Tormented Demon",
+      "file": "/bosses/tormented-demon-wiki.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Tormented_Demon_(1).png"
+    },
+    {
+      "name": "Max cape",
+      "file": "/ui/max-cape.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Max_cape.png"
+    }
+  ]
+}

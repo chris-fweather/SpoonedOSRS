@@ -1,0 +1,8 @@
+.profile-empty.profile-empty-minimal{gap:10px;padding:24px 16px;color:var(--muted)}
+.profile-empty.profile-empty-minimal>img{width:32px;height:32px;object-fit:contain;filter:grayscale(.6);opacity:.65}
+.profile-empty.profile-empty-minimal>h3{font-size:20px;font-weight:400;color:var(--muted)}
+.ov .meter.unknown{border-style:solid;border-color:#3b3934;background:#282722}
+.ov .meter.unknown>b{display:none}
+.activity-ranks-unknown .activity-rank-count b{color:var(--muted)}
+.activity-ranks-unknown .activity-rank-icon img{filter:grayscale(1);opacity:.3}
+.activity-ranks-unknown .activity-rank-icon:hover img,.activity-ranks-unknown .activity-rank-icon:focus-visible img{filter:grayscale(1);opacity:.6}

@@ -1,0 +1,28 @@
+.collection-timeline{min-width:0}
+.insights-grid>.collection-timeline{grid-column:1/-1}
+.collection-timeline>.ph{flex-direction:column;align-items:stretch;gap:10px}
+.timeline-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.timeline-controls .seg{flex:1}
+.timeline-controls .seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr}.timeline-controls .seg button{justify-content:center}
+.timeline-controls .sort-menu{align-self:stretch;min-height:36px}
+.timeline-period{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);font-size:13px}
+.timeline-period>span{min-width:0;font-weight:600}
+.timeline-period>small{flex:none;font-size:11px;color:var(--muted);white-space:nowrap}.timeline-period b{color:var(--gold)}
+.collection-timeline .timeline-items{overflow:visible;max-height:none;padding:8px 0 0;grid-template-columns:repeat(auto-fill,minmax(52px,1fr))}
+.collection-timeline .timeline-items>.cl-item{height:auto;min-height:52px;cursor:help}
+.timeline-tip{display:grid;gap:2px}.timeline-tip small{color:var(--muted)}
+.timeline-empty{padding:24px 0;text-align:center}
+.timeline-undated{margin-top:10px;text-align:right}
+/* Lollipops: a stem from the collection's day up to a head showing what was collected. */
+.calendar-cell{fill:#211f19}.calendar-cell.odd{fill:#2a2720}.calendar-label{fill:#a39b8b;font-size:9.5px;pointer-events:none}.calendar-divider{stroke:#5b5446}.calendar-group{fill:#cfc7b4;font-size:10.5px;font-weight:600;pointer-events:none}
+.lollipop-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 6px;font-size:11px;color:var(--muted)}.lollipop-tools>div{display:flex;gap:5px}.lollipop-tools .btn{min-width:34px;min-height:34px;justify-content:center}
+.lollipop-stage{width:100%;overflow:hidden;touch-action:none;cursor:grab;user-select:none;border-radius:6px;background:linear-gradient(#211f19,#191813)}.lollipop-stage:active{cursor:grabbing}.lollipop-stage:focus-visible{outline:2px solid var(--gold)}
+.lollipop-stage svg{display:block}.lollipop-axis{stroke:#4a453c}
+.lollipop{cursor:pointer;outline:none}.lollipop-stem{stroke:#81b8c5;stroke-width:1.5;opacity:.7}.lollipop-foot{fill:#81b8c5}.lollipop-head{fill:#1b1a15;stroke:#81b8c5;stroke-width:1.5}
+.lollipop-stalk.is-pet .lollipop-stem,.lollipop.is-pet .lollipop-head{stroke:#e0a343}.lollipop-stalk.is-pet .lollipop-foot{fill:#e0a343}
+.lollipop:hover .lollipop-head,.lollipop:focus-visible .lollipop-head,.lollipop.is-on .lollipop-head{stroke:#ffd34d;stroke-width:2.5}
+.lollipop image{image-rendering:pixelated;pointer-events:none}.lollipop-count{fill:#d5ad61}.lollipop-count-text{fill:#17150f;font-size:9.5px;font-weight:700}
+@media(max-width:520px){
+.lollipop-tools .btn{min-width:40px;min-height:40px}
+ .timeline-controls{display:grid;grid-template-columns:1fr;width:100%;margin-left:0}
+ .timeline-controls .seg button{padding-inline:4px;font-size:12.5px;white-space:nowrap}
+ }

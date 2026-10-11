@@ -1,0 +1,53 @@
+{
+  "name": "spoonedosrs",
+  "version": "0.1.0-beta.3",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node scripts/run-framework.mjs dev",
+    "build": "node scripts/run-framework.mjs build",
+    "start": "node ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "node --max-old-space-size=4096 node_modules/typescript/bin/tsc --noEmit",
+    "test": "node scripts/run-tests.mjs",
+    "test:migrations": "node scripts/check-migrations.mjs",
+    "test:beta": "node scripts/check-beta-flow.mjs",
+    "test:integration": "node scripts/check-integration.mjs",
+    "release:check": "node scripts/check-release.mjs",
+    "release:verify": "npm run release:check && npm run typecheck && npm test && npm run test:migrations && npm run build",
+    "release:deploy": "node scripts/deploy-release.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.31.0",
+    "next": "16.3.8",
+    "radix-ui": "^1.6.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "^3.8.0",
+    "three": "^0.183.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.62.5",
+    "@cloudflare/workers-types": "5.20261001.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.34",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.8",
+    "miniflare": "5.20261001.0-alpha",
+    "react-server-dom-webpack": "19.2.8",
+    "typescript": "5.9.3",
+    "vinext": "1.0.1",
+    "vite": "8.3.3",
+    "wrangler": "4.147.0"
+  },
+  "type": "module",
+  "overrides": {
+    "sharp": "0.35.5",
+    "fflate": "0.7.5"
+  }
+}

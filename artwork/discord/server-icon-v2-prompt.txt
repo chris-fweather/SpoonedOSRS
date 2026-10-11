@@ -1,0 +1,7 @@
+Created with the built-in image-generation tool.
+
+Create a finished square Discord server icon for Spooned OSRS, matching the faceted non-pixelated low-poly raccoon and twilight colors in the reference banner. Reference is STYLE AND CHARACTER reference only; create a new icon composition, do not crop the banner. Center a bold close-up head and upper shoulders of Rocky, a charming grey raccoon, facing nearly forward with a slight three-quarter turn. Distinct black eye mask, silver-grey cheek and forehead facets, alert eyes, rounded triangular ears, small black nose, subtle warm amber rim lighting. Strong, clean silhouette and broad simple polygon planes so it remains recognizable at 32px. Fill most of the frame, but keep both ears and cheeks comfortably inside an imaginary circular crop with 10 percent outer safety margin. Background: very simple deep muted violet/charcoal with a restrained soft amber glow behind the head, harmonizing with the website and banner. Premium game-community mascot badge. No text, no letters, no shield frame, no coin, no small scenery, no busy details, no pixelated textures. Square 1024x1024, opaque background.
+
+Refinement: Preserve the portrait and zoom out around 18 percent so both ear tips and cheeks fit inside a centered circular avatar crop. Keep the same faceted art, palette and expression.
+
+Upload server-icon-v2-512.png to Discord. The 1024px export and original are also preserved. The previous pixel-art icon remains available as server-icon.png.

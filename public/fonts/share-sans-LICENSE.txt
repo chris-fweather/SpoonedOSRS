@@ -1,0 +1,3 @@
+Copyright 2015-2021 Google LLC. All Rights Reserved.
+
+http://scripts.sil.org/OFL

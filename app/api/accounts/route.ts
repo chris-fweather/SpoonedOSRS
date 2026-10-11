@@ -1,0 +1,6 @@
+import {publicMessage,requestJson,RequestError} from '@/lib/request-body';
+import {listAccounts} from '@/lib/storage';
+import {claimRuneScapeName,HttpError,unlinkRuneScapeName,ensureAuthTables} from '@/lib/auth';
+export async function GET(req:Request){try{await ensureAuthTables();return Response.json({accounts:await listAccounts(new URL(req.url).searchParams.get('q')??'')},{headers:{'Cache-Control':'no-store'}});}catch{return Response.json({error:'Accounts could not be loaded.'},{status:503});}}
+export async function POST(req:Request){try{const {username}=await requestJson(req,200);if(!username)throw Error('Enter an account name.');return Response.json(await claimRuneScapeName(req,username));}catch(e){const status=e instanceof HttpError||e instanceof RequestError?e.status:400;return Response.json({error:publicMessage(e,'Could not add account.')},{status});}}
+export async function DELETE(req:Request){try{const {username}=await requestJson(req,200);await unlinkRuneScapeName(req,username);return Response.json({ok:true});}catch(e){const status=e instanceof HttpError||e instanceof RequestError?e.status:400;return Response.json({error:publicMessage(e,'Could not unlink that name.')},{status});}}

@@ -1,0 +1,15 @@
+/* Title treatments use paint-only effects and respect reduced-motion settings. */
+.achievement-text.title-common,.title-sample .title-common,.preview-title.title-common{color:#bcb5a5!important;text-shadow:none;animation:none}
+.achievement-text.title-uncommon,.title-sample .title-uncommon,.preview-title.title-uncommon{color:#81cc91!important;text-shadow:none}
+.achievement-text.title-rare,.title-sample .title-rare,.preview-title.title-rare{color:#86c7f3!important;text-shadow:0 0 5px #428fbd35}
+.achievement-text.title-epic,.title-sample .title-epic,.preview-title.title-epic{color:#ff7373!important;text-shadow:0 0 7px #d428284f}
+.achievement-text.title-maxed,.title-sample .title-maxed,.preview-title.title-maxed{color:#ff7373!important;text-shadow:0 0 7px #d428284f}
+.achievement-text.title-one-only,.title-sample .title-one-only,.preview-title.title-one-only{color:#ffd98a!important;background:linear-gradient(100deg,#ffd780,#f5a1ea,#97e4ff,#fff0b3,#ffd780);background-size:260% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:legendary-title-flow 5s linear infinite;filter:drop-shadow(0 0 3px #e9b25750)}
+.achievement-text.title-pet-master,.title-sample .title-pet-master,.preview-title.title-pet-master{color:#c9eeff!important;background:linear-gradient(105deg,#a1ebff,#ddaeff,#fff6c7,#8ed9ff,#a1ebff);background-size:300% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:legendary-title-flow 3s linear infinite,ultimate-title-aura 3s ease-in-out infinite;--title-glow:#ad8cff90}
+.achievement-text.title-log-master,.title-sample .title-log-master,.preview-title.title-log-master{color:#c9eeff!important;background:linear-gradient(105deg,#a1ebff,#ddaeff,#fff6c7,#8ed9ff,#a1ebff);background-size:300% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:legendary-title-flow 3s linear infinite,ultimate-title-aura 3s ease-in-out infinite;--title-glow:#ad8cff90}
+
+@keyframes legendary-title-flow{to{background-position:300% 0}}
+@keyframes ultimate-title-aura{0%,100%{filter:drop-shadow(0 0 2px var(--title-glow))}50%{filter:drop-shadow(0 0 6px var(--title-glow))}}
+@media(prefers-reduced-motion:reduce){.achievement-text,.title-sample>span,.preview-title{animation:none!important}}
+.achievement-text.title-supporter,.title-sample .title-supporter,.preview-title.title-supporter{color:#dfbe79!important;text-shadow:0 0 4px #aa84352b}
+

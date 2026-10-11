@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {registerDiscordCommands} from './discord-registration.ts';
+import {DISCORD_APPLICATION_ID,DISCORD_PUBLIC_KEY,DISCORD_GUILD_ID} from './discord-config.ts';
+function mock(key=DISCORD_PUBLIC_KEY){const calls:{url:string;options:RequestInit|undefined}[]=[];const send:typeof fetch=async(input,options)=>{const url=String(input);calls.push({url,options});if(url.endsWith('/oauth2/token'))return Response.json({access_token:'test-token'});if(url.endsWith('/oauth2/@me'))return Response.json({application:{id:DISCORD_APPLICATION_ID,verify_key:key}});return Response.json({id:'command'});};return {calls,send};}
+test('registration uses narrow credentials and upserts only its three guild commands',async()=>{const m=mock();assert.deepEqual(await registerDiscordCommands('test-secret',DISCORD_APPLICATION_ID,m.send),['profile','leaderboard','spooned']);assert.equal(m.calls.length,5);assert.match(String(m.calls[0].options?.body),/scope=applications.commands.update/);for(const c of m.calls.slice(2)){assert.ok(c.url.includes('/guilds/'+DISCORD_GUILD_ID+'/commands'));assert.equal(c.options?.method,'POST');assert.ok(!String(c.options?.body).includes('test-secret'));}});
+test('wrong application key stops before changing any commands',async()=>{const m=mock('wrong');await assert.rejects(()=>registerDiscordCommands('test-secret',DISCORD_APPLICATION_ID,m.send),/public key/);assert.equal(m.calls.length,2);});
+test('wrong application ID never sends credentials',async()=>{const m=mock();await assert.rejects(()=>registerDiscordCommands('test-secret','wrong',m.send),/ID/);assert.equal(m.calls.length,0);});

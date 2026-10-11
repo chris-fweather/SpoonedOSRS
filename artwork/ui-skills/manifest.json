@@ -1,0 +1,1059 @@
+{
+  "version": 1,
+  "exported": "2026-10-08",
+  "format": "RGBA PNG",
+  "size": 256,
+  "count": 70,
+  "icons": [
+    {
+      "name": "Collection log tab",
+      "file": "navigation/collection-log-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/collection-log-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9518416ad54cae62d2fb162ff19a2b834d6458b1578f0acc80706dbc7da0476f",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest points",
+      "file": "navigation/quest-point-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/quest-point-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "87dc89a7e7001b3f5c929ae1e5ae06042399e18a02c8af2acb31bad5530f3f10",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Achievement diaries",
+      "file": "navigation/achievement-diaries-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/achievement-diaries-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "052b1676cd69ab46349be0c021885c5aaed0e091572458bcba6cc789e859869c",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Statistics / leaderboard",
+      "file": "navigation/stats-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/stats-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "08d5a20bd51c79762482c6531485e948d6d2be628f929e0a48f6b2fb1a23b416",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Skills tab",
+      "file": "navigation/skills-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/skills-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e925e77272e183b29f65e28b4ee8397c129297ba050cd43ca61674e2f5eb48e4",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat overview",
+      "file": "navigation/combat-achievements.png",
+      "category": "navigation",
+      "referencePath": "/ui/combat-achievements.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "21792bdc63a62d0d37dd32797da8e82c2319716fb33920f65e8150e4136dfed9",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat tasks",
+      "file": "navigation/combat-achievements-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/combat-achievements-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "21cd0100b76d38e32507d0161facad9fbacc81345fa6fef33fafa6dc5361b4fb",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest list",
+      "file": "navigation/quest-list-icon.png",
+      "category": "navigation",
+      "referencePath": "/ui/quest-list-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "86ed522783cc66497a4cace32a63612d149533cd292cf0e70a0c22df5672d6a8",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 8,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Collection log book",
+      "file": "navigation/collection-log.png",
+      "category": "navigation",
+      "referencePath": "/ui/collection-log.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4f3b454b55729d6dc8d4de90df0452e70903e539fe8afbfb79d26bdb3e54ee05",
+      "provenance": {
+        "atlas": "updated-01-navigation.png",
+        "cell": 9,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Support / coins",
+      "file": "community/support-coins.png",
+      "category": "community",
+      "referencePath": "/items/995.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f4068a9465ca031c58f659b244f7143e50b849c59a9b2ffed36a4db4dacec1af",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Supporters / heart",
+      "file": "community/supporters-heart.png",
+      "category": "community",
+      "referencePath": "/bosses/hitpoints.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f06d13ddf3b662768fa5582fcdcba3cceeb38ff3065cc3da46d515ca9dce1586",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Settings / connections",
+      "file": "community/settings-icon.png",
+      "category": "community",
+      "referencePath": "/ui/settings-icon.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "60f479dd6b293f91169379c61d1bb89cc5be150bcfb32a9b8117e13050a9906f",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Friends chat",
+      "file": "community/friends-chat.png",
+      "category": "community",
+      "referencePath": "/ui/friends-chat.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e4204de46338474b75f3444bf5f3f92ee52c3e1f545b4a1958e2cae811a0d330",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Clan chat",
+      "file": "community/clan-chat.png",
+      "category": "community",
+      "referencePath": "/ui/clan-chat.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "91bf541952e8e9953ec9b698dbb3fab66e8a28d9921c597f9f92db0dfb59f15a",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Friends list",
+      "file": "community/friends-list.png",
+      "category": "community",
+      "referencePath": "/ui/friends-list.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "60be570d5b2b22f1e56b9fddca7b5916ca3a0e5fcfcfd04b250e58393dace7cc",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Join chat",
+      "file": "community/join-chat.png",
+      "category": "community",
+      "referencePath": "/ui/join-chat.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "62e858ff744d1cf8eb4f31768492e2f12753ed98567402ab1b50cd448b8636bc",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Game chat",
+      "file": "community/game-chat.png",
+      "category": "community",
+      "referencePath": "/ui/game-chat.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "418e56a1f6cec51ee1cbde737625df83fdc59b34b6e0b36ecf9d2021c3dec285",
+      "provenance": {
+        "atlas": "updated-02-community.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Helper / white",
+      "file": "ranks/white-scimitar.png",
+      "category": "ranks",
+      "referencePath": "/ui/white-scimitar.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5d65f24c447bc37d776c50586144c87a7c7560a9357d55598a8a61e5a66009ff",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Moderator / rune",
+      "file": "ranks/rune-scimitar.png",
+      "category": "ranks",
+      "referencePath": "/drops/Rune_scimitar.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f96c5afe42d557f01db4a7cea45d11b0136d153d69415973e8d178150c6681b8",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Admin / dragon",
+      "file": "ranks/dragon-scimitar.png",
+      "category": "ranks",
+      "referencePath": "/ui/dragon-scimitar.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5a21b0b7e0d36235452276ef0bdf2bbcd519870a8d2421e6db5bc5d0fd7f93e0",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Supporter / gilded",
+      "file": "ranks/gilded-scimitar.png",
+      "category": "ranks",
+      "referencePath": "/ui/gilded-scimitar.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "be765944f42380924d852126a2adf06de88f146d83a15f5639bec26456a7dbd1",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Owner / lava",
+      "file": "ranks/rank-owner.png",
+      "category": "ranks",
+      "referencePath": "/../artwork/discord/emojis/02_more_icons/rank_owner.gif",
+      "width": 256,
+      "height": 256,
+      "sha256": "caa5a59e786c81174f86b64c05e15318dac2495b0fe86a15b6c5b5b2f35b600f",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Max cape",
+      "file": "ranks/max-cape.png",
+      "category": "ranks",
+      "referencePath": "/ui/max-cape.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ec4e60f3ee6951736914ba101e0c6d35f003619f2f63658b76ac9a6c141d8214",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Crossed swords",
+      "file": "ranks/crossed-swords.png",
+      "category": "ranks",
+      "referencePath": "/../artwork/discord/emojis/02_more_icons/crossed_swords.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cb938577321e36b5c1c8894f9091a835bddac5bc4797dc72bed5b140ff4b6f17",
+      "provenance": {
+        "atlas": "updated-03-ranks.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Quest: Novice",
+      "file": "tiers/novice.png",
+      "category": "tiers",
+      "referencePath": "/ui/novice.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a8f7967defed66a1a14f332170d84748b42fca67c8dbd5b358a450c8d22117bb",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Easy",
+      "file": "tiers/ca-easy.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-easy.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "eaef630c9d69aae6ee5a07947616dfbdd12b9e9ee8bf5daa0e947e577459907f",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest: Intermediate",
+      "file": "tiers/intermediate.png",
+      "category": "tiers",
+      "referencePath": "/ui/intermediate.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0fd28652285afba54a6df02b135e19ac057693b5ee7ccb560de9b3217c47983f",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Medium",
+      "file": "tiers/ca-medium.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-medium.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "36be8d23c616cc90535586f439ff09a785b91e942e1b366fe6ba24848746d28d",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest: Experienced",
+      "file": "tiers/experienced.png",
+      "category": "tiers",
+      "referencePath": "/ui/experienced.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5927b3297aa805bf1cfbc2c83d759aa0d46806187ccef4ceca0a3629a0b5376a",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Hard",
+      "file": "tiers/ca-hard.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-hard.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "de483cd51dca4470589bc5a1aff92e6b3cdf247e399f54fdf703d9eb2d0dea7f",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest: Master",
+      "file": "tiers/master.png",
+      "category": "tiers",
+      "referencePath": "/ui/master.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4b5399c6c6c5c6a932bd63b8677c20a1750cda38caa5105d423949658c4e76c8",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Elite",
+      "file": "tiers/ca-elite.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-elite.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "258c568476ef1137d81933735e32b8c740567cb34f679403b7a056d946ac0748",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest: Grandmaster",
+      "file": "tiers/grandmaster.png",
+      "category": "tiers",
+      "referencePath": "/ui/grandmaster.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9e8d7b47439b8ad0e53acdd93c1adf28281d896580c6c3094aec9263a657a756",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 8,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Master",
+      "file": "tiers/ca-master.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-master.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "39b87ac2f68de167136b329ba8f3e13f93224dcaa065f3ccfffdc734090b43a9",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 9,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Quest: Special",
+      "file": "tiers/special.png",
+      "category": "tiers",
+      "referencePath": "/ui/special.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9741a83e4c53044d3eda848f9cd8e98f7a66f29063aba92fe092fb2478064a37",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 10,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Combat: Grandmaster",
+      "file": "tiers/ca-grandmaster.png",
+      "category": "tiers",
+      "referencePath": "/ui/ca-grandmaster.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "537080a2b888401790227f75d5da6c428b938b45ac6298667d82e8bf517b00cf",
+      "provenance": {
+        "atlas": "updated-04-tiers.png",
+        "cell": 11,
+        "columns": 4,
+        "rows": 3
+      }
+    },
+    {
+      "name": "Attack",
+      "file": "skills/attack.png",
+      "category": "skills",
+      "referencePath": "/bosses/attack.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "67580e24907edb1020fd325fec2056ff0873636384a10b1a76653151ed3513df",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Strength",
+      "file": "skills/strength.png",
+      "category": "skills",
+      "referencePath": "/bosses/strength.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2e8d6c9944ee0ede56a53eebc98ed87f53d8e07ac4fb62b58a60a8b3879180a3",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Defence",
+      "file": "skills/defence.png",
+      "category": "skills",
+      "referencePath": "/bosses/defence.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4510d94cfca9d462bcf683cb876c28df8d84b8bf0ee6a6ffbf971f29d3aac0ed",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Ranged",
+      "file": "skills/ranged.png",
+      "category": "skills",
+      "referencePath": "/bosses/ranged.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b05f17f6ca36bd685a897751dabbcbb644a44717cb2a584c449dcaf92c75e0a2",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Prayer",
+      "file": "skills/prayer.png",
+      "category": "skills",
+      "referencePath": "/bosses/prayer.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ce000b971e2dff356d42fe2543c7a102c385ddb4b5efcf9a34ff6d4359a85dda",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Magic",
+      "file": "skills/magic.png",
+      "category": "skills",
+      "referencePath": "/bosses/magic.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a7ba8772466ecba38d1f27a2771f125a9637cbf7ed1ce1f99e2d1e6c1360a9bd",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Hitpoints",
+      "file": "skills/hitpoints.png",
+      "category": "skills",
+      "referencePath": "/bosses/hitpoints.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "125cb59fe7b45c06bd28f4dd65ccb72d1a103ccb76e562d1a4ae32b22b8c62bb",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Slayer",
+      "file": "skills/slayer.png",
+      "category": "skills",
+      "referencePath": "/bosses/slayer.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2ad3e39921a70e204997dd8c70fb681e4ac64fe8aa4db5ef262fc3f7e388bfa0",
+      "provenance": {
+        "atlas": "updated-05-combat-skills.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Crafting",
+      "file": "skills/crafting.png",
+      "category": "skills",
+      "referencePath": "/bosses/crafting.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d8d1d6d3a104d160fec00f32667703dd36fc4173be2eca6517bec05cef8ea011",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Fletching",
+      "file": "skills/fletching.png",
+      "category": "skills",
+      "referencePath": "/bosses/fletching.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "62c5561dfe4be6fbe4bd7350d143a631c6a423b7ddd97f8bf6a8a17c0dbb778c",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Smithing",
+      "file": "skills/smithing.png",
+      "category": "skills",
+      "referencePath": "/bosses/smithing.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "042314868a97f51d5b35ab28ac844df5af960626b5cc0dbb968961c407e73545",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Herblore",
+      "file": "skills/herblore.png",
+      "category": "skills",
+      "referencePath": "/bosses/herblore.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "725f17b68abd70278f971a5369b4d29a7e233958c149561867e77e54e772a371",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Cooking",
+      "file": "skills/cooking.png",
+      "category": "skills",
+      "referencePath": "/bosses/cooking.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "37eb4dcf087194471d999d1ce96e3c6633027299f8bc64f6584e64ef9512a93f",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Firemaking",
+      "file": "skills/firemaking.png",
+      "category": "skills",
+      "referencePath": "/bosses/firemaking.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5351442a1ef9efa9c5baa178870a772885b2cbeea4629fbd493173bc0b13299e",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Runecraft",
+      "file": "skills/runecraft.png",
+      "category": "skills",
+      "referencePath": "/bosses/runecraft.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "29309d4453641f5285f04a6ab6af793b55b97cc3264f77db948048ed84365d6b",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Construction",
+      "file": "skills/construction.png",
+      "category": "skills",
+      "referencePath": "/bosses/construction.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "795c343c41f768e7f4bb8a73e0a314dfebddccbcbbc2ca3d13c399eb8b33a690",
+      "provenance": {
+        "atlas": "updated-06-artisan-skills.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Agility",
+      "file": "skills/agility.png",
+      "category": "skills",
+      "referencePath": "/bosses/agility.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "da6b55a841449223b678dcbc68d31b84f15f20578846a3145724374c0d2e77be",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 0,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Thieving",
+      "file": "skills/thieving.png",
+      "category": "skills",
+      "referencePath": "/bosses/thieving.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a2134fca57dc28b78159014e042d848155456e6ca7f6ee951e4eac8f660698d6",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 1,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Mining",
+      "file": "skills/mining.png",
+      "category": "skills",
+      "referencePath": "/bosses/mining.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2015cdd9f09ebf3a68ddcb9fd311d4c1e73e6903a18b36cc3f7f06ef260f754f",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 2,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Fishing",
+      "file": "skills/fishing.png",
+      "category": "skills",
+      "referencePath": "/bosses/fishing.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3ffd74fbac7828b74dbb612b51f44dcc7f94520db225b83f591ea3a2207850af",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 3,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Woodcutting",
+      "file": "skills/woodcutting.png",
+      "category": "skills",
+      "referencePath": "/bosses/woodcutting.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "083131236f904599367bee8aead72c563884b06320e606da1ca164039ca89366",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 4,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Farming",
+      "file": "skills/farming.png",
+      "category": "skills",
+      "referencePath": "/bosses/farming.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "713d40b94cb3010a47bdbe43c4982b3d6f428e2747971c0ad546782c2d8c30ff",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 5,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Hunter",
+      "file": "skills/hunter.png",
+      "category": "skills",
+      "referencePath": "/bosses/hunter.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0acc9857e2ee1b1610f95992ba8e1a40172f25516799343c3e0b1b681175a8fd",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 6,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Sailing",
+      "file": "skills/sailing.png",
+      "category": "skills",
+      "referencePath": "/bosses/sailing.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "89c9bdbe9fed1d6daccba980aad454e25d2c49fa0e26996d532da26b84253319",
+      "provenance": {
+        "atlas": "updated-07-adventure-skills.png",
+        "cell": 7,
+        "columns": 4,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Ironman",
+      "file": "account-modes/ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3c7d832c6d8f06c0566f1d2ac37c6fcc355328afa15797d645a7ed5e5eecdc10",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 0,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Hardcore Ironman",
+      "file": "account-modes/hardcore-ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/hardcore_ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8b9fd6a861d00aec7a0e4cfbbd8bc693d2564222dd14f002230a9271f02086a9",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 1,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Ultimate Ironman",
+      "file": "account-modes/ultimate-ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/ultimate_ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f472d31e62334bd08b7041b5f4c73f7ee1e90a4ccb87e8e8a2932d08a4104243",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 2,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Group Ironman",
+      "file": "account-modes/group-ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/group_ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a49ccd3da1e627153867a2459e416f0c9270ff443055822df93324b0118694c3",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 3,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Hardcore Group Ironman",
+      "file": "account-modes/hardcore-group-ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/hardcore_group_ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "64792b130bc2ac36ec565dd102c9931ce6425b481355b73751b5a9391910e762",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 4,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Unranked Group Ironman",
+      "file": "account-modes/unranked-group-ironman.png",
+      "category": "account-modes",
+      "referencePath": "/ui/account-modes/unranked_group_ironman.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b3691dce8517a0443e3334132df1a627fad5292a4bf3b4c19820b146e9c6b796",
+      "provenance": {
+        "atlas": "updated-08-account-badges.png",
+        "cell": 5,
+        "columns": 3,
+        "rows": 2
+      }
+    },
+    {
+      "name": "Discord",
+      "file": "community/discord.png",
+      "category": "community",
+      "referencePath": null,
+      "width": 256,
+      "height": 256,
+      "sha256": "0546edcecb7d0c9fa344d161b16d54e604a3179ac9e2a9cdf3b59b1d0fa693ba",
+      "provenance": {
+        "type": "approved standalone generated icon",
+        "tool": "built-in image_gen",
+        "sourceImage": "exec-0e39a67b-396c-4e97-91c6-46766689d261.png",
+        "description": "White faceted Discord face with purple border and bevels. Transparent background. Approved by Chris on 2026-10-08."
+      }
+    },
+    {
+      "name": "Gold leaderboard crown",
+      "file": "ranks/crown-gold.png",
+      "category": "ranks",
+      "referencePath": null,
+      "width": 256,
+      "height": 256,
+      "sha256": "8744a6875088af1d6403f826dbd1942e64b7364561642bc5f591f19bd6b31e55",
+      "provenance": {
+        "type": "standalone generated icon",
+        "tool": "built-in image_gen",
+        "sourceImage": "exec-5677f21e-b5a3-41d2-a9f1-6cecfcab7d61.png",
+        "description": "Custom faceted three-point leaderboard crown. gold finish. Created at Chris's request on 2026-10-08."
+      }
+    },
+    {
+      "name": "Silver leaderboard crown",
+      "file": "ranks/crown-silver.png",
+      "category": "ranks",
+      "referencePath": null,
+      "width": 256,
+      "height": 256,
+      "sha256": "73e5549204c5be7dcdf59e1cf1a8b61ee2a617b98e3a7ed05393b0e9d5cc2ae0",
+      "provenance": {
+        "type": "standalone generated icon",
+        "tool": "built-in image_gen",
+        "sourceImage": "exec-adabfb40-a0c6-4146-af4f-8667d2fcef4b.png",
+        "description": "Custom faceted three-point leaderboard crown. silver finish. Created at Chris's request on 2026-10-08."
+      }
+    },
+    {
+      "name": "Bronze leaderboard crown",
+      "file": "ranks/crown-bronze.png",
+      "category": "ranks",
+      "referencePath": null,
+      "width": 256,
+      "height": 256,
+      "sha256": "8dd70b58eb0fc76f0b0926774c51004a2a5a310400eb827aff9619073afb6d53",
+      "provenance": {
+        "type": "standalone generated icon",
+        "tool": "built-in image_gen",
+        "sourceImage": "exec-d5cc7ecc-709e-45d3-a467-0bb657c01cca.png",
+        "description": "Custom faceted three-point leaderboard crown. bronze finish. Created at Chris's request on 2026-10-08."
+      }
+    }
+  ]
+}

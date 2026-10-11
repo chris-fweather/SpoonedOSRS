@@ -1,0 +1,25 @@
+{
+  "credit": "Game artwork Jagex; OSRS Wiki CC BY-NC-SA",
+  "assets": [
+    {
+      "file": "friends-chat.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Chat-channel.png"
+    },
+    {
+      "file": "clan-chat.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Your_Clan_icon.png"
+    },
+    {
+      "file": "friends-chat-example.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Chat-channel_interface.png"
+    },
+    {
+      "file": "join-chat.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Clan_Chat_Join_Chat.png"
+    },
+    {
+      "file": "game-chat.png",
+      "source": "https://oldschool.runescape.wiki/w/File:Chat.png"
+    }
+  ]
+}

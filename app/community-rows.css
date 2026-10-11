@@ -1,0 +1,49 @@
+.collector-list>li:not(.collector-placeholder){position:relative}.collector-identity:after{content:"";position:absolute;inset:0;z-index:1;border-radius:4px}.collector-identity:focus-visible:after{outline:2px solid var(--gold);outline-offset:2px}.collector-list>li:not(.collector-placeholder):hover{cursor:pointer}
+
+/* Align the prefix with the first name line, independently of the achievement subtitle. */
+.collector-list .collector-identity{display:flex;align-items:flex-start;gap:5px}
+.collector-list .identity-prefix{display:flex;align-items:center;flex:none;height:20px}
+.collector-list .identity-prefix:empty{display:none}
+.collector-list .identity-prefix .staff-rank{margin:0;height:20px;gap:4px}
+.collector-list .identity-prefix .staff-word{font:700 14px/20px var(--rs);margin:0}
+.collector-list .identity-text>b{min-height:20px;line-height:20px;align-items:baseline;gap:4px}
+.collector-list .identity-prefix .rank-icon{width:20px;height:20px}
+/* Three columns at every breakpoint: rank, identity, total. */
+.site .collector-list>li,.site .board-column-head{grid-template-columns:24px minmax(0,1fr) max-content;gap:12px}
+.site .collector-list>li>.collector-rank{grid-column:1;grid-row:1}
+.site .collector-list>li>.collector-name,.site .collector-list>li>.empty-player{grid-column:2;grid-row:1}
+/* justify-content resets the old phone flex rule, which left-packed shorter totals. */
+.site .collector-list>li>.collector-score{grid-column:3;grid-row:1;display:grid;text-align:right;justify-content:end;justify-items:end;gap:4px;align-self:center;max-width:145px}
+.site .collector-list>li>.collector-preview{grid-column:1/-1;grid-row:2}
+.site .collector-list .identity-text{min-width:0}.site .collector-list .identity-text>b{flex-wrap:wrap;column-gap:4px;row-gap:0}
+.site .collector-list .collector-score small{line-height:1.4}
+@media(max-width:520px){
+ .site .collector-list>li,.site .board-column-head{grid-template-columns:18px minmax(0,1fr) max-content;gap:7px;padding-inline:4px}
+ .site .collector-list>li{min-height:68px;padding-block:13px}
+ .site .collector-list>li>.collector-score{max-width:108px}
+ .site .collector-list .collector-score b{font-size:17px;white-space:nowrap;letter-spacing:0}
+ .site .collector-list .collector-score small{font-size:9px;max-width:78px}
+ .site .collector-list .collector-identity{gap:4px}.site .collector-list .identity-prefix .rank-icon{width:17px;height:20px}
+ .site .collector-list .collector-name{font-size:12px}.site .collector-list .collector-name small{font-size:10px}
+ .site .collector-list .collector-rank{font-size:19px}
+}
+
+/* Reserve a bounded numeric column and fit the full value after font/size changes. */
+.site .collector-list>li>.collector-score-long{width:clamp(80px,28vw,145px)}
+.site .collector-list .fitted-score{display:block;max-width:100%;width:100%;min-width:0}
+.site .collector-list .fitted-score>span{display:inline-block;white-space:nowrap}
+@media(max-width:520px){.site .collector-list .collector-score b.fitted-score{font-size:17px}}
+
+/* Podium: ranks 1–3 get a crown beside the name and a matching rank number. */
+.site .collector-list .podium-crown{flex:none;align-self:center;margin-left:1px}
+.site .podium-crown{width:auto;height:14px;filter:drop-shadow(0 1px 1px #000)}
+.site .collector-list .collector-rank.podium-1{color:#ffd34d}.site .collector-list .collector-rank.podium-2{color:#dfe9ef}.site .collector-list .collector-rank.podium-3{color:#d98a4e}
+/* Same layout as profile name blocks: the scimitar and account badge sit level with the name line, each in its own
+   column, and the achievement title centres under the username (and any donation title). */
+.site .collector-list .collector-identity{align-items:flex-start}
+.site .collector-list .identity-prefix,.site .collector-list .identity-mode{display:flex;align-items:center;flex:none;align-self:flex-start;height:20px}
+.site .collector-list .identity-mode:empty{display:none}
+.collector-list .account-mode-badge{cursor:default}
+.site .collector-list .identity-text{justify-items:center;text-align:center}
+.site .collector-list .identity-text>b{justify-content:center}
+.site .collector-list .identity-text>.achievement-title{text-align:center}

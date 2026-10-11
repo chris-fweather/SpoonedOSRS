@@ -1,0 +1,2721 @@
+{
+  "checkedAt": "2026-10-06T13:56:45.590Z",
+  "items": 1717,
+  "counts": {
+    "numeric": 1333,
+    "acquisition": 320,
+    "variable": 64
+  },
+  "notes": [
+    "Numeric means at least one source has an exact numerical probability; it does not mean per kill.",
+    "Variable, conditional, purchase, and completion rewards must not be assigned a made-up fixed probability.",
+    "Unresolved references remain explicitly unverified in the UI."
+  ],
+  "unresolved": [],
+  "variable": [
+    {
+      "id": "3470",
+      "name": "Fine cloth",
+      "rates": [
+        [
+          "Steel Chest (red) · Level: N/A",
+          "1/1,679.42 ; 2/124.47"
+        ],
+        [
+          "Steel Chest (brown) · Level: N/A",
+          "1/134.39 ; 1/119.99"
+        ],
+        [
+          "Steel Chest (crimson) · Level: N/A",
+          "2/134.43 ; 2/124.47"
+        ],
+        [
+          "Steel Chest (black) · Level: N/A",
+          "3/134.46 ; 3/126.06"
+        ],
+        [
+          "Steel Chest (purple) · Level: N/A",
+          "4/134.5 ; 4/126.89"
+        ],
+        [
+          "Black Chest (red) · Level: N/A",
+          "7/140.98 ; 7/129.05"
+        ],
+        [
+          "Black Chest (brown) · Level: N/A",
+          "8/141.02 ; 8/129.59"
+        ],
+        [
+          "Black Chest (crimson) · Level: N/A",
+          "9/141.07 ; 9/130.02"
+        ],
+        [
+          "Black Chest (black) · Level: N/A",
+          "10/141.11 ; 10/130.37"
+        ],
+        [
+          "Black Chest (purple) · Level: N/A",
+          "11/141.15 ; 11/130.67"
+        ],
+        [
+          "Silver Chest (red) · Level: N/A",
+          "16/152.39 ; 16/148.22"
+        ],
+        [
+          "Silver Chest (brown) · Level: N/A",
+          "17/152.46 ; 16/148.22"
+        ],
+        [
+          "Silver Chest (crimson) · Level: N/A",
+          "18/152.53 ; 16/148.41"
+        ],
+        [
+          "Silver Chest (black) · Level: N/A",
+          "19/152.6 ; 16/148.5"
+        ],
+        [
+          "Silver Chest (purple) · Level: N/A",
+          "20/152.67 ; 20/148.59"
+        ],
+        [
+          "Gold Chest (red) · Level: N/A",
+          "21/143.91 ; 21/142.09"
+        ],
+        [
+          "Gold Chest (crimson) · Level: N/A",
+          "23/144.08 ; 23/142.27"
+        ],
+        [
+          "Gold Chest (brown) · Level: N/A",
+          "22/143.99 ; 22/142.18"
+        ],
+        [
+          "Gold Chest (black) · Level: N/A",
+          "24/144.18 ; 24/142.37"
+        ],
+        [
+          "Gold Chest (purple) · Level: N/A",
+          "25/144.28 ; 25/142.47"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Fine_cloth"
+    },
+    {
+      "id": "5553",
+      "name": "Rogue top",
+      "rates": [
+        [
+          "Rogue's equipment crate · Level: N/A",
+          "Once"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rogue_top"
+    },
+    {
+      "id": "5554",
+      "name": "Rogue mask",
+      "rates": [
+        [
+          "Rogue's equipment crate · Level: N/A",
+          "Once"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rogue_mask"
+    },
+    {
+      "id": "5555",
+      "name": "Rogue trousers",
+      "rates": [
+        [
+          "Rogue's equipment crate · Level: N/A",
+          "Once"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rogue_trousers"
+    },
+    {
+      "id": "5556",
+      "name": "Rogue gloves",
+      "rates": [
+        [
+          "Rogue's equipment crate · Level: N/A",
+          "Once"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rogue_gloves"
+    },
+    {
+      "id": "5557",
+      "name": "Rogue boots",
+      "rates": [
+        [
+          "Rogue's equipment crate · Level: N/A",
+          "Once"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rogue_boots"
+    },
+    {
+      "id": "7989",
+      "name": "Big bass",
+      "rates": [
+        [
+          "Fishing spot (big net, harpoon) Big net · Level: 46",
+          "Very rare"
+        ],
+        [
+          "Boat fishing spot (big net, harpoon) Big net · Level: 46",
+          "Very rare"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Big_bass"
+    },
+    {
+      "id": "7991",
+      "name": "Big swordfish",
+      "rates": [
+        [
+          "Fishing spot (cage, harpoon) Harpoon (m) · Level: 35",
+          "Very rare"
+        ],
+        [
+          "Fishing spot (Piscatoris Fishing Colony) Harpoon · Level: 35",
+          "Very rare"
+        ],
+        [
+          "Boat fishing spot (Piscatoris Fishing Colony) Harpoon · Level: 35",
+          "Very rare"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Big_swordfish"
+    },
+    {
+      "id": "11942",
+      "name": "Ecumenical key",
+      "rates": [
+        [
+          "Feral Vampyre · Level: 61–130",
+          "1/60 – 1/40"
+        ],
+        [
+          "Ogre · Level: 53; 58; 63",
+          "1/60 – 1/40"
+        ],
+        [
+          "Icefiend · Level: 13; 18",
+          "1/60 – 1/40"
+        ],
+        [
+          "Imp (m) · Level: 2; 7",
+          "1/60 – 1/40"
+        ],
+        [
+          "Pyrefiend · Level: 43; 48",
+          "1/60 – 1/40"
+        ],
+        [
+          "Werewolf · Level: 88; 93",
+          "1/60 – 1/40"
+        ],
+        [
+          "Bloodveld · Level: 76; 81",
+          "1/60 – 1/40"
+        ],
+        [
+          "Gorak Full · Level: 145; 149",
+          "1/60 – 1/40"
+        ],
+        [
+          "Aviansie · Level: 69–148",
+          "1/60 – 1/40"
+        ],
+        [
+          "Spiritual mage · Level: 120; 121; 123; 182",
+          "1/60 – 1/40"
+        ],
+        [
+          "Spiritual ranger · Level: 115–158",
+          "1/60 – 1/40"
+        ],
+        [
+          "Spiritual warrior · Level: 115–158",
+          "1/60 – 1/40"
+        ],
+        [
+          "Knight of Saradomin · Level: 101; 103",
+          "1/60 – 1/40"
+        ],
+        [
+          "Ork · Level: 107",
+          "1/60 – 1/40"
+        ],
+        [
+          "Flaming pyrelord · Level: 97",
+          "1/60 – 1/40"
+        ],
+        [
+          "Goblin (God Wars Dungeon) · Level: 12; 13; 15; 17",
+          "1/60 – 1/40"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Ecumenical_key"
+    },
+    {
+      "id": "12851",
+      "name": "Amulet of the Damned (full)",
+      "rates": [
+        [
+          "Silver Chest (red) · Level: N/A",
+          "10/152.39 ; 10/148.68"
+        ],
+        [
+          "Silver Chest (brown) · Level: N/A",
+          "10/152.46 ; 10/148.74"
+        ],
+        [
+          "Silver Chest (crimson) · Level: N/A",
+          "10/152.53 ; 10/148.81"
+        ],
+        [
+          "Silver Chest (black) · Level: N/A",
+          "10/152.6 ; 10/148.88"
+        ],
+        [
+          "Silver Chest (purple) · Level: N/A",
+          "10/152.67 ; 10/148.95"
+        ],
+        [
+          "Gold Chest (red) · Level: N/A",
+          "6/143.91 ; 6/142.17"
+        ],
+        [
+          "Gold Chest (crimson) · Level: N/A",
+          "6/144.08 ; 6/142.35"
+        ],
+        [
+          "Gold Chest (brown) · Level: N/A",
+          "6/143.99 ; 6/142.26"
+        ],
+        [
+          "Gold Chest (black) · Level: N/A",
+          "6/144.18 ; 6/142.44"
+        ],
+        [
+          "Gold Chest (purple) · Level: N/A",
+          "6/144.28 ; 6/142.54"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_the_Damned"
+    },
+    {
+      "id": "13225",
+      "name": "TzRek-Jad",
+      "rates": [
+        [
+          "TzTok-Jad · Level: 702",
+          "1/200 ; 1/100"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/TzRek-Jad"
+    },
+    {
+      "id": "13262",
+      "name": "Abyssal orphan",
+      "rates": [
+        [
+          "Unsired · Level: N/A",
+          "5/128 ; Never"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Abyssal_orphan"
+    },
+    {
+      "id": "13274",
+      "name": "Bludgeon spine",
+      "rates": [
+        [
+          "Unsired · Level: N/A",
+          "62/128 ; 62/123"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bludgeon_spine"
+    },
+    {
+      "id": "13275",
+      "name": "Bludgeon claw",
+      "rates": [
+        [
+          "Unsired · Level: N/A",
+          "62/128 ; 62/123"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bludgeon_claw"
+    },
+    {
+      "id": "13276",
+      "name": "Bludgeon axon",
+      "rates": [
+        [
+          "Unsired · Level: N/A",
+          "62/128 ; 62/123"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bludgeon_axon"
+    },
+    {
+      "id": "13277",
+      "name": "Jar of Miasma",
+      "rates": [
+        [
+          "Unsired · Level: N/A",
+          "13/128 ; 13/123"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Jar_of_Miasma"
+    },
+    {
+      "id": "13320",
+      "name": "Heron",
+      "rates": [
+        [
+          "Fish: Shrimps / Anchovies · Method and level dependent",
+          "Base chance: 870,330"
+        ],
+        [
+          "Fish: Karambwanji · Method and level dependent",
+          "Base chance: 443,697"
+        ],
+        [
+          "Fish: Sardines / Herring · Method and level dependent",
+          "Base chance: 1,056,000"
+        ],
+        [
+          "Fish: Big net fishing · Method and level dependent",
+          "Base chance: 1,147,827"
+        ],
+        [
+          "Fish: Trout / Salmon · Method and level dependent",
+          "Base chance: 923,616"
+        ],
+        [
+          "Fish: Pike · Method and level dependent",
+          "Base chance: 305,792"
+        ],
+        [
+          "Fish: Rainbow fish · Method and level dependent",
+          "Base chance: 137,739"
+        ],
+        [
+          "Fish: Tuna / Swordfish · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Lobster · Method and level dependent",
+          "Base chance: 116,129"
+        ],
+        [
+          "Fish: Aerial fishing · Method and level dependent",
+          "Base chance: 636,833"
+        ],
+        [
+          "Fish: Cave eels · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Monkfish · Method and level dependent",
+          "Base chance: 138,583"
+        ],
+        [
+          "Fish: Karambwan · Method and level dependent",
+          "Base chance: 170,874"
+        ],
+        [
+          "Fish: Leaping trout · Method and level dependent",
+          "Base chance: 1,280,862"
+        ],
+        [
+          "Fish: Sharks · Method and level dependent",
+          "Base chance: 82,243"
+        ],
+        [
+          "Fish: Infernal eels · Method and level dependent",
+          "Base chance: 165,000"
+        ],
+        [
+          "Fish: Anglerfish · Method and level dependent",
+          "Base chance: 78,649"
+        ],
+        [
+          "Fish: Minnow · Method and level dependent",
+          "Base chance: 977,778"
+        ],
+        [
+          "Fish: Dark crabs · Method and level dependent",
+          "Base chance: 149,434"
+        ],
+        [
+          "Fish: Sacred eels · Method and level dependent",
+          "Base chance: 99,000"
+        ],
+        [
+          "Fish: Fishing Trawler minigame · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Fish: Guppies · Method and level dependent",
+          "Base chance: 820,330"
+        ],
+        [
+          "Fish: Cavefish · Method and level dependent",
+          "Base chance: 300,792"
+        ],
+        [
+          "Fish: Tetra · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Catfish · Method and level dependent",
+          "Base chance: 152,120"
+        ],
+        [
+          "Fish: Swordtip squid · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Jumbo squid · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Giant krill · Method and level dependent",
+          "Base chance: 257,770"
+        ],
+        [
+          "Fish: Haddock · Method and level dependent",
+          "Base chance: 247,770"
+        ],
+        [
+          "Fish: Yellowfin · Method and level dependent",
+          "Base chance: 237,770"
+        ],
+        [
+          "Fish: Halibut · Method and level dependent",
+          "Base chance: 227,770"
+        ],
+        [
+          "Fish: Bluefin · Method and level dependent",
+          "Base chance: 217,770"
+        ],
+        [
+          "Fish: Marlin · Method and level dependent",
+          "Base chance: 207,770"
+        ],
+        [
+          "Fish: Leechfin · Method and level dependent",
+          "Base chance: 1,847,827"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Heron"
+    },
+    {
+      "id": "13321",
+      "name": "Rock golem",
+      "rates": [
+        [
+          "Rock: Clay rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Copper rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Tin rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Blurite rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Limestone rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Iron rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Silver rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Barronite rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Calcified rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Lead rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Coal rocks · Method and level dependent",
+          "Base chance: 290,640"
+        ],
+        [
+          "Rock: Sandstone rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Sunstone rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Gold rocks · Method and level dependent",
+          "Base chance: 296,640"
+        ],
+        [
+          "Rock: Gem rocks · Method and level dependent",
+          "Base chance: 211,886"
+        ],
+        [
+          "Rock: Granite rocks · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Ash pile · Method and level dependent",
+          "Base chance: 741,600"
+        ],
+        [
+          "Rock: Volcanic sulphur · Method and level dependent",
+          "Base chance: 710,000"
+        ],
+        [
+          "Rock: Volcanic Mine · Method and level dependent",
+          "Base chance: 60,000"
+        ],
+        [
+          "Rock: Mithril rocks · Method and level dependent",
+          "Base chance: 148,320"
+        ],
+        [
+          "Rock: Lovakite rocks · Method and level dependent",
+          "Base chance: 245,562"
+        ],
+        [
+          "Rock: Adamantite rocks · Method and level dependent",
+          "Base chance: 59,328"
+        ],
+        [
+          "Rock: Nickel rocks · Method and level dependent",
+          "Base chance: 247,200"
+        ],
+        [
+          "Rock: Runite rocks · Method and level dependent",
+          "Base chance: 42,377"
+        ],
+        [
+          "Rock: Amethyst crystals · Method and level dependent",
+          "Base chance: 46,350"
+        ],
+        [
+          "Rock: Blast mine · Method and level dependent",
+          "Base chance: 123,600"
+        ],
+        [
+          "Rock: Motherlode Mine · Method and level dependent",
+          "Base chance: 247,200"
+        ],
+        [
+          "Rock: Crashed Star · Method and level dependent",
+          "Base chance: 521,550"
+        ],
+        [
+          "Rock: Rubium rocks · Method and level dependent",
+          "Base chance: Unknown"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rock_golem"
+    },
+    {
+      "id": "13322",
+      "name": "Beaver",
+      "rates": [
+        [
+          "Tree: Achey trees · Method and level dependent",
+          "Base chance (B): 317,647"
+        ],
+        [
+          "Tree: Normal trees · Method and level dependent",
+          "Base chance (B): 317,647"
+        ],
+        [
+          "Tree: Oak trees · Method and level dependent",
+          "Base chance (B): 361,146"
+        ],
+        [
+          "Tree: Willow trees · Method and level dependent",
+          "Base chance (B): 289,286"
+        ],
+        [
+          "Tree: Teak trees · Method and level dependent",
+          "Base chance (B): 264,336"
+        ],
+        [
+          "Tree: Jatoba trees · Method and level dependent",
+          "Base chance (B): 264,336"
+        ],
+        [
+          "Tree: Juniper trees · Method and level dependent",
+          "Base chance (B): 360,000"
+        ],
+        [
+          "Tree: Maple trees · Method and level dependent",
+          "Base chance (B): 221,918"
+        ],
+        [
+          "Tree: Hollow trees · Method and level dependent",
+          "Base chance (B): 214,367"
+        ],
+        [
+          "Tree: Mahogany trees · Method and level dependent",
+          "Base chance (B): 220,623"
+        ],
+        [
+          "Tree: Arctic pine trees · Method and level dependent",
+          "Base chance (B): 145,758"
+        ],
+        [
+          "Tree: Yew trees · Method and level dependent",
+          "Base chance (B): 145,013"
+        ],
+        [
+          "Tree: Blisterwood trees · Method and level dependent",
+          "Base chance (B): 289,286"
+        ],
+        [
+          "Tree: Sulliusceps · Method and level dependent",
+          "Base chance (B): 343,000"
+        ],
+        [
+          "Tree: Camphor trees · Method and level dependent",
+          "Base chance (B): 145,013"
+        ],
+        [
+          "Tree: Magic trees · Method and level dependent",
+          "Base chance (B): 72,321"
+        ],
+        [
+          "Tree: Bloodwood trees · Method and level dependent",
+          "Base chance (B): 969,283"
+        ],
+        [
+          "Tree: Engorged bloodwood tree · Method and level dependent",
+          "Base chance (B): 319,283"
+        ],
+        [
+          "Tree: Ironwood trees · Method and level dependent",
+          "Base chance (B): 72,321"
+        ],
+        [
+          "Tree: Redwood trees · Method and level dependent",
+          "Base chance (B): 72,321"
+        ],
+        [
+          "Tree: Rosewood trees · Method and level dependent",
+          "Base chance (B): 72,321"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Beaver"
+    },
+    {
+      "id": "13324",
+      "name": "Baby chinchompa",
+      "rates": [
+        [
+          "Chinchompa: Grey · Method and level dependent",
+          "Base chance: 131,395 · Chance at 99: 128,920"
+        ],
+        [
+          "Chinchompa: Red · Method and level dependent",
+          "Base chance: 98,373 · Chance at 99: 95,898"
+        ],
+        [
+          "Chinchompa: Black · Method and level dependent",
+          "Base chance: 82,758 · Chance at 99: 80,283"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Baby_chinchompa"
+    },
+    {
+      "id": "20659",
+      "name": "Giant Squirrel",
+      "rates": [
+        [
+          "Level: 1 · Agility course: Gnome Stronghold · Lap time (seconds): 34.0 · Agility xp/hr: 10,000 · Time to reach drop rate (hours): 313 · Method and level dependent",
+          "Base chance: 35,609"
+        ],
+        [
+          "Level: 1 · Agility course: Shayzien (basic) · Lap time (seconds): 51.0 · Agility xp/hr: 10,000 · Time to reach drop rate (hours): 415 · Method and level dependent",
+          "Base chance: 31,804"
+        ],
+        [
+          "Level: 1 · Agility course: Draynor Village Rooftop · Lap time (seconds): 43.2 · Agility xp/hr: 10,000 · Time to reach drop rate (hours): 366 · Method and level dependent",
+          "Base chance: 33,005"
+        ],
+        [
+          "Level: 1 · Agility course: Brimhaven Agility Arena · Lap time (seconds): 60.0 · Agility xp/hr: 67,000 · Time to reach drop rate (hours): 399 · Method and level dependent",
+          "Base chance: 26,404"
+        ],
+        [
+          "Level: 20 · Agility course: Al Kharid Rooftop · Lap time (seconds): 64.2 · Agility xp/hr: 12,000 · Time to reach drop rate (hours): 431 · Method and level dependent",
+          "Base chance: 26,648"
+        ],
+        [
+          "Level: 30 · Agility course: Varrock Rooftop · Lap time (seconds): 64.8 · Agility xp/hr: 14,000 · Time to reach drop rate (hours): 395 · Method and level dependent",
+          "Base chance: 24,410"
+        ],
+        [
+          "Level: 30 · Agility course: Agility Pyramid · Lap time (seconds): 138.5 · Agility xp/hr: 44,700 · Time to reach drop rate (hours): 286 · Method and level dependent",
+          "Base chance: 9,901"
+        ],
+        [
+          "Level: 30 · Agility course: Penguin · Lap time (seconds): 65.0 · Agility xp/hr: 30,000 · Time to reach drop rate (hours): 132 · Method and level dependent",
+          "Base chance: 9,779"
+        ],
+        [
+          "Level: 35 · Agility course: Barbarian Outpost · Lap time (seconds): 32.0 · Agility xp/hr: 18,000 · Time to reach drop rate (hours): 372 · Method and level dependent",
+          "Base chance: 44,376"
+        ],
+        [
+          "Level: 40 · Agility course: Canifis Rooftop · Lap time (seconds): 43.8 · Agility xp/hr: 19,700 · Time to reach drop rate (hours): 418 · Method and level dependent",
+          "Base chance: 36,842"
+        ],
+        [
+          "Level: 45 · Agility course: Shayzien (advanced) · Lap time (seconds): 46.8 · Agility xp/hr: 30,000 · Time to reach drop rate (hours): 354 · Method and level dependent",
+          "Base chance: 29,738"
+        ],
+        [
+          "Level: 48 · Agility course: Ape Atoll · Lap time (seconds): 38.0 · Agility xp/hr: 55,200 · Time to reach drop rate (hours): 372 · Method and level dependent",
+          "Base chance: 37,720"
+        ],
+        [
+          "Level: 50 · Agility course: Falador Rooftop · Lap time (seconds): 58.2 · Agility xp/hr: 35,500 · Time to reach drop rate (hours): 393 · Method and level dependent",
+          "Base chance: 26,806"
+        ],
+        [
+          "Level: 50 · Agility course: Colossal Wyrm Remains (basic) · Lap time (seconds): 67.8 · Agility xp/hr: 31,000 · Time to reach drop rate (hours): Unknown · Method and level dependent",
+          "Base chance: Unknown"
+        ],
+        [
+          "Level: 52 · Agility course: Wilderness · Lap time (seconds): 45.0 · Agility xp/hr: 45,000 · Time to reach drop rate (hours): 402 · Method and level dependent",
+          "Base chance: 34,666"
+        ],
+        [
+          "Level: 60 · Agility course: Seers' Village Rooftop · Lap time (seconds): 36.0 · Agility xp/hr: 58,000 · Time to reach drop rate (hours): 327 · Method and level dependent",
+          "Base chance: 35,205"
+        ],
+        [
+          "Level: 60 · Agility course: Werewolf · Lap time (seconds): 38.3 · Agility xp/hr: 68,500 · Time to reach drop rate (hours): 320 · Method and level dependent",
+          "Base chance: 32,597"
+        ],
+        [
+          "Level: 62 · Agility course: Colossal Wyrm Remains (advanced) · Lap time (seconds): 82.8 · Agility xp/hr: 43,000 · Time to reach drop rate (hours): Unknown · Method and level dependent",
+          "Base chance: Unknown"
+        ],
+        [
+          "Level: 70 · Agility course: Pollnivneach Rooftop · Lap time (seconds): 60.6 · Agility xp/hr: 60,300 · Time to reach drop rate (hours): 521 · Method and level dependent",
+          "Base chance: 33,422"
+        ],
+        [
+          "Level: 70 · Agility course: Dorgesh-Kaan (Agility route) · Lap time (seconds): 156.0 · Agility xp/hr: 63,000 · Time to reach drop rate (hours): 350 · Method and level dependent",
+          "Base chance: 10,561"
+        ],
+        [
+          "Level: 70 · Agility course: Dorgesh-Kaan (Grapple route) · Lap time (seconds): 90.0 · Agility xp/hr: 4,300 · Time to reach drop rate (hours): 202 · Method and level dependent",
+          "Base chance: 10,561"
+        ],
+        [
+          "Level: 75 · Agility course: Prifddinas · Lap time (seconds): 74.0 · Agility xp/hr: 65,000 · Time to reach drop rate (hours): 466 · Method and level dependent",
+          "Base chance: 25,146"
+        ],
+        [
+          "Level: 80 · Agility course: Rellekka Rooftop · Lap time (seconds): 51.0 · Agility xp/hr: 65,000 · Time to reach drop rate (hours): 405 · Method and level dependent",
+          "Base chance: 31,063"
+        ],
+        [
+          "Level: 90 · Agility course: Ardougne Rooftop · Lap time (seconds): 45.6 · Agility xp/hr: 70,000 · Time to reach drop rate (hours): 405 · Method and level dependent",
+          "Base chance: 34,440"
+        ],
+        [
+          "Hallowed Sepulchre: Floor 1 · Method and level dependent",
+          "Static chance: 35,000"
+        ],
+        [
+          "Hallowed Sepulchre: Floor 2 · Method and level dependent",
+          "Static chance: 16,000"
+        ],
+        [
+          "Hallowed Sepulchre: Floor 3 · Method and level dependent",
+          "Static chance: 8,000"
+        ],
+        [
+          "Hallowed Sepulchre: Floor 4 · Method and level dependent",
+          "Static chance: 4,000"
+        ],
+        [
+          "Hallowed Sepulchre: Floor 5 · Method and level dependent",
+          "Static chance: 2,000"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Giant_Squirrel"
+    },
+    {
+      "id": "20661",
+      "name": "Tangleroot",
+      "rates": [
+        [
+          "Level: 1 · Patch: Allotment · Produce: Potato · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 2 · Patch: Flower · Produce: Marigolds · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 3 · Patch: Hops · Produce: Barley · Method and level dependent",
+          "Base chance: 112,416"
+        ],
+        [
+          "Level: 4 · Patch: Hops · Produce: Hammerstone · Method and level dependent",
+          "Base chance: 112,416"
+        ],
+        [
+          "Level: 5 · Patch: Allotment · Produce: Onion · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 7 · Patch: Allotment · Produce: Cabbage · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 8 · Patch: Hops · Produce: Asgarnian · Method and level dependent",
+          "Base chance: 89,933"
+        ],
+        [
+          "Level: 9 · Patch: Herb · Produce: Guam · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 10 · Patch: Bush · Produce: Redberries · Method and level dependent",
+          "Base chance: 44,966"
+        ],
+        [
+          "Level: 11 · Patch: Flower · Produce: Rosemary · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 12 · Patch: Allotment · Produce: Tomato · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 13 · Patch: Hops · Produce: Jute · Method and level dependent",
+          "Base chance: 89,933"
+        ],
+        [
+          "Level: 14 · Patch: Herb · Produce: Marrentill · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 15 · Patch: Tree · Produce: Oak · Method and level dependent",
+          "Base chance: 22,483"
+        ],
+        [
+          "Level: 16 · Patch: Hops · Produce: Yanillian · Method and level dependent",
+          "Base chance: 74,944"
+        ],
+        [
+          "Level: 18 · Patch: Hops · Produce: Flax · Method and level dependent",
+          "Base chance: 89,933"
+        ],
+        [
+          "Level: 19 · Patch: Herb · Produce: Tarromin · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 20 · Patch: Allotment · Produce: Sweetcorn · Method and level dependent",
+          "Base chance: 224,832"
+        ],
+        [
+          "Level: 21 · Patch: Hops · Produce: Krandorian · Method and level dependent",
+          "Base chance: 64,238"
+        ],
+        [
+          "Level: 22 · Patch: Bush · Produce: Cadava berries · Method and level dependent",
+          "Base chance: 37,472"
+        ],
+        [
+          "Level: 23 · Patch: Seaweed · Produce: Giant seaweed · Method and level dependent",
+          "Base chance: 7,500"
+        ],
+        [
+          "Level: 24 · Patch: Flower · Produce: Nasturtiums · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 25 · Patch: Flower · Produce: Woad leaf · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 26 · Patch: Flower · Produce: Limpwurt root · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 26 · Patch: Herb · Produce: Harralander · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 27 · Patch: Fruit tree · Produce: Apple · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 28 · Patch: Coral · Produce: Elkhorn coral · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 28 · Patch: Hops · Produce: Wildblood · Method and level dependent",
+          "Base chance: 56,208"
+        ],
+        [
+          "Level: 29 · Patch: Herb · Produce: Goutweed · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 30 · Patch: Tree · Produce: Willow · Method and level dependent",
+          "Base chance: 16,059"
+        ],
+        [
+          "Level: 31 · Patch: Allotment · Produce: Strawberry · Method and level dependent",
+          "Base chance: 187,360"
+        ],
+        [
+          "Level: 32 · Patch: Herb · Produce: Ranarr · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 33 · Patch: Fruit tree · Produce: Banana · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 34 · Patch: Tithe Farm · Produce: Tithe Farm · Method and level dependent",
+          "Base chance: 7,494,389"
+        ],
+        [
+          "Level: 35 · Patch: Hardwood tree · Produce: Teak · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 36 · Patch: Bush · Produce: Dwellberries · Method and level dependent",
+          "Base chance: 32,119"
+        ],
+        [
+          "Level: 36 · Patch: Vine · Produce: Grapes · Method and level dependent",
+          "Base chance: 385,426"
+        ],
+        [
+          "Level: 37 · Patch: Hops · Produce: Hemp · Method and level dependent",
+          "Base chance: 56,208"
+        ],
+        [
+          "Level: 38 · Patch: Herb · Produce: Toadflax · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 39 · Patch: Fruit tree · Produce: Orange · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 42 · Patch: Fruit tree · Produce: Curry · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 44 · Patch: Herb · Produce: Irit · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 45 · Patch: Tree · Produce: Maple · Method and level dependent",
+          "Base chance: 14,052"
+        ],
+        [
+          "Level: 47 · Patch: Allotment · Produce: Watermelon · Method and level dependent",
+          "Base chance: 160,594"
+        ],
+        [
+          "Level: 48 · Patch: Bush · Produce: Jangerberries · Method and level dependent",
+          "Base chance: 28,104"
+        ],
+        [
+          "Level: 50 · Patch: Herb · Produce: Avantoe · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 51 · Patch: Fruit tree · Produce: Pineapple · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 52 · Patch: Coral · Produce: Pillar coral · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 53 · Patch: Mushroom · Produce: Mushrooms · Method and level dependent",
+          "Base chance: 7,500"
+        ],
+        [
+          "Level: 55 · Patch: Cactus · Produce: Cactus · Method and level dependent",
+          "Base chance: 7,000"
+        ],
+        [
+          "Level: 55 · Patch: Hardwood tree · Produce: Mahogany · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 56 · Patch: Herb · Produce: Kwuarm · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 57 · Patch: Fruit tree · Produce: Papaya · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 58 · Patch: Flower · Produce: White lily · Method and level dependent",
+          "Base chance: 281,040"
+        ],
+        [
+          "Level: 59 · Patch: Bush · Produce: White berries · Method and level dependent",
+          "Base chance: 28,104"
+        ],
+        [
+          "Level: 60 · Patch: Tree · Produce: Yew · Method and level dependent",
+          "Base chance: 11,242"
+        ],
+        [
+          "Level: 61 · Patch: Allotment · Produce: Snape grass · Method and level dependent",
+          "Base chance: 173,977"
+        ],
+        [
+          "Level: 62 · Patch: Herb · Produce: Snapdragon · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 63 · Patch: Belladonna · Produce: Nightshade · Method and level dependent",
+          "Base chance: 8,000"
+        ],
+        [
+          "Level: 64 · Patch: Cactus · Produce: Potato cactus · Method and level dependent",
+          "Base chance: 160,594"
+        ],
+        [
+          "Level: 65 · Patch: Hespori · Produce: Hespori · Method and level dependent",
+          "Base chance: 7,000"
+        ],
+        [
+          "Level: 65 · Patch: Herb · Produce: Huasca · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 66 · Patch: Hardwood tree · Produce: Camphor · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 67 · Patch: Herb · Produce: Cadantine · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 68 · Patch: Fruit tree · Produce: Palm · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 70 · Patch: Bush · Produce: Poison ivy · Method and level dependent",
+          "Base chance: 28,104"
+        ],
+        [
+          "Level: 71 · Patch: Hops · Produce: Cotton · Method and level dependent",
+          "Base chance: 56,208"
+        ],
+        [
+          "Level: 72 · Patch: Calquat · Produce: Calquat tree · Method and level dependent",
+          "Base chance: 6,000"
+        ],
+        [
+          "Level: 73 · Patch: Herb · Produce: Lantadyme · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 74 · Patch: Crystal tree · Produce: Crystal tree · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 75 · Patch: Tree · Produce: Magic · Method and level dependent",
+          "Base chance: 9,368"
+        ],
+        [
+          "Level: 77 · Patch: Coral · Produce: Umbral coral · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 79 · Patch: Herb · Produce: Dwarf weed · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 80 · Patch: Hardwood tree · Produce: Ironwood · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 81 · Patch: Fruit tree · Produce: Dragonfruit · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 83 · Patch: Spirit tree · Produce: Spirit tree · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 85 · Patch: Celastrus tree · Produce: Celastrus tree · Method and level dependent",
+          "Base chance: 9,000"
+        ],
+        [
+          "Level: 85 · Patch: Herb · Produce: Torstol · Method and level dependent",
+          "Base chance: 98,364"
+        ],
+        [
+          "Level: 90 · Patch: Redwood tree · Produce: Redwood tree · Method and level dependent",
+          "Base chance: 5,000"
+        ],
+        [
+          "Level: 92 · Patch: Hardwood tree · Produce: Rosewood · Method and level dependent",
+          "Base chance: 5,000"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Tangleroot"
+    },
+    {
+      "id": "20663",
+      "name": "Rocky",
+      "rates": [
+        [
+          "Method: Man / Woman · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Farmer · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: H.A.M. Member · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Warrior · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Al Kharid warrior · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Villager · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Rogue · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Cave goblin · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Master Farmer · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Guard · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Fremennik citizen · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Bandit (Pollnivneach) (beard) · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Wealthy citizen · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Bandit (Bandit Camp) · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Knight of Ardougne · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Bandit (Pollnivneach) (no beard) · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Pirate · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Menaphite Thug · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 257,211"
+        ],
+        [
+          "Method: Watchman · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 134,625"
+        ],
+        [
+          "Method: Paladin · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 127,056"
+        ],
+        [
+          "Method: Gnome · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 108,718"
+        ],
+        [
+          "Method: Hero · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 99,175"
+        ],
+        [
+          "Method: Elf · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 99,175"
+        ],
+        [
+          "Method: Vyre · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 99,175"
+        ],
+        [
+          "Method: TzHaar-Hur · Activity: Pickpocketing · Method and level dependent",
+          "Base chance: 176,743"
+        ],
+        [
+          "Method: Stealing valuables · Activity: N/A · Method and level dependent",
+          "Base chance: 206,777"
+        ],
+        [
+          "Method: Cannonball stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Veg stall · Activity: Stall · Method and level dependent",
+          "Base chance: 206,777"
+        ],
+        [
+          "Method: Bakery stall · Activity: Stall · Method and level dependent",
+          "Base chance: 124,066"
+        ],
+        [
+          "Method: Crafting stall · Activity: Stall · Method and level dependent",
+          "Base chance: 47,718"
+        ],
+        [
+          "Method: Food Stall · Activity: Stall · Method and level dependent",
+          "Base chance: 47,718"
+        ],
+        [
+          "Method: Silk stall · Activity: Stall · Method and level dependent",
+          "Base chance: 68,926"
+        ],
+        [
+          "Method: Tea stall · Activity: Stall · Method and level dependent",
+          "Base chance: 68,926"
+        ],
+        [
+          "Method: Market stall (wine) · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Fruit Stall · Activity: Stall · Method and level dependent",
+          "Base chance: 124,066"
+        ],
+        [
+          "Method: Seed Stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Fur stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Fish stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Crossbow stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Silver stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Magic Stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Scimitar Stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Spice stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Gem stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Ore stall · Activity: Stall · Method and level dependent",
+          "Base chance: 36,490"
+        ],
+        [
+          "Method: Grand Gold Chest (room 1) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 41,355"
+        ],
+        [
+          "Method: Grand Gold Chest (room 2) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 29,540"
+        ],
+        [
+          "Method: Grand Gold Chest (room 3) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 25,847"
+        ],
+        [
+          "Method: Grand Gold Chest (room 4) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 20,678"
+        ],
+        [
+          "Method: Grand Gold Chest (room 5) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 20,678"
+        ],
+        [
+          "Method: Grand Gold Chest (room 6) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 20,678"
+        ],
+        [
+          "Method: Grand Gold Chest (room 7) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 10,339"
+        ],
+        [
+          "Method: Grand Gold Chest (room 8) · Activity: Pyramid Plunder · Method and level dependent",
+          "Base chance: 6,893"
+        ],
+        [
+          "Method: Sq'irk tree · Activity: Sorceress's Garden · Method and level dependent",
+          "Base chance: 10,339"
+        ],
+        [
+          "Room: 1 · Level Req: 21+ · Cumulative Rate (level 91): 1/39,080 · Cumulative Rate (level 99): 1/38,880 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/39,080 · Chance for Rocky (level 99): 1/38,880"
+        ],
+        [
+          "Room: 2 · Level Req: 31+ · Cumulative Rate (level 91): ~1/16,060 · Cumulative Rate (level 99): ~1/15,957 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/27,265 · Chance for Rocky (level 99): 1/27,065"
+        ],
+        [
+          "Room: 3 · Level Req: 41+ · Cumulative Rate (level 91): ~1/9,552 · Cumulative Rate (level 99): ~1/9,483 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/23,572 · Chance for Rocky (level 99): 1/23,372"
+        ],
+        [
+          "Room: 4 · Level Req: 51+ · Cumulative Rate (level 91): ~1/6,289 · Cumulative Rate (level 99): ~1/6,235 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/18,403 · Chance for Rocky (level 99): 1/18,203"
+        ],
+        [
+          "Room: 5 · Level Req: 61+ · Cumulative Rate (level 91): ~1/4,687 · Cumulative Rate (level 99): ~1/4,645 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/18,403 · Chance for Rocky (level 99): 1/18,203"
+        ],
+        [
+          "Room: 6 · Level Req: 71+ · Cumulative Rate (level 91): ~1/3,736 · Cumulative Rate (level 99): ~1/3,701 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/18,403 · Chance for Rocky (level 99): 1/18,203"
+        ],
+        [
+          "Room: 7 · Level Req: 81+ · Cumulative Rate (level 91): ~1/2,553 · Cumulative Rate (level 99): ~1/2,517 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/8,064 · Chance for Rocky (level 99): 1/7,864"
+        ],
+        [
+          "Room: 8 · Level Req: 91+ · Cumulative Rate (level 91): ~1/1,644 · Cumulative Rate (level 99): ~1/1,604 · Method and level dependent",
+          "Chance for Rocky (level 91): 1/4,618 · Chance for Rocky (level 99): 1/4,418"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rocky"
+    },
+    {
+      "id": "20665",
+      "name": "Rift guardian",
+      "rates": [
+        [
+          "Rune: Blood runes (Arceuus) · Method and level dependent",
+          "Base chance: 804,984"
+        ],
+        [
+          "Rune: Soul runes · Method and level dependent",
+          "Base chance: 782,999"
+        ],
+        [
+          "Rune: Ourania Altar · Method and level dependent",
+          "Base chance: 1,487,213"
+        ],
+        [
+          "Rune: Everything else · Method and level dependent",
+          "Base chance: 1,795,758"
+        ],
+        [
+          "Method: Lava runes (Fire Altar) · Lvl Begin: 23 · Lvl End: 77 · Essence crafted: 139,933 · Method and level dependent",
+          "Pet chance: 7.50%"
+        ],
+        [
+          "Method: Blood runes (Arceuus) · Lvl Begin: 77 · Lvl End: 90 · Essence crafted: 158,475 · Method and level dependent",
+          "Pet chance: 17.91%"
+        ],
+        [
+          "Method: Soul runes · Lvl Begin: 90 · Lvl End: 99 · Essence crafted: 253,524 · Method and level dependent",
+          "Pet chance: 27.73%"
+        ],
+        [
+          "Method: Lava runes (Fire Altar) · Lvl Begin: 23 · Lvl End: 99 · Essence crafted: 1,240,776 · Method and level dependent",
+          "Pet chance: 49.93%"
+        ],
+        [
+          "Method: Mind runes · Lvl Begin: 89 · Lvl End: 99 · Essence crafted: 1,489,480 · Method and level dependent",
+          "Pet chance: 56.42%"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Rift_guardian"
+    },
+    {
+      "id": "21291",
+      "name": "Jal-Nib-Rek",
+      "rates": [
+        [
+          "TzKal-Zuk · Level: 1400",
+          "1/100 ; 1/75"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Jal-Nib-Rek"
+    },
+    {
+      "id": "21804",
+      "name": "Ancient crystal",
+      "rates": [
+        [
+          "Revenant dragon · Level: 135",
+          "1/2,666.67 ; 1/1,466.67"
+        ],
+        [
+          "Revenant hellhound · Level: 90",
+          "1/3,253.33 ; 1/1,789.33"
+        ],
+        [
+          "Revenant ork · Level: 105",
+          "1/2,933.33 ; 1/1,613.33"
+        ],
+        [
+          "Revenant pyrefiend · Level: 52",
+          "1/4,186.67 ; 1/2,302.67"
+        ],
+        [
+          "Revenant dark beast · Level: 120",
+          "1/2,933.33 ; 1/1,613.33"
+        ],
+        [
+          "Revenant hobgoblin · Level: 60",
+          "1/4,186.67 ; 1/2,302.67"
+        ],
+        [
+          "Revenant knight · Level: 126",
+          "1/2,666.67 ; 1/1,466.67"
+        ],
+        [
+          "Revenant imp · Level: 7",
+          "1/14,666.67 ; 1/8,066.67"
+        ],
+        [
+          "Revenant demon · Level: 98",
+          "1/3,253.33 ; 1/1,789.33"
+        ],
+        [
+          "Revenant goblin · Level: 15",
+          "1/9,773.33 ; 1/5,375.33"
+        ],
+        [
+          "Revenant cyclops · Level: 82",
+          "1/3,253.33 ; 1/1,789.33"
+        ],
+        [
+          "Revenant maledictus · Level: 397",
+          "1/2,666.67 ; 1/1,466.67"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Ancient_crystal"
+    },
+    {
+      "id": "22473",
+      "name": "Lil' Zik",
+      "rates": [
+        [
+          "Monumental chest · Level: N/A",
+          "1/650 ; 1/500"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Lil'_Zik"
+    },
+    {
+      "id": "22542",
+      "name": "Viggora's chainmace (u)",
+      "rates": [
+        [
+          "Revenant dragon Off-task · Level: 135",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant dragon On-task · Level: 135",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant hellhound Off-task · Level: 90",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant hellhound On-task · Level: 90",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant ork Off-task · Level: 105",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant ork On-task · Level: 105",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant pyrefiend Off-task · Level: 52",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant pyrefiend On-task · Level: 52",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant dark beast Off-task · Level: 120",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant dark beast On-task · Level: 120",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant hobgoblin Off-task · Level: 60",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant hobgoblin On-task · Level: 60",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant knight Off-task · Level: 126",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant knight On-task · Level: 126",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant imp Off-task · Level: 7",
+          "1/146,668.5 ; 1/80,668.5"
+        ],
+        [
+          "Revenant imp On-task · Level: 7",
+          "1/29,331.5 ; 1/16,131.5"
+        ],
+        [
+          "Revenant demon Off-task · Level: 98",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant demon On-task · Level: 98",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant goblin Off-task · Level: 15",
+          "1/97,734.56 ; 1/53,754.56"
+        ],
+        [
+          "Revenant goblin On-task · Level: 15",
+          "1/19,545.45 ; 1/10,749.45"
+        ],
+        [
+          "Revenant cyclops Off-task · Level: 82",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant cyclops On-task · Level: 82",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant maledictus Off-task · Level: 397",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant maledictus On-task · Level: 397",
+          "1/5,333 ; 1/2,933"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Viggora's_chainmace"
+    },
+    {
+      "id": "22547",
+      "name": "Craw's bow (u)",
+      "rates": [
+        [
+          "Revenant dragon Off-task · Level: 135",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant dragon On-task · Level: 135",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant hellhound Off-task · Level: 90",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant hellhound On-task · Level: 90",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant ork Off-task · Level: 105",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant ork On-task · Level: 105",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant pyrefiend Off-task · Level: 52",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant pyrefiend On-task · Level: 52",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant dark beast Off-task · Level: 120",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant dark beast On-task · Level: 120",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant hobgoblin Off-task · Level: 60",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant hobgoblin On-task · Level: 60",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant knight Off-task · Level: 126",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant knight On-task · Level: 126",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant imp Off-task · Level: 7",
+          "1/146,668.5 ; 1/80,668.5"
+        ],
+        [
+          "Revenant imp On-task · Level: 7",
+          "1/29,331.5 ; 1/16,131.5"
+        ],
+        [
+          "Revenant demon Off-task · Level: 98",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant demon On-task · Level: 98",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant goblin Off-task · Level: 15",
+          "1/97,734.56 ; 1/53,754.56"
+        ],
+        [
+          "Revenant goblin On-task · Level: 15",
+          "1/19,545.45 ; 1/10,749.45"
+        ],
+        [
+          "Revenant cyclops Off-task · Level: 82",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant cyclops On-task · Level: 82",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant maledictus Off-task · Level: 397",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant maledictus On-task · Level: 397",
+          "1/5,333 ; 1/2,933"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Craw's_bow"
+    },
+    {
+      "id": "22552",
+      "name": "Thammaron's sceptre (u)",
+      "rates": [
+        [
+          "Revenant dragon Off-task · Level: 135",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant dragon On-task · Level: 135",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant hellhound Off-task · Level: 90",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant hellhound On-task · Level: 90",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant ork Off-task · Level: 105",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant ork On-task · Level: 105",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant pyrefiend Off-task · Level: 52",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant pyrefiend On-task · Level: 52",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant dark beast Off-task · Level: 120",
+          "1/29,333.7 ; 1/16,133.7"
+        ],
+        [
+          "Revenant dark beast On-task · Level: 120",
+          "1/5,866.3 ; 1/3,226.3"
+        ],
+        [
+          "Revenant hobgoblin Off-task · Level: 60",
+          "1/41,867.19 ; 1/23,027.19"
+        ],
+        [
+          "Revenant hobgoblin On-task · Level: 60",
+          "1/8,372.81 ; 1/4,604.81"
+        ],
+        [
+          "Revenant knight Off-task · Level: 126",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant knight On-task · Level: 126",
+          "1/5,333 ; 1/2,933"
+        ],
+        [
+          "Revenant imp Off-task · Level: 7",
+          "1/146,668.5 ; 1/80,668.5"
+        ],
+        [
+          "Revenant imp On-task · Level: 7",
+          "1/29,331.5 ; 1/16,131.5"
+        ],
+        [
+          "Revenant demon Off-task · Level: 98",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant demon On-task · Level: 98",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant goblin Off-task · Level: 15",
+          "1/97,734.56 ; 1/53,754.56"
+        ],
+        [
+          "Revenant goblin On-task · Level: 15",
+          "1/19,545.45 ; 1/10,749.45"
+        ],
+        [
+          "Revenant cyclops Off-task · Level: 82",
+          "1/32,533.74 ; 1/17,893.74"
+        ],
+        [
+          "Revenant cyclops On-task · Level: 82",
+          "1/6,506.26 ; 1/3,578.26"
+        ],
+        [
+          "Revenant maledictus Off-task · Level: 397",
+          "1/26,667 ; 1/14,667"
+        ],
+        [
+          "Revenant maledictus On-task · Level: 397",
+          "1/5,333 ; 1/2,933"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Thammaron's_sceptre"
+    },
+    {
+      "id": "22557",
+      "name": "Amulet of avarice",
+      "rates": [
+        [
+          "Revenant dragon Off-task · Level: 135",
+          "1/13,333.5 ; 1/7,333.5"
+        ],
+        [
+          "Revenant dragon On-task · Level: 135",
+          "1/2,666.5 ; 1/1,466.5"
+        ],
+        [
+          "Revenant hellhound Off-task · Level: 90",
+          "1/16,266.87 ; 1/8,946.87"
+        ],
+        [
+          "Revenant hellhound On-task · Level: 90",
+          "1/3,253.13 ; 1/1,789.13"
+        ],
+        [
+          "Revenant ork Off-task · Level: 105",
+          "1/14,666.85 ; 1/8,066.85"
+        ],
+        [
+          "Revenant ork On-task · Level: 105",
+          "1/2,933.15 ; 1/1,613.15"
+        ],
+        [
+          "Revenant pyrefiend Off-task · Level: 52",
+          "1/20,933.6 ; 1/11,513.6"
+        ],
+        [
+          "Revenant pyrefiend On-task · Level: 52",
+          "1/4,186.41 ; 1/2,302.41"
+        ],
+        [
+          "Revenant dark beast Off-task · Level: 120",
+          "1/14,666.85 ; 1/8,066.85"
+        ],
+        [
+          "Revenant dark beast On-task · Level: 120",
+          "1/2,933.15 ; 1/1,613.15"
+        ],
+        [
+          "Revenant hobgoblin Off-task · Level: 60",
+          "1/20,933.6 ; 1/11,513.6"
+        ],
+        [
+          "Revenant hobgoblin On-task · Level: 60",
+          "1/4,186.41 ; 1/2,302.41"
+        ],
+        [
+          "Revenant knight Off-task · Level: 126",
+          "1/13,333.5 ; 1/7,333.5"
+        ],
+        [
+          "Revenant knight On-task · Level: 126",
+          "1/2,666.5 ; 1/1,466.5"
+        ],
+        [
+          "Revenant imp Off-task · Level: 7",
+          "1/73,334.25 ; 1/40,334.25"
+        ],
+        [
+          "Revenant imp On-task · Level: 7",
+          "1/14,665.75 ; 1/8,065.75"
+        ],
+        [
+          "Revenant demon Off-task · Level: 98",
+          "1/16,266.87 ; 1/8,946.87"
+        ],
+        [
+          "Revenant demon On-task · Level: 98",
+          "1/3,253.13 ; 1/1,789.13"
+        ],
+        [
+          "Revenant goblin Off-task · Level: 15",
+          "1/48,867.28 ; 1/26,877.28"
+        ],
+        [
+          "Revenant goblin On-task · Level: 15",
+          "1/9,772.72 ; 1/5,374.72"
+        ],
+        [
+          "Revenant cyclops Off-task · Level: 82",
+          "1/16,266.87 ; 1/8,946.87"
+        ],
+        [
+          "Revenant cyclops On-task · Level: 82",
+          "1/3,253.13 ; 1/1,789.13"
+        ],
+        [
+          "Revenant maledictus Off-task · Level: 397",
+          "1/13,333.5 ; 1/7,333.5"
+        ],
+        [
+          "Revenant maledictus On-task · Level: 397",
+          "1/2,666.5 ; 1/1,466.5"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_avarice"
+    },
+    {
+      "id": "23185",
+      "name": "Ring of 3rd Age",
+      "rates": [
+        [
+          "The Mimic Elite · Level: N/A",
+          "6/250 ; 6/264"
+        ],
+        [
+          "The Mimic Master · Level: N/A",
+          "6/228 ; 6/240"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Ring_of_3rd_Age"
+    },
+    {
+      "id": "23908",
+      "name": "Zalcano shard",
+      "rates": [
+        [
+          "Zalcano · Level: 336",
+          "1/750 – 1/1,500"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Zalcano_shard"
+    },
+    {
+      "id": "24740",
+      "name": "Strange old lockpick (full)",
+      "rates": [
+        [
+          "Coffin (Hallowed Sepulchre) · Level: 66",
+          "1/200 – 1/40"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Strange_old_lockpick"
+    },
+    {
+      "id": "25442",
+      "name": "Bronze locks",
+      "rates": [
+        [
+          "Bronze Chest (red) · Level: N/A",
+          "1/63 ; 1/61"
+        ],
+        [
+          "Bronze Chest (brown) · Level: N/A",
+          "1/62 ; 1/60"
+        ],
+        [
+          "Bronze Chest (crimson) · Level: N/A",
+          "1/61 ; 1/59"
+        ],
+        [
+          "Bronze Chest (black) · Level: N/A",
+          "1/60 ; 1/58"
+        ],
+        [
+          "Bronze Chest (purple) · Level: N/A",
+          "1/59 ; 1/57"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bronze_locks"
+    },
+    {
+      "id": "25445",
+      "name": "Steel locks",
+      "rates": [
+        [
+          "Steel Chest (red) · Level: N/A",
+          "1/63 ; 1/61"
+        ],
+        [
+          "Steel Chest (brown) · Level: N/A",
+          "1/62 ; 1/60"
+        ],
+        [
+          "Steel Chest (crimson) · Level: N/A",
+          "1/61 ; 1/59"
+        ],
+        [
+          "Steel Chest (black) · Level: N/A",
+          "1/60 ; 1/58"
+        ],
+        [
+          "Steel Chest (purple) · Level: N/A",
+          "1/59 ; 1/57"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Steel_locks"
+    },
+    {
+      "id": "25448",
+      "name": "Black locks",
+      "rates": [
+        [
+          "Black Chest (red) · Level: N/A",
+          "1/63 ; 1/61"
+        ],
+        [
+          "Black Chest (brown) · Level: N/A",
+          "1/62 ; 1/60"
+        ],
+        [
+          "Black Chest (crimson) · Level: N/A",
+          "1/61 ; 1/59"
+        ],
+        [
+          "Black Chest (black) · Level: N/A",
+          "1/60 ; 1/58"
+        ],
+        [
+          "Black Chest (purple) · Level: N/A",
+          "1/59 ; 1/57"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Black_locks"
+    },
+    {
+      "id": "25451",
+      "name": "Silver locks",
+      "rates": [
+        [
+          "Silver Chest (red) · Level: N/A",
+          "1/63 ; 1/61"
+        ],
+        [
+          "Silver Chest (brown) · Level: N/A",
+          "1/62 ; 1/60"
+        ],
+        [
+          "Silver Chest (crimson) · Level: N/A",
+          "1/61 ; 1/59"
+        ],
+        [
+          "Silver Chest (black) · Level: N/A",
+          "1/60 ; 1/58"
+        ],
+        [
+          "Silver Chest (purple) · Level: N/A",
+          "1/59 ; 1/57"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Silver_locks"
+    },
+    {
+      "id": "25454",
+      "name": "Gold locks",
+      "rates": [
+        [
+          "Gold Chest (red) · Level: N/A",
+          "1/63 ; 1/61"
+        ],
+        [
+          "Gold Chest (crimson) · Level: N/A",
+          "1/61 ; 1/59"
+        ],
+        [
+          "Gold Chest (brown) · Level: N/A",
+          "1/62 ; 1/60"
+        ],
+        [
+          "Gold Chest (black) · Level: N/A",
+          "1/60 ; 1/58"
+        ],
+        [
+          "Gold Chest (purple) · Level: N/A",
+          "1/59 ; 1/57"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Gold_locks"
+    },
+    {
+      "id": "25474",
+      "name": "Tree wizards' journal",
+      "rates": [
+        [
+          "Steel Chest (red) · Level: N/A",
+          "1/1,217.32 ; 1/1,213.9"
+        ],
+        [
+          "Steel Chest (brown) · Level: N/A",
+          "1/1,215.61 ; 1/1,212.2"
+        ],
+        [
+          "Steel Chest (crimson) · Level: N/A",
+          "1/1,213.9 ; 1/1,210.52"
+        ],
+        [
+          "Steel Chest (black) · Level: N/A",
+          "1/1,212.2 ; 1/1,208.84"
+        ],
+        [
+          "Steel Chest (purple) · Level: N/A",
+          "1/1,210.52 ; 1/1,207.18"
+        ],
+        [
+          "Black Chest (red) · Level: N/A",
+          "1/378 ; 1/374.13"
+        ],
+        [
+          "Black Chest (brown) · Level: N/A",
+          "1/376.07 ; 1/372.2"
+        ],
+        [
+          "Black Chest (crimson) · Level: N/A",
+          "1/374.13 ; 1/370.28"
+        ],
+        [
+          "Black Chest (black) · Level: N/A",
+          "1/372.2 ; 1/368.35"
+        ],
+        [
+          "Black Chest (purple) · Level: N/A",
+          "1/370.28 ; 1/366.43"
+        ],
+        [
+          "Silver Chest (red) · Level: N/A",
+          "1/154.45 ; 1/150.47"
+        ],
+        [
+          "Silver Chest (brown) · Level: N/A",
+          "1/152.46 ; 1/148.47"
+        ],
+        [
+          "Silver Chest (crimson) · Level: N/A",
+          "1/150.5 ; 1/146.48"
+        ],
+        [
+          "Silver Chest (black) · Level: N/A",
+          "1/148.47 ; 1/144.49"
+        ],
+        [
+          "Silver Chest (purple) · Level: N/A",
+          "1/146.48 ; 1/142.5"
+        ],
+        [
+          "Gold Chest (red) · Level: N/A",
+          "1/109.74 ; 1/105.73"
+        ],
+        [
+          "Gold Chest (crimson) · Level: N/A",
+          "1/105.73 ; 1/101.72"
+        ],
+        [
+          "Gold Chest (brown) · Level: N/A",
+          "1/107.73 ; 1/103.73"
+        ],
+        [
+          "Gold Chest (black) · Level: N/A",
+          "1/103.73 ; 1/99.71"
+        ],
+        [
+          "Gold Chest (purple) · Level: N/A",
+          "1/101.72 ; 1/97.71"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Tree_wizards'_journal"
+    },
+    {
+      "id": "25476",
+      "name": "Bloody notes",
+      "rates": [
+        [
+          "Steel Chest (red) · Level: N/A",
+          "1/1,217.32 ; 1/1,213.9"
+        ],
+        [
+          "Steel Chest (brown) · Level: N/A",
+          "1/1,215.61 ; 1/1,212.2"
+        ],
+        [
+          "Steel Chest (crimson) · Level: N/A",
+          "1/1,213.9 ; 1/1,210.52"
+        ],
+        [
+          "Steel Chest (black) · Level: N/A",
+          "1/1,212.2 ; 1/1,208.84"
+        ],
+        [
+          "Steel Chest (purple) · Level: N/A",
+          "1/1,210.52 ; 1/1,207.18"
+        ],
+        [
+          "Black Chest (red) · Level: N/A",
+          "1/378 ; 1/374.13"
+        ],
+        [
+          "Black Chest (brown) · Level: N/A",
+          "1/376.07 ; 1/372.2"
+        ],
+        [
+          "Black Chest (crimson) · Level: N/A",
+          "1/374.13 ; 1/370.28"
+        ],
+        [
+          "Black Chest (black) · Level: N/A",
+          "1/372.2 ; 1/368.35"
+        ],
+        [
+          "Black Chest (purple) · Level: N/A",
+          "1/370.28 ; 1/366.43"
+        ],
+        [
+          "Silver Chest (red) · Level: N/A",
+          "1/154.45 ; 1/150.47"
+        ],
+        [
+          "Silver Chest (brown) · Level: N/A",
+          "1/152.46 ; 1/148.47"
+        ],
+        [
+          "Silver Chest (crimson) · Level: N/A",
+          "1/150.5 ; 1/146.48"
+        ],
+        [
+          "Silver Chest (black) · Level: N/A",
+          "1/148.47 ; 1/144.49"
+        ],
+        [
+          "Silver Chest (purple) · Level: N/A",
+          "1/146.48 ; 1/142.5"
+        ],
+        [
+          "Gold Chest (red) · Level: N/A",
+          "1/109.74 ; 1/105.73"
+        ],
+        [
+          "Gold Chest (crimson) · Level: N/A",
+          "1/105.73 ; 1/103.73"
+        ],
+        [
+          "Gold Chest (brown) · Level: N/A",
+          "1/107.73 ; 1/103.73"
+        ],
+        [
+          "Gold Chest (black) · Level: N/A",
+          "1/103.73 ; 1/99.71"
+        ],
+        [
+          "Gold Chest (purple) · Level: N/A",
+          "1/101.72 ; 1/97.71"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bloody_notes"
+    },
+    {
+      "id": "26792",
+      "name": "Abyssal pearls",
+      "rates": [
+        [
+          "Rewards Guardian · Level: N/A",
+          "18/140 ; 18/125"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Abyssal_pearls"
+    },
+    {
+      "id": "26908",
+      "name": "Intricate pouch",
+      "rates": [
+        [
+          "Rewards Guardian · Level: N/A",
+          "5/140 ; 5/125"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Intricate_pouch"
+    },
+    {
+      "id": "27279",
+      "name": "Thread of Elidinis",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "1/10 – 3/10"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Thread_of_Elidinis"
+    },
+    {
+      "id": "27283",
+      "name": "Breach of the Scarab",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "1/50 – 3/50"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Breach_of_the_Scarab"
+    },
+    {
+      "id": "27285",
+      "name": "Eye of the Corruptor",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "1/50 – 3/50"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Eye_of_the_Corruptor"
+    },
+    {
+      "id": "27289",
+      "name": "Jewel of the Sun",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "1/50 – 3/50"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Jewel_of_the_Sun"
+    },
+    {
+      "id": "27352",
+      "name": "Tumeken's guardian",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "Varies"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Tumeken's_guardian"
+    },
+    {
+      "id": "28962",
+      "name": "Quetzin",
+      "rates": [
+        [
+          "Hunters' loot sack (expert) · Level: N/A",
+          "1/1,000 ; 1/67"
+        ],
+        [
+          "Hunters' loot sack (master) · Level: N/A",
+          "1/1,000 ; 1/67"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Quetzin"
+    },
+    {
+      "id": "29836",
+      "name": "Nid",
+      "rates": [
+        [
+          "Araxxor · Level: 890",
+          "1/3,000 ; 1/1,500"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Nid"
+    },
+    {
+      "id": "30622",
+      "name": "Bran",
+      "rates": [
+        [
+          "Eldric the Ice King · Level: 350",
+          "1/3,000 ; 1/1,500"
+        ],
+        [
+          "Branda the Fire Queen · Level: 350",
+          "1/3,000 ; 1/1,500"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bran"
+    },
+    {
+      "id": "30626",
+      "name": "Deadeye prayer scroll",
+      "rates": [
+        [
+          "Eldric the Ice King · Level: 350",
+          "1/75 ; Never"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Deadeye_prayer_scroll"
+    },
+    {
+      "id": "30627",
+      "name": "Mystic vigour prayer scroll",
+      "rates": [
+        [
+          "Branda the Fire Queen · Level: 350",
+          "1/75 ; Never"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Mystic_vigour_prayer_scroll"
+    },
+    {
+      "id": "30893",
+      "name": "Jewel of Amascut",
+      "rates": [
+        [
+          "Chest (Tombs of Amascut) · Level: N/A",
+          "1/50 – 3/50"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Jewel_of_Amascut"
+    },
+    {
+      "id": "31088",
+      "name": "Avernic treads",
+      "rates": [
+        [
+          "Doom of Mokhaiotl · Level: 558–908",
+          "1/1,350 – 1/540"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Avernic_treads"
+    },
+    {
+      "id": "31109",
+      "name": "Mokhaiotl cloth",
+      "rates": [
+        [
+          "Doom of Mokhaiotl · Level: 558–908",
+          "1/2,500 – 1/540"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Mokhaiotl_cloth"
+    },
+    {
+      "id": "31115",
+      "name": "Eye of Ayak (uncharged)",
+      "rates": [
+        [
+          "Doom of Mokhaiotl · Level: 558–908",
+          "1/2,000 – 1/540"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Eye_of_Ayak"
+    },
+    {
+      "id": "31130",
+      "name": "Dom",
+      "rates": [
+        [
+          "Doom of Mokhaiotl · Level: 558–908",
+          "1/1,000 – 1/250"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Dom"
+    },
+    {
+      "id": "31283",
+      "name": "Soup",
+      "rates": [
+        [
+          "Method: Trimming sails · Activity: Trimming sails · Level: 1 · Method and level dependent",
+          "Rarity: 1/120,000"
+        ],
+        [
+          "Method: Port tasks · Activity: Port tasks · Level: 1 · Method and level dependent",
+          "Rarity: 1/6,000 - 1/3,150"
+        ],
+        [
+          "Method: Sea charting · Activity: Sea charting · Level: 1 · Method and level dependent",
+          "Rarity: 1/30,000"
+        ],
+        [
+          "Method: The Tempor Tantrum Swordfish · Activity: Barracuda Trials · Level: 30 · Method and level dependent",
+          "Rarity: 1/16,000"
+        ],
+        [
+          "Method: The Tempor Tantrum Shark · Activity: Barracuda Trials · Level: 30 · Method and level dependent",
+          "Rarity: 1/8,000"
+        ],
+        [
+          "Method: The Tempor Tantrum Marlin · Activity: Barracuda Trials · Level: 30 · Method and level dependent",
+          "Rarity: 1/5,334"
+        ],
+        [
+          "Method: The Jubbly Jive Swordfish · Activity: Barracuda Trials · Level: 55 · Method and level dependent",
+          "Rarity: 1/11,500"
+        ],
+        [
+          "Method: The Jubbly Jive Shark · Activity: Barracuda Trials · Level: 55 · Method and level dependent",
+          "Rarity: 1/5,750"
+        ],
+        [
+          "Method: The Jubbly Jive Marlin · Activity: Barracuda Trials · Level: 55 · Method and level dependent",
+          "Rarity: 1/3,834"
+        ],
+        [
+          "Method: The Gwenith Glide Swordfish · Activity: Barracuda Trials · Level: 72 · Method and level dependent",
+          "Rarity: 1/9,000"
+        ],
+        [
+          "Method: The Gwenith Glide Shark · Activity: Barracuda Trials · Level: 72 · Method and level dependent",
+          "Rarity: 1/4,500"
+        ],
+        [
+          "Method: The Gwenith Glide Marlin · Activity: Barracuda Trials · Level: 72 · Method and level dependent",
+          "Rarity: 1/3,000"
+        ],
+        [
+          "Method: Small shipwreck · Activity: Shipwreck salvaging · Level: 15 · Method and level dependent",
+          "Rarity: 1/800,000"
+        ],
+        [
+          "Method: Fisherman's shipwreck · Activity: Shipwreck salvaging · Level: 26 · Method and level dependent",
+          "Rarity: 1/500,000"
+        ],
+        [
+          "Method: Barracuda shipwreck · Activity: Shipwreck salvaging · Level: 35 · Method and level dependent",
+          "Rarity: 1/300,000"
+        ],
+        [
+          "Method: Large shipwreck · Activity: Shipwreck salvaging · Level: 53 · Method and level dependent",
+          "Rarity: 1/280,000"
+        ],
+        [
+          "Method: Pirate shipwreck · Activity: Shipwreck salvaging · Level: 64 · Method and level dependent",
+          "Rarity: 1/275,000"
+        ],
+        [
+          "Method: Mercenary shipwreck · Activity: Shipwreck salvaging · Level: 73 · Method and level dependent",
+          "Rarity: 1/260,000"
+        ],
+        [
+          "Method: Fremennik shipwreck · Activity: Shipwreck salvaging · Level: 80 · Method and level dependent",
+          "Rarity: 1/230,000"
+        ],
+        [
+          "Method: Merchant shipwreck · Activity: Shipwreck salvaging · Level: 87 · Method and level dependent",
+          "Rarity: 1/160,000"
+        ],
+        [
+          "Method: Deep sea trawling · Activity: Deep sea trawling · Level: 56 · Method and level dependent",
+          "Rarity: 1/360,000"
+        ],
+        [
+          "Method: Salvage sorting · Activity: Salvaging station · Level: 15+ · Method and level dependent",
+          "Rarity: 1/800,000"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Soup"
+    },
+    {
+      "id": "31949",
+      "name": "Bottled storm",
+      "rates": [
+        [
+          "Armoured kraken · Level: 180",
+          "1/500 ; 1/250"
+        ],
+        [
+          "Vampyre kraken · Level: 211",
+          "1/350 ; 1/175"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Bottled_storm"
+    },
+    {
+      "id": "31961",
+      "name": "Broken dragon hook",
+      "rates": [
+        [
+          "Great white shark · Level: 175",
+          "1/500 ; 1/250"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Broken_dragon_hook"
+    },
+    {
+      "id": "32087",
+      "name": "Barracuda paint",
+      "rates": [
+        [
+          "Barracuda Trial: The Tempor Tantrum · Expected time: 18 hours · Method and level dependent",
+          "Rate: 1/240"
+        ],
+        [
+          "Barracuda Trial: The Jubbly Jive · Expected time: 19 hours 37 minutes · Method and level dependent",
+          "Rate: 1/220"
+        ],
+        [
+          "Barracuda Trial: The Gwenith Glide · Expected time: 41 hours · Method and level dependent",
+          "Rate: 1/400"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Barracuda_paint"
+    },
+    {
+      "id": "32398",
+      "name": "Sailors' amulet (inert)",
+      "rates": [
+        [
+          "Plundered salvage · Level: 64",
+          "1/450 ; Never"
+        ],
+        [
+          "Small salvage · Level: 15",
+          "1/2,000 ; Never"
+        ],
+        [
+          "Fishy salvage · Level: 26",
+          "1/1,500 ; Never"
+        ],
+        [
+          "Barracuda salvage · Level: 35",
+          "1/1,000 ; Never"
+        ],
+        [
+          "Large salvage · Level: 53",
+          "1/500 ; Never"
+        ],
+        [
+          "Martial salvage · Level: 73",
+          "1/400 ; Never"
+        ],
+        [
+          "Opulent salvage · Level: 87",
+          "1/300 ; Never"
+        ],
+        [
+          "Fremennik salvage · Level: 80",
+          "1/350 ; Never"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Sailors'_amulet"
+    },
+    {
+      "id": "34040",
+      "name": "Mr McGroot",
+      "rates": [
+        [
+          "Wyrmscraig Goat · Level: 60",
+          "1/40,000 ; 1/2,501"
+        ]
+      ],
+      "url": "https://oldschool.runescape.wiki/w/Mr_McGroot"
+    }
+  ]
+}

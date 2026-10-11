@@ -1,0 +1,14 @@
+.adventure-requirements{display:grid;gap:13px}
+.adventure-requirement-group{display:grid;gap:6px}
+.adventure-requirement-group h3{font:600 11px/1.4 'DM Sans',system-ui,sans-serif;color:var(--muted);margin:0;text-transform:none;letter-spacing:.02em}
+.adventure-requirement-list{list-style:none;padding:0;margin:0;display:grid;gap:5px}
+.adventure-requirement-list li{display:flex;align-items:center;gap:9px;padding:9px 10px;border:1px solid var(--line);border-radius:4px;background:var(--sunk);font-size:12px;line-height:1.5;min-height:40px}
+.adventure-requirement-list li>img{width:23px;height:23px;object-fit:contain;flex:none}
+.adventure-requirement-list li>span{min-width:0;overflow-wrap:anywhere}
+.adventure-requirement-list li>span>a{color:inherit}
+.adventure-requirement-list li>span>small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:2px}
+.adventure-requirement-list .requirement-check{margin-left:auto;color:var(--good);font-size:12px;flex:none}
+.adventure-item-icons{display:flex;align-items:center;flex-wrap:wrap;gap:3px;max-width:78px;flex:none}
+.adventure-item-icons img{width:30px;height:30px;object-fit:contain;image-rendering:pixelated}
+.adventure-requirement-list li.req-met{color:var(--good);border-color:#344b2c}
+.adventure-requirement-list li.req-miss{color:var(--bad)}

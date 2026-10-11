@@ -1,0 +1,100 @@
+.account-settings-page h1{display:flex;align-items:center;gap:14px}
+.account-title-icon{width:34px;height:34px;object-fit:contain;image-rendering:pixelated;flex:none}
+
+/* Discord identity */
+.account-settings-page .account-summary{display:flex;flex-direction:row;gap:16px;align-items:center;margin:24px 0 14px;padding:18px 22px}
+.account-settings-page .account-summary .account-summary-avatar{width:52px;height:52px;font-size:20px;box-shadow:0 0 0 2px var(--panel),0 0 0 3px var(--line-3)}
+.account-summary>div{display:grid;gap:4px;min-width:0}
+.account-summary h2{margin:0;overflow-wrap:anywhere}
+.account-summary>div>span{font-size:12px;color:var(--muted)}
+.account-summary>b{margin-left:auto;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--sunk);font-size:11px;font-weight:600;color:var(--muted);white-space:nowrap}
+
+/* Primary save/sync buttons share one shape and state treatment */
+.account-settings-page .save-button{justify-content:center;min-width:150px;min-height:38px;padding:8px 18px;font-size:13px;border-radius:6px;box-shadow:0 1px 0 #ffd08a22 inset,0 2px 0 #0006}
+.account-settings-page .save-button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.account-settings-page .save-button.is-saved,.account-settings-page .save-button.is-saved:hover:not(:disabled){background:linear-gradient(#2f4a26,#22361c);border-color:#4f8a3b;color:#bff0a8}
+.account-settings-page .save-button:disabled{opacity:.6}
+
+/* Discord server roles */
+.account-settings-page .discord-roles-panel{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"icon copy action" "icon status status";align-items:center;column-gap:16px;row-gap:0;padding:18px 22px}
+.discord-roles-icon{grid-area:icon;align-self:start;display:grid;place-items:center;width:34px;height:34px;margin-top:1px;color:#5865f2}.discord-roles-icon .discord-mark{width:30px;height:auto}
+.discord-roles-copy{grid-area:copy;display:grid;gap:5px;min-width:0}
+.discord-roles-copy h2{margin:0}
+.discord-roles-copy p{font-size:13px;line-height:1.55;color:var(--muted)}
+.discord-roles-action{grid-area:action}
+.discord-roles-status{grid-area:status;font-size:12px;color:var(--muted)}
+.discord-roles-status:not(:empty){margin-top:10px}
+.discord-roles-status.is-done{color:#9fd88c}
+.discord-roles-status.is-error{color:var(--orange)}
+
+/* Linked RuneScape profiles */
+.account-settings-page .account-section-title{margin:28px 0 10px;font:600 11px/1.3 'DM Sans',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.account-settings-list{display:grid;gap:10px}
+.account-privacy-card{padding:0}
+.account-privacy-card>summary{display:flex;align-items:center;gap:12px;padding:12px 18px;cursor:pointer;list-style:none;border-radius:8px}
+.account-privacy-card>summary::-webkit-details-marker{display:none}
+.account-privacy-card>summary:hover{background:#ffffff05}
+.account-privacy-card>summary:focus-visible{outline:2px solid var(--orange);outline-offset:-2px}
+.account-card-portrait{width:30px;height:35px;object-fit:contain;flex:none}
+.account-card-name{display:grid;gap:3px;min-width:0}
+.account-card-name b{font:20px var(--rs);line-height:1.1;overflow-wrap:anywhere}
+.account-card-name small{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px}
+.account-visibility-dot{width:7px;height:7px;border-radius:50%;background:var(--good);flex:none}
+.account-visibility-dot.is-private{background:var(--dim)}
+.account-disclosure{margin-left:auto;display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:12px;white-space:nowrap;flex:none}
+.account-disclosure>svg{transition:transform .15s}
+.account-privacy-card[open] .account-disclosure>svg{transform:rotate(180deg)}
+.account-privacy-card>summary:hover .account-disclosure{color:var(--orange)}
+
+.account-privacy-body{display:grid;gap:16px;margin:0;min-width:0;padding:16px 18px 18px;border:0;border-top:1px solid var(--line)}
+.account-privacy-top{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px}
+.account-field-label{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--dim)}
+.account-visibility{display:grid;grid-template-columns:auto repeat(2,minmax(0,170px));align-items:center;gap:8px}
+.account-visibility .account-choice{justify-content:center}
+.account-visibility .account-field-label{margin-right:4px}
+.account-details{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px;margin-left:auto}
+.account-details>span{display:grid;gap:2px;font-size:10.5px;color:var(--dim)}
+.account-details b{font-size:12px;font-weight:500;color:var(--text)}
+.account-share{display:grid;gap:8px}
+.account-privacy-toggles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px}
+@media(min-width:1040px){.account-privacy-toggles{grid-template-columns:repeat(4,auto)}}
+
+/* Tick-box chips: the native checkbox stays visible, the whole chip is the hit area */
+.account-choice{display:flex;align-items:center;gap:9px;min-height:38px;box-sizing:border-box;padding:7px 11px;border:1px solid var(--line);border-radius:6px;background:var(--sunk);font-size:12px;line-height:1.35;cursor:pointer;transition:border-color .12s,background .12s}
+.account-choice input{flex:none;margin:0;accent-color:var(--orange);cursor:inherit}
+.account-choice input[type=radio]{width:15px;height:15px}
+.account-choice:hover{border-color:var(--line-3)}
+.account-choice:has(input:checked){border-color:#756548;background:#2b261d}
+.account-choice:has(input:disabled){opacity:.5;cursor:not-allowed}
+.account-choice:has(input:focus-visible){outline:2px solid var(--orange);outline-offset:1px}
+.account-choice input:focus-visible{outline:none}
+
+.account-privacy-footer{display:flex;align-items:center;gap:10px 16px;padding-top:14px;border-top:1px solid var(--line)}
+.account-privacy-footer .fine{flex:1;margin:0;font-size:11px;line-height:1.55}
+.account-save-notice{font-size:12px;color:#9fd88c;text-align:right}
+.account-save-notice:empty{display:none}
+.account-save-notice.is-dirty{color:var(--muted)}
+.account-save-notice.is-error{color:var(--orange)}
+
+@media(max-width:700px){
+ .account-settings-page .discord-roles-panel{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"icon copy" "action action" "status status";row-gap:14px;padding:16px}
+ .discord-roles-status:not(:empty){margin-top:0}
+ .discord-roles-action .save-button{width:100%}
+ .account-details{margin-left:0}
+ .account-privacy-footer{flex-wrap:wrap}
+ .account-privacy-footer .fine{flex-basis:100%}
+ .account-save-notice{flex:1;text-align:left}
+}
+@media(max-width:600px){
+ .account-settings-page .account-summary{flex-wrap:wrap;padding:16px}
+ .account-summary>b{margin-left:0}
+ .account-privacy-card>summary{padding:12px 14px}
+ .account-privacy-body{padding:14px}
+ .account-privacy-toggles{display:flex;flex-wrap:wrap}
+ .account-choice{min-height:44px;flex:1 1 auto}
+ .account-visibility{grid-template-columns:repeat(2,minmax(0,1fr));flex:1 1 100%;width:100%}.account-visibility .account-field-label{grid-column:1/-1}
+ .account-privacy-footer .save-button{width:100%}
+}
+@media(max-width:420px){
+ .account-disclosure>span{display:none}
+}

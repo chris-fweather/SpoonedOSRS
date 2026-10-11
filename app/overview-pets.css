@@ -1,0 +1,17 @@
+/* Only the Overview catalogue uses the borderless, centred pet treatment. */
+.ov .ov-pets .petlog-grid{display:flex;flex-wrap:wrap;justify-content:center;align-content:flex-start;gap:4px;padding:4px 0 7px}
+.ov .ov-pets .petlog-grid>.overview-pet-trigger{display:block;flex:0 0 38px;width:38px;height:38px;min-width:0}
+.ov .ov-pets .petlog-grid button{display:grid;place-items:center;width:38px;height:38px;padding:3px;border:0;border-radius:3px;box-shadow:none;background:transparent;cursor:pointer}
+.ov .ov-pets .petlog-grid button img{width:32px;height:32px;max-width:32px;max-height:32px;object-fit:contain;transition:transform .15s ease,opacity .15s ease}
+.ov .ov-pets .petlog-grid button:not(.got) img{filter:grayscale(1) brightness(.65);opacity:.55}
+.ov .ov-pets .petlog-grid button.got img{filter:drop-shadow(1px 1px 0 #000);opacity:1}
+.ov .ov-pets .petlog-grid button:hover img{transform:scale(1.06);opacity:1}
+.ov .ov-pets .petlog-grid button:not(.got):hover img{filter:grayscale(1) brightness(.9)}
+.ov .ov-pets .petlog-grid button:focus-visible{outline:1px solid var(--gold);outline-offset:1px}
+.ov .ov-pets .petlog-grid button:focus-visible img{opacity:1}
+.overview-pet-tip{display:grid;gap:3px;min-width:165px}
+.overview-pet-tip>strong{color:var(--gold);font-size:12px}
+.overview-pet-tip>small{color:var(--muted);font-size:10px}
+.overview-pet-tip>b{font-weight:500;font-size:11px}
+.overview-pet-record{display:grid;gap:5px;margin-top:5px;padding-top:7px;border-top:1px solid var(--line);line-height:1.5}
+@media(prefers-reduced-motion:reduce){.ov .ov-pets .petlog-grid button img{transition:none}}

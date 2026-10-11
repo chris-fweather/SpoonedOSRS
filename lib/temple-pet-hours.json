@@ -1,0 +1,456 @@
+{
+  "checked": "2026-10-05",
+  "source": "https://templeosrs.com/api/pets/hours.php",
+  "rows": [
+    {
+      "pet_name": "Pet chaos elemental",
+      "drop_rate": 300,
+      "kills_per_hour": 100,
+      "pet_hours": 3
+    },
+    {
+      "pet_name": "Pet dagannoth supreme",
+      "drop_rate": 5000,
+      "kills_per_hour": 88,
+      "pet_hours": 57
+    },
+    {
+      "pet_name": "Pet dagannoth prime",
+      "drop_rate": 5000,
+      "kills_per_hour": 88,
+      "pet_hours": 57
+    },
+    {
+      "pet_name": "Pet dagannoth rex",
+      "drop_rate": 5000,
+      "kills_per_hour": 88,
+      "pet_hours": 57
+    },
+    {
+      "pet_name": "Pet penance queen",
+      "drop_rate": 1000,
+      "kills_per_hour": 4,
+      "pet_hours": 250
+    },
+    {
+      "pet_name": "Pet kree'arra",
+      "drop_rate": 5000,
+      "kills_per_hour": 50,
+      "pet_hours": 100
+    },
+    {
+      "pet_name": "Pet general graardor",
+      "drop_rate": 5000,
+      "kills_per_hour": 60,
+      "pet_hours": 83
+    },
+    {
+      "pet_name": "Pet k'ril tsutsaroth",
+      "drop_rate": 5000,
+      "kills_per_hour": 65,
+      "pet_hours": 77
+    },
+    {
+      "pet_name": "Pet zilyana",
+      "drop_rate": 5000,
+      "kills_per_hour": 65,
+      "pet_hours": 77
+    },
+    {
+      "pet_name": "Baby mole",
+      "drop_rate": 3000,
+      "kills_per_hour": 125,
+      "pet_hours": 24
+    },
+    {
+      "pet_name": "Prince black dragon",
+      "drop_rate": 3000,
+      "kills_per_hour": 150,
+      "pet_hours": 20
+    },
+    {
+      "pet_name": "Kalphite princess",
+      "drop_rate": 3000,
+      "kills_per_hour": 60,
+      "pet_hours": 50
+    },
+    {
+      "pet_name": "Pet smoke devil",
+      "drop_rate": 3000,
+      "kills_per_hour": 110,
+      "pet_hours": 27
+    },
+    {
+      "pet_name": "Pet kraken",
+      "drop_rate": 3000,
+      "kills_per_hour": 100,
+      "pet_hours": 30
+    },
+    {
+      "pet_name": "Pet dark core",
+      "drop_rate": 5000,
+      "kills_per_hour": 65,
+      "pet_hours": 77
+    },
+    {
+      "pet_name": "Pet snakeling",
+      "drop_rate": 4000,
+      "kills_per_hour": 46,
+      "pet_hours": 87
+    },
+    {
+      "pet_name": "Chompy chick",
+      "drop_rate": 500,
+      "kills_per_hour": 300,
+      "pet_hours": 2
+    },
+    {
+      "pet_name": "Venenatis spiderling",
+      "drop_rate": 2800,
+      "kills_per_hour": 55,
+      "pet_hours": 51
+    },
+    {
+      "pet_name": "Callisto cub",
+      "drop_rate": 2800,
+      "kills_per_hour": 65,
+      "pet_hours": 43
+    },
+    {
+      "pet_name": "Vet'ion jr. ",
+      "drop_rate": 2800,
+      "kills_per_hour": 55,
+      "pet_hours": 51
+    },
+    {
+      "pet_name": "Scorpia's offspring",
+      "drop_rate": 2016,
+      "kills_per_hour": 130,
+      "pet_hours": 16
+    },
+    {
+      "pet_name": "Tzrek-jad",
+      "drop_rate": 67,
+      "kills_per_hour": 2.5,
+      "pet_hours": 27
+    },
+    {
+      "pet_name": "Hellpuppy",
+      "drop_rate": 3000,
+      "kills_per_hour": 65,
+      "pet_hours": 46
+    },
+    {
+      "pet_name": "Abyssal orphan",
+      "drop_rate": 2560,
+      "kills_per_hour": 50,
+      "pet_hours": 51
+    },
+    {
+      "pet_name": "Phoenix",
+      "drop_rate": 5000,
+      "kills_per_hour": 50,
+      "pet_hours": 100
+    },
+    {
+      "pet_name": "Olmlet",
+      "drop_rate": 53,
+      "kills_per_hour": 0.1008,
+      "pet_hours": 526
+    },
+    {
+      "pet_name": "Olmlet (CM)",
+      "drop_rate": 53,
+      "kills_per_hour": 0.1314,
+      "pet_hours": 403
+    },
+    {
+      "pet_name": "Skotos",
+      "drop_rate": 65,
+      "kills_per_hour": 1,
+      "pet_hours": 65
+    },
+    {
+      "pet_name": "Jal-nib-rek",
+      "drop_rate": 43,
+      "kills_per_hour": 1,
+      "pet_hours": 43
+    },
+    {
+      "pet_name": "Noon",
+      "drop_rate": 3000,
+      "kills_per_hour": 37,
+      "pet_hours": 81
+    },
+    {
+      "pet_name": "Vorki",
+      "drop_rate": 3000,
+      "kills_per_hour": 34,
+      "pet_hours": 88
+    },
+    {
+      "pet_name": "Lil' zik (NM)",
+      "drop_rate": 650,
+      "kills_per_hour": 3.2,
+      "pet_hours": 203
+    },
+    {
+      "pet_name": "Ikkle hydra",
+      "drop_rate": 3000,
+      "kills_per_hour": 30,
+      "pet_hours": 100
+    },
+    {
+      "pet_name": "Sraracha",
+      "drop_rate": 3000,
+      "kills_per_hour": 110,
+      "pet_hours": 27
+    },
+    {
+      "pet_name": "Youngllef (Regular)",
+      "drop_rate": 2000,
+      "kills_per_hour": 10,
+      "pet_hours": 200
+    },
+    {
+      "pet_name": "Youngllef (Corrupted)",
+      "drop_rate": 800,
+      "kills_per_hour": 7.2,
+      "pet_hours": 111
+    },
+    {
+      "pet_name": "Smolcano",
+      "drop_rate": 2250,
+      "kills_per_hour": 40,
+      "pet_hours": 56
+    },
+    {
+      "pet_name": "Little nightmare",
+      "drop_rate": 800,
+      "kills_per_hour": 3.75,
+      "pet_hours": 213
+    },
+    {
+      "pet_name": "Lil' creator",
+      "drop_rate": 12000,
+      "kills_per_hour": 430,
+      "pet_hours": 28
+    },
+    {
+      "pet_name": "Rift guardian",
+      "drop_rate": 1793283,
+      "kills_per_hour": 26363,
+      "pet_hours": 68
+    },
+    {
+      "pet_name": "Beaver",
+      "drop_rate": 261861,
+      "kills_per_hour": 2353,
+      "pet_hours": 111
+    },
+    {
+      "pet_name": "Rock golem",
+      "drop_rate": 209411,
+      "kills_per_hour": 1770,
+      "pet_hours": 118
+    },
+    {
+      "pet_name": "Baby chinchompa",
+      "drop_rate": 80283,
+      "kills_per_hour": 809,
+      "pet_hours": 99
+    },
+    {
+      "pet_name": "Rocky",
+      "drop_rate": 34015,
+      "kills_per_hour": 1915,
+      "pet_hours": 18
+    },
+    {
+      "pet_name": "Tangleroot",
+      "drop_rate": 6525,
+      "kills_per_hour": 80,
+      "pet_hours": 82
+    },
+    {
+      "pet_name": "Heron",
+      "drop_rate": 76174,
+      "kills_per_hour": 1100,
+      "pet_hours": 69
+    },
+    {
+      "pet_name": "Giant squirrel",
+      "drop_rate": 7304,
+      "kills_per_hour": 55,
+      "pet_hours": 133
+    },
+    {
+      "pet_name": "Herbi",
+      "drop_rate": 6500,
+      "kills_per_hour": 68,
+      "pet_hours": 96
+    },
+    {
+      "pet_name": "Bloodhound",
+      "drop_rate": 1000,
+      "kills_per_hour": 10,
+      "pet_hours": 273
+    },
+    {
+      "pet_name": "Tiny tempor",
+      "drop_rate": 8000,
+      "kills_per_hour": 80,
+      "pet_hours": 100
+    },
+    {
+      "pet_name": "Lil' zik (HM)",
+      "drop_rate": 500,
+      "kills_per_hour": 2.8,
+      "pet_hours": 179
+    },
+    {
+      "pet_name": "Little nightmare (Phosani)",
+      "drop_rate": 1400,
+      "kills_per_hour": 10,
+      "pet_hours": 140
+    },
+    {
+      "pet_name": "Nexling",
+      "drop_rate": 4100,
+      "kills_per_hour": 23.5,
+      "pet_hours": 174
+    },
+    {
+      "pet_name": "Abyssal protector",
+      "drop_rate": 4000,
+      "kills_per_hour": 39,
+      "pet_hours": 103
+    },
+    {
+      "pet_name": "Tumeken's guardian",
+      "drop_rate": 371,
+      "kills_per_hour": 2.5,
+      "pet_hours": 148
+    },
+    {
+      "pet_name": "Muphin",
+      "drop_rate": 2500,
+      "kills_per_hour": 30,
+      "pet_hours": 83
+    },
+    {
+      "pet_name": "Wisp",
+      "drop_rate": 2000,
+      "kills_per_hour": 22,
+      "pet_hours": 91
+    },
+    {
+      "pet_name": "Butch",
+      "drop_rate": 3000,
+      "kills_per_hour": 39,
+      "pet_hours": 77
+    },
+    {
+      "pet_name": "Baron",
+      "drop_rate": 2500,
+      "kills_per_hour": 39,
+      "pet_hours": 64
+    },
+    {
+      "pet_name": "Lil'viathan",
+      "drop_rate": 2500,
+      "kills_per_hour": 31,
+      "pet_hours": 81
+    },
+    {
+      "pet_name": "Scurry",
+      "drop_rate": 3000,
+      "kills_per_hour": 65,
+      "pet_hours": 46
+    },
+    {
+      "pet_name": "Smol Heredit",
+      "drop_rate": 100,
+      "kills_per_hour": 2.7,
+      "pet_hours": 37
+    },
+    {
+      "pet_name": "Quetzin",
+      "drop_rate": 1000,
+      "kills_per_hour": 24,
+      "pet_hours": 42
+    },
+    {
+      "pet_name": "Nid",
+      "drop_rate": 3000,
+      "kills_per_hour": 45,
+      "pet_hours": 67
+    },
+    {
+      "pet_name": "Nid (Destroy)",
+      "drop_rate": 1500,
+      "kills_per_hour": 45,
+      "pet_hours": 33
+    },
+    {
+      "pet_name": "Huberte",
+      "drop_rate": 400,
+      "kills_per_hour": 8.5,
+      "pet_hours": 47
+    },
+    {
+      "pet_name": "Moxi",
+      "drop_rate": 3000,
+      "kills_per_hour": 84,
+      "pet_hours": 36
+    },
+    {
+      "pet_name": "Bran",
+      "drop_rate": 3000,
+      "kills_per_hour": 60,
+      "pet_hours": 50
+    },
+    {
+      "pet_name": "Bran (Sacrifice)",
+      "drop_rate": 1500,
+      "kills_per_hour": 60,
+      "pet_hours": 25
+    },
+    {
+      "pet_name": "Yami (Contract)",
+      "drop_rate": 100,
+      "kills_per_hour": 15,
+      "pet_hours": 7
+    },
+    {
+      "pet_name": "Yami",
+      "drop_rate": 2500,
+      "kills_per_hour": 20,
+      "pet_hours": 125
+    },
+    {
+      "pet_name": "Dom",
+      "drop_rate": 250,
+      "kills_per_hour": 32,
+      "pet_hours": 10
+    },
+    {
+      "pet_name": "Soup",
+      "drop_rate": 4662,
+      "kills_per_hour": 90,
+      "pet_hours": 52
+    },
+    {
+      "pet_name": "Gull",
+      "drop_rate": 3000,
+      "kills_per_hour": 100,
+      "pet_hours": 30
+    },
+    {
+      "pet_name": "Beef",
+      "drop_rate": 1000,
+      "kills_per_hour": 250,
+      "pet_hours": 4
+    }
+  ]
+}

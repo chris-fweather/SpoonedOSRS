@@ -1,0 +1,7 @@
+{
+  "white-scimitar.png":{"itemId":6611,"source":"https://static.runelite.net/cache/item/icon/6611.png","credit":"Jagex inventory sprite via RuneLite cache"},
+  "dragon-scimitar.png":{"itemId":4587,"source":"https://static.runelite.net/cache/item/icon/4587.png","credit":"Jagex inventory sprite via RuneLite cache"},
+  "gilded-scimitar.png":{"itemId":12389,"source":"https://static.runelite.net/cache/item/icon/12389.png","credit":"Jagex inventory sprite via RuneLite cache"},
+  "rune":{"asset":"/drops/Rune_scimitar.png","source":"https://oldschool.runescape.wiki/w/Rune_scimitar"},
+  "infernal-lava.png":{"source":"/models/look/items/21295.gltf","imageIndex":1,"credit":"Jagex Infernal cape texture from the existing model export","note":"Unmodified embedded PNG. The Owner rank is an original CSS treatment on the dragon scimitar blade, not an in-game item or moderator rank."}
+}

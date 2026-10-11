@@ -1,0 +1,33 @@
+.char-name .profile-identity{display:inline-flex;align-items:flex-start;justify-content:center;max-width:100%;gap:4px}.char-name .profile-prefixes{display:inline-flex;align-items:center;flex:none;gap:2px;padding-top:2px}.char-name .profile-name-lines{min-width:0;text-align:left}.char-name .profile-name-lines>b{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px;font-size:clamp(12px,6.2cqi,17px);line-height:1.35}.char-name .profile-name-lines .achievement-title{margin:1px 0 0;text-align:left}.account-mode-badge{display:inline-flex;align-items:center;vertical-align:middle;flex:none}.char-name .profile-prefixes .staff-rank{margin:0}.char-name .profile-name-lines .rs-title{font-size:inherit}
+
+.char-name .profile-prefixes{padding-top:0;align-self:flex-start;height:23px;align-items:center}
+.char-name .profile-prefixes .rank-icon{position:relative;display:block;flex:0 0 23px;width:23px;height:23px}
+.char-name .profile-prefixes .rank-weapon{position:absolute;inset:0;width:23px;height:23px;transform:none}
+.char-name .profile-name-lines .achievement-title,.char-name .profile-name-lines .preview-title{display:flex;justify-content:flex-start;padding-left:0;margin-left:0}
+.profile-studio .studio-identity{width:100%;text-align:center}
+.profile-studio .studio-identity .profile-name-lines>b{font-family:var(--rs);color:#eeeae0;line-height:23px;gap:0 3px}
+.rank-icon .rank-weapon>img{object-fit:contain;width:100%;height:100%}
+/* One shared font and line box keeps Sir level with the name and donor suffix. */
+.char-name .profile-identity{font-family:var(--rs);font-size:clamp(12px,6.2cqi,17px);line-height:23px}
+.char-name .profile-name-lines>b{font-size:inherit;line-height:23px}
+.char-name .profile-prefixes .staff-rank{display:inline-flex;align-items:center;height:23px;font:inherit}
+.char-name .profile-prefixes .staff-word{font:inherit;line-height:23px;display:block;margin:0}
+
+.profile-studio .studio-identity .profile-name-lines{text-align:center}.profile-studio .studio-identity .profile-name-lines>b,.profile-studio .studio-identity .profile-name-lines .achievement-title{justify-content:center}
+
+.profile-studio .studio-identity .profile-identity{gap:4px}
+.profile-studio .studio-identity .profile-prefixes{width:auto;justify-content:flex-end}
+.profile-studio .studio-identity .profile-name-lines{text-align:left;flex:0 1 auto}
+.profile-studio .studio-identity .profile-name-lines>b,.profile-studio .studio-identity .profile-name-lines .achievement-title{justify-content:flex-start}
+/* The scimitar and account badge are small marks on the name line, beside the name block, so the achievement
+   title below starts where the username starts. The scimitar is a little larger than the badge so it stays obvious. */
+.char-name .profile-prefixes{align-self:flex-start;height:23px;padding-top:0}
+.char-name .profile-prefixes .rank-icon{flex:0 0 21px;width:21px;height:21px;min-height:0}
+.char-name .profile-prefixes .rank-weapon{width:21px;height:21px}
+/* The account badge sits level with the username, in its own column so the title below starts where the username does.
+   It scales with the name; the scimitar stays centred on the whole block. */
+.char-name .profile-mode{display:inline-flex;align-items:center;align-self:flex-start;flex:none;height:23px}.char-name .profile-mode:empty{display:none}
+.char-name .profile-prefixes:empty{display:none}
+/* The achievement title centres under the username (and any donation title), never under the icons. */
+.char-name .profile-name-lines{text-align:center}.char-name .profile-name-lines>b,.profile-studio .studio-identity .profile-name-lines>b{justify-content:center}
+.char-name .profile-name-lines .achievement-title,.char-name .profile-name-lines .preview-title,.profile-studio .studio-identity .profile-name-lines .achievement-title{justify-content:center}

@@ -1,0 +1,1 @@
+{"name":"spooned-discord-role-bridge","private":true,"type":"module","engines":{"node":">=22.13.0"},"scripts":{"start":"node --env-file=.env index.mjs","test":"node --test *.test.mjs"},"dependencies":{"discord.js":"14.27.0"}}

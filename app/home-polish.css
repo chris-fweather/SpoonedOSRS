@@ -1,0 +1,17 @@
+.home-title-mascot{display:flex;align-items:center;gap:20px;position:relative}.home-title-mascot h1{min-width:0;flex:1}.home-title-mascot>img{width:90px;height:90px;object-fit:contain;image-rendering:pixelated;flex:none;filter:drop-shadow(0 5px 7px #0008)}@media(max-width:600px){.home-title-mascot{gap:10px}.home-title-mascot>img{width:60px;height:60px}}
+
+/* Shared castle artwork keeps the landing page and community banners in one world. */
+.home-page .home-discover{background:linear-gradient(90deg,#161611df 0%,#171611aa 47%,#15152230 76%),url('/brand/community-castle.webp') center/cover}
+.home-page .home-search-area{padding:28px 32px;gap:14px}
+.home-page .home-search-area>p{max-width:550px;text-wrap:pretty;color:#d3cbbb;text-shadow:0 1px 3px #000}
+.home-page .home-start{background:linear-gradient(90deg,#15141bc9,#15141b92);padding:22px 24px}
+.home-page .home-start ol,.home-page .home-start>small{color:#c5bfaf}
+.home-page .home-title-mascot>img{width:72px;height:72px}
+@media(max-width:650px){.home-page .home-search-area{padding:24px 20px}.home-page .home-title-mascot>img{width:54px;height:54px}.home-page .home-discover{background-position:70% center}}
+
+.home-page .home-discover{background:var(--panel)}
+.home-page .home-search-area{background:linear-gradient(90deg,#161611d9,#1716118c 60%,#15152230),url('/brand/community-castle.webp') center/cover;border-radius:7px 0 0 7px}
+.home-page .home-start{background:var(--sunk)}
+.home-page .home-title-mascot>img,.home-page .home-start>img{image-rendering:auto}
+.home-page .home-title-mascot>img{width:84px;height:72px}
+@media(max-width:650px){.home-page .home-search-area{border-radius:7px 7px 0 0}.home-page .home-title-mascot>img{width:58px;height:52px}}

@@ -1,0 +1,11 @@
+/** Local orthographic SVG portraits of the same cache heads used by the 3D character. */
+import fs from 'node:fs';
+import {skinColor} from '../lib/skin-palette.ts';
+import {SKIN_COLORS} from '../lib/game-colors.ts';
+const root='public/portraits';fs.mkdirSync(root,{recursive:true});
+function attr(g,id){const a=g.accessors[id],v=g.bufferViews[a.bufferView],b=Buffer.from(g.buffers[v.buffer].uri.split(',')[1],'base64');return Array.from({length:a.count*3},(_,i)=>b.readFloatLE((v.byteOffset??0)+(a.byteOffset??0)+i*4));}
+const hex=rgb=>'#'+rgb.map(c=>Math.round(Math.max(0,Math.min(1,c<=.0031308?12.92*c:1.055*c**(1/2.4)-.055))*255).toString(16).padStart(2,'0')).join('');
+let count=0;for(const body of ['male','female'])for(const hair of ['brown','blonde','black','red','grey']){
+ const g=JSON.parse(fs.readFileSync(`public/models/look/appearance/${body}-${hair}.gltf`)),jaw=JSON.parse(fs.readFileSync(`public/models/look/${body==='male'?'kits/14.gltf':'female/kits/296.gltf'}`)),p=g.meshes[0].primitives[0],jp=jaw.meshes[0].primitives[0],pos=[...attr(g,p.attributes.POSITION),...attr(jaw,jp.attributes.POSITION)],colors=[...attr(g,p.attributes.COLOR_0),...attr(jaw,jp.attributes.COLOR_0)],normals=[...attr(g,p.attributes.NORMAL),...attr(jaw,jp.attributes.NORMAL)],xs=pos.filter((_,i)=>i%3===0),ys=pos.filter((_,i)=>i%3===1),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),scale=Math.min(32/(maxX-minX),39/(maxY-minY)),cx=(minX+maxX)/2;
+ for(const skin of Object.keys(SKIN_COLORS)){const faces=[];for(let i=0;i<pos.length;i+=9){const points=[],rgb=[0,0,0];let z=0,light=0;for(let v=0;v<3;v++){const j=i+v*3;points.push(`${(20+(pos[j]-cx)*scale).toFixed(2)},${(3+(maxY-pos[j+1])*scale).toFixed(2)}`);z+=pos[j+2];const color=skinColor(colors.slice(j,j+3),skin)??colors.slice(j,j+3);color.forEach((c,k)=>rgb[k]+=c/3);light+=Math.max(0,(-.25*normals[j]+.45*normals[j+1]+normals[j+2])/1.13)/3;}faces.push({z,svg:`<polygon points="${points.join(' ')}" fill="${hex(rgb.map(c=>c*(.72+.33*light)))}"/>`});}faces.sort((a,b)=>a.z-b.z);fs.writeFileSync(`${root}/${body}-${hair}-${skin}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" role="img"><title>Character base appearance</title>${faces.map(f=>f.svg).join('')}</svg>`);count++;}
+}console.log(`Exported ${count} local cache-head portraits.`);

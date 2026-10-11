@@ -1,0 +1,2 @@
+/* One badge size wherever a name shows it: 13px tall, in the artwork's own proportions. */
+.account-mode-badge{display:inline-flex;align-items:center;flex:none;cursor:help}.account-mode-badge>img{display:block;height:13px;width:auto}

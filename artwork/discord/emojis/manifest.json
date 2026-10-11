@@ -1,0 +1,268 @@
+[
+  {
+    "name": "pets",
+    "file": "01_main/pets.png",
+    "source": "brand/rocky-mascot.webp",
+    "width": 128,
+    "height": 128,
+    "bytes": 13882
+  },
+  {
+    "name": "clogs",
+    "file": "01_main/clogs.png",
+    "source": "icons/navigation/collection-log-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 22097
+  },
+  {
+    "name": "quests",
+    "file": "01_main/quests.png",
+    "source": "icons/navigation/quest-point-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 30169
+  },
+  {
+    "name": "diaries",
+    "file": "01_main/diaries.png",
+    "source": "icons/navigation/achievement-diaries-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 30530
+  },
+  {
+    "name": "leaderboard",
+    "file": "01_main/leaderboard.png",
+    "source": "icons/navigation/stats-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 22327
+  },
+  {
+    "name": "combat",
+    "file": "02_more_icons/combat.png",
+    "source": "icons/navigation/combat-achievements.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 23491
+  },
+  {
+    "name": "support",
+    "file": "02_more_icons/support.png",
+    "source": "icons/community/support-coins.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 24591
+  },
+  {
+    "name": "supporters",
+    "file": "02_more_icons/supporters.png",
+    "source": "icons/community/supporters-heart.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 18479
+  },
+  {
+    "name": "connections",
+    "file": "02_more_icons/connections.png",
+    "source": "icons/community/settings-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 17048
+  },
+  {
+    "name": "friends_chat",
+    "file": "02_more_icons/friends_chat.png",
+    "source": "icons/community/friends-chat.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 23054
+  },
+  {
+    "name": "clan_chat",
+    "file": "02_more_icons/clan_chat.png",
+    "source": "icons/community/clan-chat.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 23586
+  },
+  {
+    "name": "friends_list",
+    "file": "02_more_icons/friends_list.png",
+    "source": "icons/community/friends-list.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 25987
+  },
+  {
+    "name": "skills",
+    "file": "02_more_icons/skills.png",
+    "source": "icons/navigation/skills-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 22298
+  },
+  {
+    "name": "combat_tasks",
+    "file": "02_more_icons/combat_tasks.png",
+    "source": "icons/navigation/combat-achievements-icon.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 29179
+  },
+  {
+    "name": "collection_log",
+    "file": "02_more_icons/collection_log.png",
+    "source": "icons/navigation/collection-log.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 21181
+  },
+  {
+    "name": "max_cape",
+    "file": "02_more_icons/max_cape.png",
+    "source": "icons/ranks/max-cape.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 19204
+  },
+  {
+    "name": "rank_helper",
+    "file": "02_more_icons/rank_helper.png",
+    "source": "icons/ranks/adamant-scimitar.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 11985
+  },
+  {
+    "name": "rank_moderator",
+    "file": "02_more_icons/rank_moderator.png",
+    "source": "icons/ranks/rune-scimitar.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 12897
+  },
+  {
+    "name": "rank_admin",
+    "file": "02_more_icons/rank_admin.png",
+    "source": "icons/ranks/dragon-scimitar.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 12367
+  },
+  {
+    "name": "rank_gilded",
+    "file": "02_more_icons/rank_gilded.png",
+    "source": "icons/ranks/gilded-scimitar.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 13475
+  },
+  {
+    "name": "combat_easy",
+    "file": "02_more_icons/combat_easy.png",
+    "source": "icons/tiers/ca-easy.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 14270
+  },
+  {
+    "name": "combat_medium",
+    "file": "02_more_icons/combat_medium.png",
+    "source": "icons/tiers/ca-medium.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 14438
+  },
+  {
+    "name": "combat_hard",
+    "file": "02_more_icons/combat_hard.png",
+    "source": "icons/tiers/ca-hard.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 13121
+  },
+  {
+    "name": "combat_elite",
+    "file": "02_more_icons/combat_elite.png",
+    "source": "icons/tiers/ca-elite.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 14753
+  },
+  {
+    "name": "combat_master",
+    "file": "02_more_icons/combat_master.png",
+    "source": "icons/tiers/ca-master.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 14735
+  },
+  {
+    "name": "combat_grandmaster",
+    "file": "02_more_icons/combat_grandmaster.png",
+    "source": "icons/tiers/ca-grandmaster.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 16086
+  },
+  {
+    "name": "quest_novice",
+    "file": "02_more_icons/quest_novice.png",
+    "source": "icons/tiers/novice.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 19807
+  },
+  {
+    "name": "quest_intermediate",
+    "file": "02_more_icons/quest_intermediate.png",
+    "source": "icons/tiers/intermediate.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 24168
+  },
+  {
+    "name": "quest_experienced",
+    "file": "02_more_icons/quest_experienced.png",
+    "source": "icons/tiers/experienced.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 20076
+  },
+  {
+    "name": "quest_master",
+    "file": "02_more_icons/quest_master.png",
+    "source": "icons/tiers/master.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 19629
+  },
+  {
+    "name": "quest_grandmaster",
+    "file": "02_more_icons/quest_grandmaster.png",
+    "source": "icons/tiers/grandmaster.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 21162
+  },
+  {
+    "name": "quest_special",
+    "file": "02_more_icons/quest_special.png",
+    "source": "icons/tiers/special.png",
+    "width": 128,
+    "height": 128,
+    "bytes": 18400
+  },
+  {
+    "name": "rank_owner",
+    "file": "02_more_icons/rank_owner.gif",
+    "source": "icons/ranks/dragon-scimitar.png + ui/infernal-lava.png + rank-lava-flow CSS",
+    "width": 128,
+    "height": 128,
+    "bytes": 104171,
+    "frames": 50,
+    "durationMs": 5000
+  }
+]

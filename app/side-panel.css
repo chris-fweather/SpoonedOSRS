@@ -1,0 +1,21 @@
+/* Side details reflow within their column, including long sources and XP values. */
+.pop .pop-scroll{min-width:0;overflow-x:hidden;overflow-y:auto;overflow-wrap:anywhere}
+.pop .pop-scroll>*{min-width:0;max-width:100%}
+.pop .pop-dl>div{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.25fr);align-items:start;gap:8px}
+.pop .pop-dl dt,.pop .pop-dl dd{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.pop .odds-ms{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pop .odds-ms>div{min-width:0;padding:4px 2px}
+.pop .odds-ms b{font-size:14px;white-space:normal;text-align:center;overflow-wrap:anywhere}
+.pop .temple-comparison>div{display:grid;grid-template-columns:minmax(0,1fr) auto}
+.pop .temple-comparison span{min-width:0}
+.pop .pop-links{flex-wrap:wrap}
+.pop .pop-links .btn{max-width:100%;white-space:normal}
+.pop .driest-person>div{min-width:0}
+.pop .driest-line{flex-wrap:wrap}
+.pop .fine,.pop a,.pop .pop-sub{overflow-wrap:anywhere}
+
+/* Give the three concise method rows room for a single-line value. */
+.pop .pop-dl>div:has(.stat-single-line){grid-template-columns:auto minmax(0,1fr)}
+.pop .pop-dl dd.stat-single-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal}
+
+.pop .effort-stat-help{display:inline-flex;align-items:center;gap:5px;cursor:help}.effort-stat-help>svg{flex:none;color:var(--dim)}.effort-stat-help:focus-visible{outline:1px solid var(--gold);outline-offset:3px;border-radius:2px}.effort-tooltip{display:grid;gap:7px;line-height:1.6}.effort-tooltip>strong{color:var(--gold)}

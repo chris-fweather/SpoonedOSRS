@@ -1,0 +1,21 @@
+/* Same synced rank thresholds and metals as boss activities: copper bronze, cool silver, bright gold, glowing record holder.
+   Each tier differs in hue, not only brightness, so bronze and gold stay distinct on the dark tiles. */
+.skill-rank-bronze{--skill-rank-glow:drop-shadow(0 0 2px #c0662e) drop-shadow(0 0 5px #a4501f99);--skill-rank-edge:#b8622dcc;--skill-rank-wash:#b8622d1f}
+.skill-rank-silver{--skill-rank-glow:drop-shadow(0 0 2px #e4f1f8) drop-shadow(0 0 5px #a9d4ea99);--skill-rank-edge:#c9dbe5b3;--skill-rank-wash:#c9dbe514}
+.skill-rank-gold{--skill-rank-glow:drop-shadow(0 0 2px #ffd34d) drop-shadow(0 0 6px #f0b42acc);--skill-rank-edge:#f2c23ad9;--skill-rank-wash:#f2c23a1c}
+.skill-rank-champion{--skill-rank-glow:drop-shadow(0 0 2px #fff6c6) drop-shadow(0 0 7px #ffd24f);--skill-rank-edge:#ffe38ae6;--skill-rank-wash:#ffd24f26}
+.site .preview-skill[class*="skill-rank-"]{border-color:var(--skill-rank-edge);background:linear-gradient(180deg,var(--skill-rank-wash),transparent 70%),var(--sunk)}
+.site .sk[class*="skill-rank-"]{box-shadow:0 0 0 1px var(--skill-rank-edge) inset;background:linear-gradient(180deg,var(--skill-rank-wash),transparent 75%),linear-gradient(180deg,#2c2822,#221f1a)}
+.site .skill-rank-art{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;overflow:visible}
+.site .skill-rank-art>img{width:22px;height:22px;object-fit:contain;image-rendering:pixelated}
+.site [class*="skill-rank-"]>.skill-rank-art>img{filter:var(--skill-rank-glow)}
+.site .skill-rank-champion>.skill-rank-art>img{animation:hiscore-champion 2.4s ease-in-out infinite}
+.site .skill-rank-crown{flex:none;width:auto;height:13px;filter:drop-shadow(0 1px 1px #000) drop-shadow(0 0 3px #e3ad4380)}
+/* Previews: icon, level, then the crown at the right edge. Profiles keep icon and level at the ends, so the crown sits between them. */
+.site .preview-skill>.skill-rank-crown{order:3;margin-left:auto}
+.site .preview-skill>.skill-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.site .preview-skill>.skill-rank-art{flex:0 0 20px;width:20px;height:20px}
+.site .preview-skill .skill-rank-art>img{width:19px;height:19px}
+.skill-rank-description{color:var(--gold);font-size:11px}
+@media(max-width:480px){.site .preview-skill>.skill-name{display:none}}
+@media(prefers-reduced-motion:reduce){.site .skill-rank-champion>.skill-rank-art>img{animation:none}}

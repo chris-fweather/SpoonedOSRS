@@ -1,0 +1,5 @@
+.hdr .hdr-in .brand{align-items:center;gap:10px}.hdr .hdr-in .brand>img{display:block;flex:none;width:42px;height:42px;object-fit:contain;image-rendering:pixelated}.hdr .hdr-in .brand>span{display:block;line-height:1.05}@media(max-width:650px){.hdr .hdr-in .brand>img{width:36px;height:36px}.hdr .hdr-in .brand{gap:8px}}
+
+.hdr{background:linear-gradient(90deg,#171612f5 0%,#171612ec 55%,#191a25cf),url('/brand/community-castle.webp') center 38%/cover}
+.hdr .hdr-in .brand>img{width:52px;height:44px;image-rendering:auto;filter:drop-shadow(0 2px 3px #0009)}
+@media(max-width:650px){.hdr .hdr-in .brand>img{width:44px;height:38px}}

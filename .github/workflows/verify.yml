@@ -1,0 +1,38 @@
+name: Verify
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Cold TypeScript checks include the generated game-data catalogues.
+      NODE_OPTIONS: --max-old-space-size=4096
+      # Example deployment identifiers: CI builds and tests never use the real service's IDs.
+      D1_DATABASE_ID: 00000000-0000-4000-8000-000000000000
+      DISCORD_CLIENT_ID: '100000000000000001'
+      DISCORD_GUILD_ID: '100000000000000002'
+      DISCORD_PUBLIC_KEY: '0000000000000000000000000000000000000000000000000000000000000000'
+      OWNER_DISCORD_IDS: '100000000000000003,100000000000000004'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci --include=dev --include=optional
+      - run: npm run release:verify
+      # Discord login and all-source sync against the built Worker, with upstreams mocked.
+      - run: npm run test:beta
+      # Staff tools, moderation, guides, privacy and account features against the built Worker.
+      - run: npm run test:integration

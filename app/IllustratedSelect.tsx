@@ -1,0 +1,10 @@
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {ChevronDown,Check,Search} from 'lucide-react';
+export type PictureOption={value:string;label:string;image?:string};
+export function IllustratedSelect({label,value,options,onChange,placeholder}:{label:string;value:string;options:PictureOption[];onChange:(value:string)=>void;placeholder?:string}){
+ const [query,setQuery]=useState('');const menu=useRef<HTMLDetailsElement>(null);const trigger=useRef<HTMLElement>(null);
+ const selected=options.find(o=>o.value===value)??(placeholder?undefined:options[0]);
+ useEffect(()=>{const close=(e:PointerEvent)=>{if(menu.current&&!menu.current.contains(e.target as Node))menu.current.open=false;};document.addEventListener('pointerdown',close);return()=>document.removeEventListener('pointerdown',close);},[]);
+ return <div className="picture-field"><span>{label}</span><details className="picture-select" ref={menu} onToggle={()=>setQuery('')} onKeyDown={e=>{if(e.key==='Escape'){e.preventDefault();if(menu.current)menu.current.open=false;trigger.current?.focus();}}}><summary ref={trigger} aria-label={`${label}: ${selected?.label??placeholder??'Choose'}`}>{selected?.image&&<img src={selected.image} alt=""/>}<span className={selected?undefined:'picture-placeholder-text'}>{selected?.label??placeholder??'Choose'}</span><ChevronDown size={17}/></summary><div className="picture-menu"><label className="search"><Search size={16}/><input aria-label={`Search ${label.toLowerCase()} options`} placeholder={`Find ${label.toLowerCase()}…`} value={query} onChange={e=>setQuery(e.target.value)}/></label><div className="picture-options">{options.filter(o=>o.label.toLowerCase().includes(query.toLowerCase())).map(o=><button type="button" key={o.value} aria-pressed={o.value===value} onClick={()=>{onChange(o.value);if(menu.current)menu.current.open=false;trigger.current?.focus();}}>{o.image?<img src={o.image} alt=""/>:<span className="picture-placeholder"/>}<span>{o.label}</span>{o.value===value&&<Check size={16}/>}</button>)}{!options.some(o=>o.label.toLowerCase().includes(query.toLowerCase()))&&<p>No matching options.</p>}</div></div></details></div>;
+}

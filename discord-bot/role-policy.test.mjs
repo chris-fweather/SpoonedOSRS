@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {parseRoleMap,roleDiff,validateEntitlement} from './role-policy.mjs';
+const guild='10000000000000000',mod='20000000000000000',support='30000000000000000';
+test('role sync removes only managed roles and grants server entitlements',()=>{assert.deepEqual(roleDiff({moderator:mod,supporter:support},['supporter'],[guild,mod,'40000000000000000']),{remove:[mod],add:[support]});});
+test('maps reject everyone, duplicate roles and arbitrary entitlements',()=>{for(const map of [{supporter:guild},{helper:mod,admin:mod},{arbitrary:mod}])assert.throws(()=>parseRoleMap(JSON.stringify(map),guild));});
+test('invalid website response cannot request arbitrary roles or mention nicknames',()=>{assert.throws(()=>validateEntitlement({id:guild,roles:['administrator'],nickname:null}));assert.throws(()=>validateEntitlement({id:guild,roles:[],nickname:'@everyone'}));assert.deepEqual(validateEntitlement({id:guild,roles:['supporter'],nickname:'Player One'}).roles,['supporter']);});

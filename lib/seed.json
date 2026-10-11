@@ -1,0 +1,3437 @@
+{
+  "username": "Obifloat",
+  "pets": [
+    {
+      "id": "11995",
+      "name": "Pet chaos elemental",
+      "category": "Bosses",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Chaos Elemental",
+          "kc": 292,
+          "rate": 300,
+          "kph": 100,
+          "activity": "Chaos Elemental",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet chaos elemental",
+      "referenceHours": 3
+    },
+    {
+      "id": "12643",
+      "name": "Pet Dagannoth Supreme",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Dagannoth Supreme",
+          "kc": 1,
+          "rate": 5000.0,
+          "kph": 88,
+          "activity": "Dagannoth Supreme",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet dagannoth supreme",
+      "referenceHours": 57
+    },
+    {
+      "id": "12644",
+      "name": "Pet Dagannoth Prime",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Dagannoth Prime",
+          "kc": 2,
+          "rate": 5000.0,
+          "kph": 88,
+          "activity": "Dagannoth Prime",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet dagannoth prime",
+      "referenceHours": 57
+    },
+    {
+      "id": "12645",
+      "name": "Pet Dagannoth Rex",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Dagannoth Rex",
+          "kc": 1,
+          "rate": 5000.0,
+          "kph": 88,
+          "activity": "Dagannoth Rex",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet dagannoth rex",
+      "referenceHours": 57
+    },
+    {
+      "id": "12703",
+      "name": "Pet Penance Queen",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Penance",
+          "kc": null,
+          "rate": 1000.0,
+          "kph": 4,
+          "activity": "Penance",
+          "unit": "kills",
+          "source": "Spreadsheet"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet penance queen",
+      "referenceHours": 250
+    },
+    {
+      "id": "12649",
+      "name": "Pet Kree'arra",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Kree'Arra",
+          "kc": 1,
+          "rate": 5000.0,
+          "kph": 50,
+          "activity": "Kree'Arra",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet kree'arra",
+      "referenceHours": 100
+    },
+    {
+      "id": "12650",
+      "name": "Pet General Graardor",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "General Graardor",
+          "kc": 1,
+          "rate": 5000.0,
+          "kph": 60,
+          "activity": "General Graardor",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet general graardor",
+      "referenceHours": 83
+    },
+    {
+      "id": "12652",
+      "name": "Pet K'ril Tsutsaroth",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "K'ril Tsutsaroth",
+          "kc": 2,
+          "rate": 5000.0,
+          "kph": 65,
+          "activity": "K'ril Tsutsaroth",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet k'ril tsutsaroth",
+      "referenceHours": 77
+    },
+    {
+      "id": "12651",
+      "name": "Pet Zilyana",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Commander Zilyana",
+          "kc": 1,
+          "rate": 5000.0,
+          "kph": 65,
+          "activity": "Commander Zilyana",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet zilyana",
+      "referenceHours": 77
+    },
+    {
+      "id": "12646",
+      "name": "Baby Mole",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Giant Mole",
+          "kc": 25,
+          "rate": 3000.0,
+          "kph": 125,
+          "activity": "Giant Mole",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Baby mole",
+      "referenceHours": 24
+    },
+    {
+      "id": "12653",
+      "name": "Prince Black Dragon",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "King black dragon",
+          "kc": 10,
+          "rate": 3000.0,
+          "kph": 150,
+          "activity": "King black dragon",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Prince black dragon",
+      "referenceHours": 20
+    },
+    {
+      "id": "12647",
+      "name": "Kalphite Princess",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Kalphite Queen",
+          "kc": 61,
+          "rate": 3000.0,
+          "kph": 60,
+          "activity": "Kalphite Queen",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Kalphite princess",
+      "referenceHours": 50
+    },
+    {
+      "id": "12648",
+      "name": "Pet Smoke Devil",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Thermonuclear smoke devil",
+          "kc": 5001,
+          "rate": 3000.0,
+          "kph": 110,
+          "activity": "Thermonuclear smoke devil",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet smoke devil",
+      "referenceHours": 27
+    },
+    {
+      "id": "12655",
+      "name": "Pet Kraken",
+      "category": "Bosses",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Kraken",
+          "kc": 1916,
+          "rate": 3000.0,
+          "kph": 100,
+          "activity": "Kraken",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet kraken",
+      "referenceHours": 30
+    },
+    {
+      "id": "12816",
+      "name": "Pet dark core",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Corporeal Beast",
+          "kc": 12,
+          "rate": 5000.0,
+          "kph": 65,
+          "activity": "Corporeal Beast",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet dark core",
+      "referenceHours": 77
+    },
+    {
+      "id": "12921",
+      "name": "Pet Snakeling",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Zulrah",
+          "kc": 39,
+          "rate": 4000.0,
+          "kph": 46,
+          "activity": "Zulrah",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Pet snakeling",
+      "referenceHours": 87
+    },
+    {
+      "id": "13071",
+      "name": "Chompy chick",
+      "category": "Bosses",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Chompy",
+          "kc": null,
+          "rate": 500.0,
+          "kph": 300,
+          "activity": "Chompy",
+          "unit": "kills",
+          "source": "Spreadsheet"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Chompy chick",
+      "referenceHours": 2
+    },
+    {
+      "id": "13177",
+      "name": "Venenatis spiderling",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Venenatis",
+          "kc": 0,
+          "rate": 2000.0,
+          "kph": 55,
+          "activity": "Venenatis",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Venenatis spiderling (Spindel)",
+          "kc": 1,
+          "rate": 2800.0,
+          "kph": 55,
+          "activity": "Spindel",
+          "unit": "attempts",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Venenatis spiderling",
+      "referenceHours": 51
+    },
+    {
+      "id": "13178",
+      "name": "Callisto cub",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Callisto",
+          "kc": 0,
+          "rate": 2000.0,
+          "kph": 65,
+          "activity": "Callisto",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Callisto cub (Artio)",
+          "kc": 1,
+          "rate": 2800.0,
+          "kph": 65,
+          "activity": "Artio",
+          "unit": "attempts",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Callisto cub",
+      "referenceHours": 43
+    },
+    {
+      "id": "13179",
+      "name": "Vet'ion jr.",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Vet'ion",
+          "kc": 0,
+          "rate": 2000.0,
+          "kph": 55,
+          "activity": "Vet'ion",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Vet'ion jr. (Calvar'ion)",
+          "kc": 1,
+          "rate": 2800.0,
+          "kph": 55,
+          "activity": "Calvar'ion",
+          "unit": "attempts",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Vet'ion jr.",
+      "referenceHours": 51
+    },
+    {
+      "id": "13181",
+      "name": "Scorpia's offspring",
+      "category": "Bosses",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Scorpia",
+          "kc": 799,
+          "rate": 2016.0,
+          "kph": 130,
+          "activity": "Scorpia",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Scorpia's offspring",
+      "referenceHours": 16
+    },
+    {
+      "id": "13225",
+      "name": "TzRek-Jad",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "TzTok-Jad",
+          "kc": 19,
+          "rate": null,
+          "kph": null,
+          "activity": "TzTok-Jad",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Tzrek-jad (Offtask)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "attempts",
+          "source": "Spreadsheet count; method-specific rate required"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Tzrek-jad",
+      "referenceHours": 27
+    },
+    {
+      "id": "13247",
+      "name": "Hellpuppy",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Cerberus",
+          "kc": 0,
+          "rate": 3000.0,
+          "kph": 65,
+          "activity": "Cerberus",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Hellpuppy",
+      "referenceHours": 46
+    },
+    {
+      "id": "13262",
+      "name": "Abyssal orphan",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Abyssal Sire",
+          "kc": 0,
+          "rate": 2560.0,
+          "kph": 50,
+          "activity": "Abyssal Sire",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Abyssal orphan",
+      "referenceHours": 51
+    },
+    {
+      "id": "20693",
+      "name": "Phoenix",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Wintertodt reward cart",
+          "kc": null,
+          "rate": 5000,
+          "kph": null,
+          "activity": null,
+          "unit": "rolls",
+          "source": "OSRS Wiki: 1/5,000 per reward roll. 500 points gives 2 rolls; every further 500 points adds one roll; points between those thresholds are a linear extra-roll chance. Supply crates became reward-cart searches on 9 October 2024, with the same per-roll rate. Hiscores Wintertodt score is subdues, not rolls.",
+          "rateConfirmed": true,
+          "paceConfirmed": false
+        },
+        {
+          "name": "200 million Firemaking",
+          "kc": null,
+          "rate": 333.3333333333333,
+          "kph": null,
+          "activity": null,
+          "unit": "rolls",
+          "source": "OSRS Wiki: at 200 million Firemaking XP the phoenix is 15 times more common, so the roll rate is 1/5,000 divided by 15.",
+          "rateConfirmed": true,
+          "paceConfirmed": false
+        }
+      ],
+      "notes": "5,504 rewards claimed; 2,425 Wintertodt kills. In-game collection-log screenshot supplied by the account owner on 5 October 2026.",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Phoenix",
+      "referenceHours": 100,
+      "plannedMethod": 0,
+      "crateRolls": 5504
+    },
+    {
+      "id": "20851",
+      "name": "Olmlet",
+      "category": "Raids",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Chambers of Xeric unique",
+          "kc": null,
+          "rate": 53,
+          "kph": null,
+          "activity": null,
+          "unit": "uniques",
+          "source": "OSRS Wiki: 1/53 when a unique is received. Unique chance is 1% per 8,676 team points, capped at 65.7% at 570,000 points; further points roll another unique. A 26,025-point raid is about 1/1,765 from that formula, not this account's rate. Hiscores raid count is not a unique count.",
+          "rateConfirmed": true,
+          "paceConfirmed": false
+        },
+        {
+          "name": "Challenge Mode unique",
+          "kc": null,
+          "rate": 53,
+          "kph": null,
+          "activity": null,
+          "unit": "uniques",
+          "source": "OSRS Wiki: 1/53 when a unique is received. Unique chance is 1% per 8,676 team points, capped at 65.7% at 570,000 points; further points roll another unique. A 26,025-point raid is about 1/1,765 from that formula, not this account's rate. Hiscores raid count is not a unique count. Challenge Mode changes how often a unique is rolled, not the 1/53 pet chance.",
+          "rateConfirmed": true,
+          "paceConfirmed": false
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Olmlet",
+      "referenceHours": 403,
+      "plannedMethod": 0
+    },
+    {
+      "id": "21273",
+      "name": "Skotos",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Skotizo",
+          "kc": 85,
+          "rate": 65.0,
+          "kph": 1,
+          "activity": "Skotizo",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Skotos",
+      "referenceHours": 65
+    },
+    {
+      "id": "21291",
+      "name": "Jal-Nib-Rek",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "TzKal-Zuk",
+          "kc": 1,
+          "rate": null,
+          "kph": null,
+          "activity": "TzKal-Zuk",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Jal-nib-rek (Offtask)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "attempts",
+          "source": "Spreadsheet count; method-specific rate required"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Jal-nib-rek",
+      "referenceHours": 43
+    },
+    {
+      "id": "21748",
+      "name": "Noon",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Grotesque Guardians",
+          "kc": 0,
+          "rate": 3000.0,
+          "kph": 37,
+          "activity": "Grotesque Guardians",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Noon",
+      "referenceHours": 81
+    },
+    {
+      "id": "21992",
+      "name": "Vorki",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Vorkath",
+          "kc": 81,
+          "rate": 3000.0,
+          "kph": 34,
+          "activity": "Vorkath",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Vorki",
+      "referenceHours": 88
+    },
+    {
+      "id": "22473",
+      "name": "Lil' Zik",
+      "category": "Raids",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Theatre of Blood",
+          "kc": 0,
+          "rate": null,
+          "kph": null,
+          "activity": "Theatre of Blood",
+          "unit": "raids",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Lil' zik (Hard Mode)",
+          "kc": 0,
+          "rate": null,
+          "kph": null,
+          "activity": "Theatre of Blood: Hard Mode",
+          "unit": "raids",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Lil' zik",
+      "referenceHours": 203
+    },
+    {
+      "id": "22746",
+      "name": "Ikkle Hydra",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Alchemical Hydra",
+          "kc": 0,
+          "rate": 3000.0,
+          "kph": 30,
+          "activity": "Alchemical Hydra",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Ikkle hydra",
+      "referenceHours": 100
+    },
+    {
+      "id": "23495",
+      "name": "Sraracha",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Sarachnis",
+          "kc": 239,
+          "rate": 3000.0,
+          "kph": 110,
+          "activity": "Sarachnis",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Sraracha",
+      "referenceHours": 27
+    },
+    {
+      "id": "23757",
+      "name": "Youngllef",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "The Corrupted Gauntlet",
+          "kc": 0,
+          "rate": 800.0,
+          "kph": 7.2,
+          "activity": "The Corrupted Gauntlet",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Youngllef (Normal Gauntlet)",
+          "kc": 0,
+          "rate": 2000.0,
+          "kph": 10,
+          "activity": "The Gauntlet",
+          "unit": "attempts",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Youngllef",
+      "referenceHours": 111
+    },
+    {
+      "id": "23760",
+      "name": "Smolcano",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Zalcano",
+          "kc": 0,
+          "rate": 2250.0,
+          "kph": 40,
+          "activity": "Zalcano",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Smolcano",
+      "referenceHours": 56
+    },
+    {
+      "id": "25348",
+      "name": "Lil' Creator",
+      "category": "Minigames",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Soul Wars",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "eligible rolls",
+          "source": "Spreadsheet count; method-specific rate required"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Lil' creator",
+      "referenceHours": 28
+    },
+    {
+      "id": "25602",
+      "name": "Tiny tempor",
+      "category": "Minigames",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Tempoross",
+          "kc": 1132,
+          "rate": null,
+          "kph": null,
+          "activity": "Tempoross",
+          "unit": "games",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Tiny Tempor",
+      "referenceHours": 100
+    },
+    {
+      "id": "26348",
+      "name": "Nexling",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Nex",
+          "kc": 0,
+          "rate": 4100.0,
+          "kph": 23.5,
+          "activity": "Nex",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Nexling",
+      "referenceHours": 174
+    },
+    {
+      "id": "26901",
+      "name": "Abyssal protector",
+      "category": "Minigames",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Abyssal protector",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "eligible rolls",
+          "source": "Spreadsheet count; method-specific rate required"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Abyssal protector",
+      "referenceHours": 103
+    },
+    {
+      "id": "27590",
+      "name": "Muphin",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Phantom muspah",
+          "kc": 0,
+          "rate": 2500,
+          "kph": 30,
+          "activity": "Phantom Muspah",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Muphin",
+      "referenceHours": 83
+    },
+    {
+      "id": "28246",
+      "name": "Wisp",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "The Whisperer",
+          "kc": 1,
+          "rate": 2000.0,
+          "kph": 22,
+          "activity": "The Whisperer",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Wisp",
+      "referenceHours": 91
+    },
+    {
+      "id": "28248",
+      "name": "Butch",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Vardorvis",
+          "kc": 1,
+          "rate": 3000.0,
+          "kph": 39,
+          "activity": "Vardorvis",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Butch",
+      "referenceHours": 77
+    },
+    {
+      "id": "28250",
+      "name": "Baron",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Duke Sucellus",
+          "kc": 1,
+          "rate": 2500.0,
+          "kph": 39,
+          "activity": "Duke Sucellus",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Baron",
+      "referenceHours": 64
+    },
+    {
+      "id": "28252",
+      "name": "Lil'viathan",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "The Leviathan",
+          "kc": 1,
+          "rate": 2500.0,
+          "kph": 31,
+          "activity": "The Leviathan",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Lil'viathan",
+      "referenceHours": 81
+    },
+    {
+      "id": "28801",
+      "name": "Scurry",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Scurrius",
+          "kc": 29,
+          "rate": 3000.0,
+          "kph": 65,
+          "activity": "Scurrius",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Scurry",
+      "referenceHours": 46
+    },
+    {
+      "id": "28960",
+      "name": "Smol Heredit",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Sol Heredit",
+          "kc": 1,
+          "rate": 100.0,
+          "kph": 2.7,
+          "activity": "Sol Heredit",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Smol heredit",
+      "referenceHours": 37
+    },
+    {
+      "id": "29836",
+      "name": "Nid",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Araxxor",
+          "kc": 0,
+          "rate": 3000.0,
+          "kph": 45,
+          "activity": "Araxxor",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Nid (Destroy)",
+          "kc": null,
+          "rate": 1500.0,
+          "kph": 45,
+          "activity": null,
+          "unit": "attempts",
+          "source": "Spreadsheet"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Nid",
+      "referenceHours": 33
+    },
+    {
+      "id": "30152",
+      "name": "Huberte",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "The Hueycoatl",
+          "kc": 0,
+          "rate": 400.0,
+          "kph": 8.5,
+          "activity": "The Hueycoatl",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Huberte",
+      "referenceHours": 47
+    },
+    {
+      "id": "30154",
+      "name": "Moxi",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Amoxliatl",
+          "kc": 0,
+          "rate": 3000.0,
+          "kph": 84,
+          "activity": "Amoxliatl",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Moxi",
+      "referenceHours": 36
+    },
+    {
+      "id": "30622",
+      "name": "Bran",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "The Royal titans",
+          "kc": 80,
+          "rate": 3000.0,
+          "kph": 60,
+          "activity": "The Royal Titans",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Bran (Sacrifice)",
+          "kc": null,
+          "rate": 1500.0,
+          "kph": 60,
+          "activity": null,
+          "unit": "attempts",
+          "source": "Spreadsheet"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Bran",
+      "referenceHours": 25
+    },
+    {
+      "id": "30888",
+      "name": "Yami",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Yama",
+          "kc": 0,
+          "rate": null,
+          "kph": null,
+          "activity": "Yama",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        },
+        {
+          "name": "Yami (Contract)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "attempts",
+          "source": "Spreadsheet count; method-specific rate required"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Yami",
+      "referenceHours": 7
+    },
+    {
+      "id": "31285",
+      "name": "Gull",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Shellbane Gryphon",
+          "kc": 0,
+          "rate": 3000,
+          "kph": 100,
+          "activity": "Shellbane Gryphon",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Gull",
+      "referenceHours": 30
+    },
+    {
+      "id": "33124",
+      "name": "Beef",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Brutus",
+          "kc": 901,
+          "rate": 1000.0,
+          "kph": 250,
+          "activity": "Brutus",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Beef",
+      "referenceHours": 4
+    },
+    {
+      "id": "34042",
+      "name": "Aggy",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Mad Angel",
+          "kc": 0,
+          "rate": 2000.0,
+          "kph": 55,
+          "activity": "Mad Angel",
+          "unit": "kills",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Aggy",
+      "referenceHours": 36
+    },
+    {
+      "id": "20659",
+      "name": "Giant Squirrel",
+      "category": "Skilling",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Penguin",
+          "kc": null,
+          "rate": 3944160.0,
+          "kph": 29750,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Sepulchre",
+          "kc": null,
+          "rate": 23399000.0,
+          "kph": 95000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Seers' (w/ teleport)",
+          "kc": null,
+          "rate": 18656100.0,
+          "kph": 56000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Seers' village",
+          "kc": null,
+          "rate": 18656100.0,
+          "kph": 46600,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Ardougne",
+          "kc": null,
+          "rate": 25348245.0,
+          "kph": 62300,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Prifddinas",
+          "kc": null,
+          "rate": 30700161.36,
+          "kph": 65000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Agility pyramid",
+          "kc": null,
+          "rate": 13470764.0,
+          "kph": 44000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Dorgesh-Kaan",
+          "kc": null,
+          "rate": 22236500.0,
+          "kph": 64000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Varrock",
+          "kc": null,
+          "rate": 5220530.0,
+          "kph": 13200,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Brimhaven",
+          "kc": null,
+          "rate": 17030269.3,
+          "kph": 42702,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Al Kharid",
+          "kc": null,
+          "rate": 4351140.0,
+          "kph": 10900,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Falador",
+          "kc": null,
+          "rate": 10705640.0,
+          "kph": 26800,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Draynor",
+          "kc": null,
+          "rate": 3663600.0,
+          "kph": 9000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Wilderness",
+          "kc": null,
+          "rate": 18393937.4,
+          "kph": 45000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Gnome",
+          "kc": null,
+          "rate": 2866091.0,
+          "kph": 7000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Ape atoll",
+          "kc": null,
+          "rate": 20442100.0,
+          "kph": 49700,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Barbarian",
+          "kc": null,
+          "rate": 6389902.5,
+          "kph": 15500,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Relekka",
+          "kc": null,
+          "rate": 22298640.0,
+          "kph": 54000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Canifis",
+          "kc": null,
+          "rate": 8248080.0,
+          "kph": 19000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Pollnivneach",
+          "kc": null,
+          "rate": 27542830.0,
+          "kph": 52000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Giant squirrel",
+      "referenceHours": 133
+    },
+    {
+      "id": "13320",
+      "name": "Heron",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Anglerfish (2t Diabolical Worm)",
+          "kc": null,
+          "rate": 6032980.8,
+          "kph": 87120,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Lobster (2t)",
+          "kc": null,
+          "rate": 10228860.0,
+          "kph": 101250,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Shark (2t w/ Shark Lures)",
+          "kc": null,
+          "rate": 8837694.0,
+          "kph": 54000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Tuna/Swordfish (2t)",
+          "kc": null,
+          "rate": 22976550.0,
+          "kph": 135000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Anglerfish (Diabolical Worm)",
+          "kc": null,
+          "rate": 6032980.8,
+          "kph": 34800,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Karambwan",
+          "kc": null,
+          "rate": 8419950.0,
+          "kph": 37000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Barb fish (3t)",
+          "kc": null,
+          "rate": 28270301.400000002,
+          "kph": 110000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Monkfish",
+          "kc": null,
+          "rate": 16332960.0,
+          "kph": 40000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Barb fish (5t)",
+          "kc": null,
+          "rate": 28270301.400000002,
+          "kph": 66000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Tuna/Swordfish",
+          "kc": null,
+          "rate": 11376900.0,
+          "kph": 39000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Aerial fishing",
+          "kc": null,
+          "rate": 25374320.0,
+          "kph": 75300,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Lobster",
+          "kc": null,
+          "rate": 10228860.0,
+          "kph": 30000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Barb fish (4t)",
+          "kc": null,
+          "rate": 28270301.400000002,
+          "kph": 82500,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Sacred eel",
+          "kc": null,
+          "rate": 10135125.0,
+          "kph": 24000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Dark crabs",
+          "kc": null,
+          "rate": 19104670.0,
+          "kph": 42000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Anglerfish",
+          "kc": null,
+          "rate": 9140880.0,
+          "kph": 18000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Shark",
+          "kc": null,
+          "rate": 8774480.0,
+          "kph": 15000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Heron",
+      "referenceHours": 69
+    },
+    {
+      "id": "13324",
+      "name": "Baby chinchompa",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Black chin",
+          "kc": null,
+          "rate": 25289145.0,
+          "kph": 255000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Red chin",
+          "kc": null,
+          "rate": 25412970.0,
+          "kph": 210000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Grey chin",
+          "kc": null,
+          "rate": 25577728.0,
+          "kph": 100000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Baby chinchompa",
+      "referenceHours": 99
+    },
+    {
+      "id": "21509",
+      "name": "Herbi",
+      "category": "Skilling",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Herbiboar",
+          "kc": null,
+          "rate": 6500,
+          "kph": 68,
+          "activity": null,
+          "unit": "harvests",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Herbi",
+      "referenceHours": 96
+    },
+    {
+      "id": "28962",
+      "name": "Quetzin",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "QuetzIn",
+          "kc": null,
+          "rate": 1000,
+          "kph": 24,
+          "activity": null,
+          "unit": "rumours",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Quetzin",
+      "referenceHours": 42
+    },
+    {
+      "id": "13321",
+      "name": "Rock golem",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Gemstones (3t)",
+          "kc": null,
+          "rate": 13610000.0,
+          "kph": 180000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Gemstones",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Volcanic Mine",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Quarry",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Iron",
+          "kc": null,
+          "rate": 13611715.0,
+          "kph": 115050,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Amethyst",
+          "kc": null,
+          "rate": 13611715.0,
+          "kph": 62000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Motherlode Mine",
+          "kc": null,
+          "rate": 21859500.0,
+          "kph": 94000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Adamantite",
+          "kc": null,
+          "rate": 40651875.0,
+          "kph": 123000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Blast Mining",
+          "kc": null,
+          "rate": 25869375.0,
+          "kph": 70000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Shooting Stars",
+          "kc": null,
+          "rate": 10530000.0,
+          "kph": 26000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Coal",
+          "kc": null,
+          "rate": 20556900.0,
+          "kph": 50000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Mithril",
+          "kc": null,
+          "rate": 5401035.0,
+          "kph": 13000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Lovakite",
+          "kc": null,
+          "rate": 29675625.0,
+          "kph": 69000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Runite",
+          "kc": null,
+          "rate": 16602400.0,
+          "kph": 31500,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Rock golem",
+      "referenceHours": null
+    },
+    {
+      "id": "20665",
+      "name": "Rift guardian",
+      "category": "Skilling",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Mind rune (4 runners)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Fire rune (4 runners)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Lava rune (4 runners)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Astral rune (6 runners)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Mind rune",
+          "kc": null,
+          "rate": 9863056.5,
+          "kph": 145000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Lava rune",
+          "kc": null,
+          "rate": 12552981.0,
+          "kph": 185000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "True Blood Altar",
+          "kc": null,
+          "rate": 18829471.5,
+          "kph": 260000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Astral rune",
+          "kc": null,
+          "rate": 15601797.0,
+          "kph": 210000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "ZMI",
+          "kc": null,
+          "rate": 9863056.5,
+          "kph": 82000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Blood rune",
+          "kc": null,
+          "rate": 18829471.5,
+          "kph": 105000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Soul rune",
+          "kc": null,
+          "rate": 18829471.5,
+          "kph": 52000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Wrath rune",
+          "kc": null,
+          "rate": 15601562.100000001,
+          "kph": 35000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Nature (Runners)",
+          "kc": null,
+          "rate": 22271070.0,
+          "kph": 48000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Cosmic rune",
+          "kc": null,
+          "rate": 19179965.1,
+          "kph": 38000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Chaos rune",
+          "kc": null,
+          "rate": 23181562.799999997,
+          "kph": 45000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Nature rune",
+          "kc": null,
+          "rate": 14346264.0,
+          "kph": 52000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Law rune",
+          "kc": null,
+          "rate": 16139547.0,
+          "kph": 55000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Death rune",
+          "kc": null,
+          "rate": 14346264.0,
+          "kph": 25600,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Rift guardian",
+      "referenceHours": null
+    },
+    {
+      "id": "20663",
+      "name": "Rocky",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Relekka stalls",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Draynor stalls",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "PP (chest rush)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "TzHaar-Hur",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Ardy Knights",
+          "kc": null,
+          "rate": 534035.5,
+          "kph": 30065,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "PP (regular runs)",
+          "kc": null,
+          "rate": 1327265.3,
+          "kph": 51700,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Menaphite Thug",
+          "kc": null,
+          "rate": 2949800.468,
+          "kph": 48000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Cannonball Stalls",
+          "kc": null,
+          "rate": 18019311.2,
+          "kph": 260000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Rocky",
+      "referenceHours": null
+    },
+    {
+      "id": "13322",
+      "name": "Beaver",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Teak (1.5t)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Teak (2t)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Ironwood",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Rosewood",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Camphor",
+          "kc": null,
+          "rate": 22258185.0,
+          "kph": 200000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Teak",
+          "kc": null,
+          "rate": 22258185.0,
+          "kph": 175000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Blisterwood",
+          "kc": null,
+          "rate": 12223050.0,
+          "kph": 75000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Redwood",
+          "kc": null,
+          "rate": 14842275.0,
+          "kph": 80000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Artic Pine",
+          "kc": null,
+          "rate": 20454203.0,
+          "kph": 85000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Willow",
+          "kc": null,
+          "rate": 22258185.0,
+          "kph": 90000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Juniper",
+          "kc": null,
+          "rate": 16103791.999999998,
+          "kph": 65000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Sulliuscep",
+          "kc": null,
+          "rate": 26541480.0,
+          "kph": 80000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Maple",
+          "kc": null,
+          "rate": 5731320.0,
+          "kph": 20000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Normal logs",
+          "kc": null,
+          "rate": 19359742.5,
+          "kph": 65000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Yew",
+          "kc": null,
+          "rate": 12513375.0,
+          "kph": 35000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Oak",
+          "kc": null,
+          "rate": 43246675.0,
+          "kph": 115000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Mahogany",
+          "kc": null,
+          "rate": 21944300.0,
+          "kph": 45000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Magic",
+          "kc": null,
+          "rate": 7879300.0,
+          "kph": 15000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Hollow",
+          "kc": null,
+          "rate": 24944150.0,
+          "kph": 45000,
+          "activity": null,
+          "unit": "XP",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Beaver",
+      "referenceHours": null
+    },
+    {
+      "id": "20661",
+      "name": "Tangleroot",
+      "category": "Skilling",
+      "obtained": true,
+      "methods": [
+        {
+          "name": "Hespori seeds (no contracts)",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Spirit seed",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Teak Tree",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Mahogany Tree",
+          "kc": null,
+          "rate": null,
+          "kph": null,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Redwood Tree",
+          "kc": null,
+          "rate": 500,
+          "kph": 6.1,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Calquat",
+          "kc": null,
+          "rate": 2525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Cactus",
+          "kc": null,
+          "rate": 2525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Palm tree",
+          "kc": null,
+          "rate": 2525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Papaya tree",
+          "kc": null,
+          "rate": 2525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Celastrus Tree",
+          "kc": null,
+          "rate": 3525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Dragonfruit Tree",
+          "kc": null,
+          "rate": 4525,
+          "kph": 60,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Crystal tree",
+          "kc": null,
+          "rate": 6525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Mushroom",
+          "kc": null,
+          "rate": 6525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Giant seaweed",
+          "kc": null,
+          "rate": 6525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Magic tree",
+          "kc": null,
+          "rate": 6525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Belladona",
+          "kc": null,
+          "rate": 6525,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Yew tree",
+          "kc": null,
+          "rate": 5025,
+          "kph": 60,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Maple tree",
+          "kc": null,
+          "rate": 5025,
+          "kph": 60,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Ironwood tree",
+          "kc": null,
+          "rate": 6893,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Rosewood tree",
+          "kc": null,
+          "rate": 5525,
+          "kph": 60,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        },
+        {
+          "name": "Hespori (kills)",
+          "kc": null,
+          "rate": 8767,
+          "kph": 80,
+          "activity": null,
+          "unit": "plants",
+          "source": "Spreadsheet level-99 estimate; verify method and level on Wiki"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Tangleroot",
+      "referenceHours": 32
+    },
+    {
+      "id": "31283",
+      "name": "Soup",
+      "category": "Skilling",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Soup",
+      "referenceHours": null
+    },
+    {
+      "id": "24491",
+      "name": "Little Nightmare",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Little nightmare",
+      "referenceHours": 140
+    },
+    {
+      "id": "31130",
+      "name": "Dom",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Dom",
+      "referenceHours": 10
+    },
+    {
+      "id": "27352",
+      "name": "Tumeken's guardian",
+      "category": "Raids",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Tumeken's guardian",
+      "referenceHours": 148
+    },
+    {
+      "id": "19730",
+      "name": "Bloodhound",
+      "category": "Clues",
+      "obtained": false,
+      "methods": [
+        {
+          "name": "Clue Scrolls (master)",
+          "kc": 0,
+          "rate": 1000,
+          "kph": null,
+          "activity": "Clue Scrolls (master)",
+          "unit": "master clues",
+          "source": "OSRS hiscores count; spreadsheet rate and pace"
+        }
+      ],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "Spreadsheet",
+      "sourceRow": "Bloodhound",
+      "referenceHours": 273
+    },
+    {
+      "id": "33642",
+      "name": "Maggot marquess",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "RuneProfile catalogue; not in workbook",
+      "sourceRow": "Maggot marquess",
+      "referenceHours": null
+    },
+    {
+      "id": "34040",
+      "name": "Mr McGroot",
+      "category": "Bosses",
+      "obtained": false,
+      "methods": [],
+      "notes": "",
+      "priority": false,
+      "date": "",
+      "source": "RuneProfile catalogue; not in workbook",
+      "sourceRow": "Mr McGroot",
+      "referenceHours": null
+    }
+  ],
+  "hiscores": {
+    "name": "Obifloat",
+    "skills": [
+      {
+        "id": 0,
+        "name": "Overall",
+        "rank": 85505,
+        "level": 2333,
+        "xp": 349397502
+      },
+      {
+        "id": 1,
+        "name": "Attack",
+        "rank": 336278,
+        "level": 99,
+        "xp": 13869590
+      },
+      {
+        "id": 2,
+        "name": "Defence",
+        "rank": 292837,
+        "level": 99,
+        "xp": 13733308
+      },
+      {
+        "id": 3,
+        "name": "Strength",
+        "rank": 538654,
+        "level": 99,
+        "xp": 13743672
+      },
+      {
+        "id": 4,
+        "name": "Hitpoints",
+        "rank": 293343,
+        "level": 99,
+        "xp": 27418827
+      },
+      {
+        "id": 5,
+        "name": "Ranged",
+        "rank": 703770,
+        "level": 98,
+        "xp": 12914545
+      },
+      {
+        "id": 6,
+        "name": "Prayer",
+        "rank": 124870,
+        "level": 99,
+        "xp": 13109825
+      },
+      {
+        "id": 7,
+        "name": "Magic",
+        "rank": 136263,
+        "level": 99,
+        "xp": 23749650
+      },
+      {
+        "id": 8,
+        "name": "Cooking",
+        "rank": 171875,
+        "level": 99,
+        "xp": 13711856
+      },
+      {
+        "id": 9,
+        "name": "Woodcutting",
+        "rank": 377063,
+        "level": 93,
+        "xp": 7346496
+      },
+      {
+        "id": 10,
+        "name": "Fletching",
+        "rank": 205003,
+        "level": 99,
+        "xp": 13071043
+      },
+      {
+        "id": 11,
+        "name": "Fishing",
+        "rank": 213250,
+        "level": 98,
+        "xp": 11962442
+      },
+      {
+        "id": 12,
+        "name": "Firemaking",
+        "rank": 4796,
+        "level": 99,
+        "xp": 57139030
+      },
+      {
+        "id": 13,
+        "name": "Crafting",
+        "rank": 98603,
+        "level": 99,
+        "xp": 13817895
+      },
+      {
+        "id": 14,
+        "name": "Smithing",
+        "rank": 59290,
+        "level": 99,
+        "xp": 13337279
+      },
+      {
+        "id": 15,
+        "name": "Mining",
+        "rank": 252576,
+        "level": 95,
+        "xp": 9198801
+      },
+      {
+        "id": 16,
+        "name": "Herblore",
+        "rank": 88406,
+        "level": 99,
+        "xp": 13244131
+      },
+      {
+        "id": 17,
+        "name": "Agility",
+        "rank": 178515,
+        "level": 92,
+        "xp": 6918799
+      },
+      {
+        "id": 18,
+        "name": "Thieving",
+        "rank": 129278,
+        "level": 99,
+        "xp": 13400250
+      },
+      {
+        "id": 19,
+        "name": "Slayer",
+        "rank": 214091,
+        "level": 99,
+        "xp": 13355665
+      },
+      {
+        "id": 20,
+        "name": "Farming",
+        "rank": 338185,
+        "level": 99,
+        "xp": 13162554
+      },
+      {
+        "id": 21,
+        "name": "Runecraft",
+        "rank": 201298,
+        "level": 90,
+        "xp": 5418311
+      },
+      {
+        "id": 22,
+        "name": "Hunter",
+        "rank": 244392,
+        "level": 91,
+        "xp": 6076905
+      },
+      {
+        "id": 23,
+        "name": "Construction",
+        "rank": 112357,
+        "level": 99,
+        "xp": 13120587
+      },
+      {
+        "id": 24,
+        "name": "Sailing",
+        "rank": 137271,
+        "level": 92,
+        "xp": 6576041
+      }
+    ],
+    "activities": [
+      {
+        "id": 0,
+        "name": "Grid Points",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 1,
+        "name": "League Points",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 2,
+        "name": "Deadman Points",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 3,
+        "name": "Bounty Hunter - Hunter",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 4,
+        "name": "Bounty Hunter - Rogue",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 5,
+        "name": "Bounty Hunter (Legacy) - Hunter",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 6,
+        "name": "Bounty Hunter (Legacy) - Rogue",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 7,
+        "name": "Clue Scrolls (all)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 8,
+        "name": "Clue Scrolls (beginner)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 9,
+        "name": "Clue Scrolls (easy)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 10,
+        "name": "Clue Scrolls (medium)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 11,
+        "name": "Clue Scrolls (hard)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 12,
+        "name": "Clue Scrolls (elite)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 13,
+        "name": "Clue Scrolls (master)",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 14,
+        "name": "LMS - Rank",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 15,
+        "name": "PvP Arena - Rank",
+        "rank": -1,
+        "score": 2475
+      },
+      {
+        "id": 16,
+        "name": "Soul Wars Zeal",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 17,
+        "name": "Rifts closed",
+        "rank": 144329,
+        "score": 275
+      },
+      {
+        "id": 18,
+        "name": "Colosseum Glory",
+        "rank": 78141,
+        "score": 33318
+      },
+      {
+        "id": 19,
+        "name": "Collections Logged",
+        "rank": -1,
+        "score": 202
+      },
+      {
+        "id": 20,
+        "name": "Abyssal Sire",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 21,
+        "name": "Alchemical Hydra",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 22,
+        "name": "Amoxliatl",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 23,
+        "name": "Araxxor",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 24,
+        "name": "Artio",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 25,
+        "name": "Barrows Chests",
+        "rank": 1197182,
+        "score": 10
+      },
+      {
+        "id": 26,
+        "name": "Brutus",
+        "rank": 63369,
+        "score": 901
+      },
+      {
+        "id": 27,
+        "name": "Bryophyta",
+        "rank": -1,
+        "score": 2
+      },
+      {
+        "id": 28,
+        "name": "Callisto",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 29,
+        "name": "Calvar'ion",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 30,
+        "name": "Cerberus",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 31,
+        "name": "Chambers of Xeric",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 32,
+        "name": "Chambers of Xeric: Challenge Mode",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 33,
+        "name": "Chaos Elemental",
+        "rank": 21360,
+        "score": 292
+      },
+      {
+        "id": 34,
+        "name": "Chaos Fanatic",
+        "rank": 237902,
+        "score": 26
+      },
+      {
+        "id": 35,
+        "name": "Commander Zilyana",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 36,
+        "name": "Corporeal Beast",
+        "rank": 222701,
+        "score": 12
+      },
+      {
+        "id": 37,
+        "name": "Crazy Archaeologist",
+        "rank": 350949,
+        "score": 26
+      },
+      {
+        "id": 38,
+        "name": "Dagannoth Prime",
+        "rank": -1,
+        "score": 2
+      },
+      {
+        "id": 39,
+        "name": "Dagannoth Rex",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 40,
+        "name": "Dagannoth Supreme",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 41,
+        "name": "Deranged Archaeologist",
+        "rank": 342186,
+        "score": 25
+      },
+      {
+        "id": 42,
+        "name": "Doom of Mokhaiotl",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 43,
+        "name": "Duke Sucellus",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 44,
+        "name": "General Graardor",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 45,
+        "name": "Giant Mole",
+        "rank": 538056,
+        "score": 25
+      },
+      {
+        "id": 46,
+        "name": "Grotesque Guardians",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 47,
+        "name": "Hespori",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 48,
+        "name": "Kalphite Queen",
+        "rank": 215001,
+        "score": 61
+      },
+      {
+        "id": 49,
+        "name": "King Black Dragon",
+        "rank": 770582,
+        "score": 10
+      },
+      {
+        "id": 50,
+        "name": "Kraken",
+        "rank": 161178,
+        "score": 1916
+      },
+      {
+        "id": 51,
+        "name": "Kree'Arra",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 52,
+        "name": "K'ril Tsutsaroth",
+        "rank": -1,
+        "score": 2
+      },
+      {
+        "id": 53,
+        "name": "Lunar Chests",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 54,
+        "name": "Mad Angel",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 55,
+        "name": "Maggot King",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 56,
+        "name": "Mimic",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 57,
+        "name": "Nex",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 58,
+        "name": "Nightmare",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 59,
+        "name": "Phosani's Nightmare",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 60,
+        "name": "Obor",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 61,
+        "name": "Phantom Muspah",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 62,
+        "name": "Sarachnis",
+        "rank": 94397,
+        "score": 239
+      },
+      {
+        "id": 63,
+        "name": "Scorpia",
+        "rank": 7778,
+        "score": 799
+      },
+      {
+        "id": 64,
+        "name": "Scurrius",
+        "rank": 376860,
+        "score": 29
+      },
+      {
+        "id": 65,
+        "name": "Shellbane Gryphon",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 66,
+        "name": "Skotizo",
+        "rank": 16261,
+        "score": 85
+      },
+      {
+        "id": 67,
+        "name": "Sol Heredit",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 68,
+        "name": "Spindel",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 69,
+        "name": "Tempoross",
+        "rank": 8262,
+        "score": 1132
+      },
+      {
+        "id": 70,
+        "name": "The Gauntlet",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 71,
+        "name": "The Corrupted Gauntlet",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 72,
+        "name": "The Hueycoatl",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 73,
+        "name": "The Leviathan",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 74,
+        "name": "The Royal Titans",
+        "rank": 281863,
+        "score": 80
+      },
+      {
+        "id": 75,
+        "name": "The Whisperer",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 76,
+        "name": "Theatre of Blood",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 77,
+        "name": "Theatre of Blood: Hard Mode",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 78,
+        "name": "Thermonuclear Smoke Devil",
+        "rank": 3836,
+        "score": 5001
+      },
+      {
+        "id": 79,
+        "name": "Tombs of Amascut",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 80,
+        "name": "Tombs of Amascut: Expert Mode",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 81,
+        "name": "TzKal-Zuk",
+        "rank": 148653,
+        "score": 1
+      },
+      {
+        "id": 82,
+        "name": "TzTok-Jad",
+        "rank": 61966,
+        "score": 19
+      },
+      {
+        "id": 83,
+        "name": "Vardorvis",
+        "rank": -1,
+        "score": 1
+      },
+      {
+        "id": 84,
+        "name": "Venenatis",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 85,
+        "name": "Vet'ion",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 86,
+        "name": "Vorkath",
+        "rank": 534572,
+        "score": 81
+      },
+      {
+        "id": 87,
+        "name": "Wintertodt",
+        "rank": 3224,
+        "score": 2425
+      },
+      {
+        "id": 88,
+        "name": "Yama",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 89,
+        "name": "Zalcano",
+        "rank": -1,
+        "score": 0
+      },
+      {
+        "id": 90,
+        "name": "Zulrah",
+        "rank": 504198,
+        "score": 39
+      }
+    ]
+  },
+  "log": null,
+  "statsSyncedAt": "2026-10-03T14:44:50.792421+00:00",
+  "logSyncedAt": null,
+  "revision": 0
+}

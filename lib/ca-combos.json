@@ -1,0 +1,51 @@
+{
+  "fetchedAt": "2026-10-04T15:29:16Z",
+  "source": "https://oldschool.runescape.wiki/w/Bucket:Combat_achievement",
+  "note": "Component tasks are other catalogue task names that appear in this task's wiki description. This is not an account checklist.",
+  "combos": {
+    "Perfect Grotesque Guardians": [
+      "Static Awareness",
+      "Granite Footwork"
+    ],
+    "Perfect Grotesque Guardians II": [
+      "Perfect Grotesque Guardians"
+    ],
+    "Perfect Theatre": [
+      "Perfect Maiden",
+      "Perfect Verzik",
+      "Perfect Nylocas",
+      "Perfect Bloat",
+      "Perfect Sotetseg",
+      "Perfect Xarpus"
+    ],
+    "Perfect Nex": [
+      "A siphon will solve this",
+      "Contain this!"
+    ],
+    "Insanity": [
+      "Perfect Wardens"
+    ],
+    "Perfection of Het": [
+      "Perfect Akkha"
+    ],
+    "Perfection of Apmeken": [
+      "Perfect Apmeken",
+      "Perfect Ba-Ba"
+    ],
+    "Perfection of Crondis": [
+      "Perfect Crondis",
+      "Perfect Zebak"
+    ],
+    "Perfection of Scabaras": [
+      "Perfect Kephri",
+      "Perfect Scabaras"
+    ],
+    "Phantom Muspah Manipulator": [
+      "Space is Tight",
+      "Walk Straight Pray True"
+    ],
+    "Contract Choreographer": [
+      "Back so soon?"
+    ]
+  }
+}

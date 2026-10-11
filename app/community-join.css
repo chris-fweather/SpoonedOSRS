@@ -1,0 +1,90 @@
+.profile-chat{position:relative;isolation:isolate;overflow:hidden}
+.profile-chat>.join-pet-art{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;opacity:.12}
+.profile-chat>.join-pet-art>img{position:absolute;bottom:12px;width:48px;height:58px;object-fit:contain;filter:saturate(.7);animation:join-pet-drift 8s ease-in-out infinite;image-rendering:pixelated}
+.profile-chat>.join-pet-art>img:nth-child(even){bottom:40px;width:38px;height:45px}
+@keyframes join-pet-drift{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-7px) rotate(3deg)}}
+.community-join-dialog{width:min(720px,calc(100vw - 24px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line-2);border-radius:7px;background:var(--panel);color:var(--text);box-shadow:0 20px 80px #0009;overflow:hidden}
+.community-join-dialog[open]{display:flex;flex-direction:column}
+.community-join-dialog::backdrop{background:#000b;backdrop-filter:blur(3px)}
+.community-join-dialog>header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);flex:none}
+.community-join-dialog h2{margin:0;font:24px var(--rs);color:var(--orange)}
+.community-join-dialog header p{font-size:12px;color:var(--muted);margin:5px 0 0}
+.community-join-dialog .join-guide-body{padding:20px;overflow:auto;min-height:0;overscroll-behavior:contain}
+.join-guide-body>div{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px}
+.join-guide-body figure{margin:0}.join-guide-body figure img{width:180px;max-width:100%;image-rendering:pixelated}
+.join-guide-body figcaption{font-size:10px;color:var(--muted);line-height:1.5;margin-top:8px}
+.join-guide-body h3{font:21px var(--rs);color:var(--gold);margin:0}
+.join-guide-body h3 img{width:22px;height:25px;object-fit:contain;vertical-align:middle}
+.join-guide-body ol{padding-left:18px;font-size:12px;line-height:1.8;margin:8px 0 18px}
+.join-guide-body p{font-size:11px;line-height:1.7}
+.community-join-dialog>footer{display:flex;justify-content:flex-end;gap:10px;border-top:1px solid var(--line);padding:12px 20px;flex:none}
+@media(max-width:540px){.join-guide-body>div{grid-template-columns:1fr}.join-guide-body figure{display:none}.community-join-dialog .join-guide-body{padding:16px}.community-join-dialog>header{padding:14px 16px}.community-join-dialog>footer{padding:12px 16px}.profile-chat>.join-pet-art{opacity:.08}}
+@media(prefers-reduced-motion:reduce){.profile-chat>.join-pet-art>img{animation:none}}
+
+/* Each destination is a separate card, with its own border and artwork. */
+.profile-chat.community-join-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;border:0;background:none;box-shadow:none;overflow:visible;align-items:stretch}
+.community-join-cards .community-join-section{min-width:0;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 16px;border:1px solid var(--line-2);border-radius:5px}
+.community-join-cards .community-game{background:linear-gradient(90deg,#211c14f5,#211c14db 44%,#211c1420),url('/brand/community-game.webp') center/cover;box-shadow:inset 3px 0 #a67b3b}
+.community-join-cards .join-pet-art{position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.14}
+.community-join-cards .join-pet-art img{position:absolute;bottom:30px;width:48px;height:58px;object-fit:contain;image-rendering:pixelated;animation:join-pet-drift 8s ease-in-out infinite}
+.community-join-cards .profile-chat-heading{display:grid;gap:6px}
+.community-join-cards .profile-chat-heading>span{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.community-join-cards .profile-chat-heading>strong{display:flex;align-items:center;gap:8px}
+.community-join-cards .community-chat-name{font:20px var(--rs);color:var(--orange)}
+.community-join-cards .community-join-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:auto}
+.community-join-cards .profile-chat-toggle{font-size:12px;color:var(--orange);border:1px solid #665234;border-radius:4px;background:#30281b;padding:6px 9px;min-height:32px}
+.community-join-cards .community-discord{background:linear-gradient(90deg,rgba(23,23,41,.98),rgba(23,23,41,.88) 45%,rgba(23,23,41,.15)),url('/brand/community-discord.webp') center/cover;border-color:#555174;box-shadow:inset 3px 0 #8189eb}
+.community-join-cards .community-discord p{margin:0;color:#ccc9db;font-size:12px;line-height:1.45;max-width:none}
+.community-join-cards .discord-join-button{margin-top:auto;color:#fff;background:#4c52b8;border-color:#8189eb}
+.community-join-cards .discord-join-button:hover{background:#5d65d6}
+.community-join-cards .discord-join-button .discord-mark{width:17px;height:auto}
+@media(max-width:650px){.profile-chat.community-join-cards{grid-template-columns:1fr}.community-join-cards .profile-chat-toggle,.community-join-cards .discord-join-button{min-height:44px}.community-join-cards .community-join-actions .btn{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.community-join-cards .join-pet-art img{animation:none}}
+
+.community-join-cards .community-join-section{min-height:152px}
+.community-join-cards .profile-chat-heading>strong>.community-heading-icon{width:24px;height:24px;flex:none}.community-join-cards .profile-chat-heading>strong>.discord-mark{width:26px;height:auto;flex:none}
+.community-join-cards .profile-chat-heading{gap:4px}
+.community-join-cards .community-server-name img{width:22px;height:22px;border-radius:50%;image-rendering:auto}
+.community-join-cards .community-join-actions{padding-top:2px}
+.community-join-cards .community-join-actions .btn{margin:0;min-height:32px}
+.community-join-cards .community-discord .profile-chat-toggle{color:#e0dfff;border-color:#777196;background:#26243de6}
+.join-guide-body .discord-guide-content{grid-template-columns:120px minmax(0,1fr)}
+.discord-guide-content figure img{width:120px;border-radius:20px;image-rendering:auto}
+.discord-guide-join{gap:7px}.discord-guide-join .discord-mark{width:19px;height:auto}
+@media(max-width:650px){.community-join-cards .community-join-section{min-height:164px}.community-join-cards .community-join-actions .btn{min-height:44px}}
+@media(max-width:540px){.join-guide-body .discord-guide-content{grid-template-columns:1fr}}
+
+/* Shared heading and spacing scale, without a second Discord identity row. */
+.community-join-cards .profile-chat-heading>strong{font:20px/1.15 var(--rs);min-height:24px}
+.community-join-cards .community-join-section{min-height:142px;gap:8px}
+.community-join-cards .community-chat-name{font:20px/1.2 var(--rs);letter-spacing:.2px;margin:0}
+.community-join-cards .community-discord p{line-height:1.6;margin-top:2px}
+.community-join-cards .community-join-actions{padding-top:4px}
+@media(max-width:650px){.community-join-cards .community-join-section{min-height:150px}}
+
+.join-guide-body .discord-guide-content{grid-template-columns:225px minmax(0,1fr);gap:22px}
+.discord-client-example{background:#282a30;border:1px solid #4a4d56;border-radius:8px;padding:12px;color:#f2f3f5;display:grid;gap:12px;align-content:start}
+.discord-client-example figcaption{margin:0;color:#b5bac1;font-size:10px}.discord-example-start{display:flex;align-items:center;gap:10px;font-size:11px}.discord-example-plus{display:grid;place-items:center;width:33px;height:33px;background:#36393f;border-radius:50%;font-size:27px;color:#3ba55c}
+.discord-example-dialog{background:#36393f;padding:11px;border-radius:6px;display:grid;gap:10px;text-align:center}.discord-example-dialog>b{font-size:12px}.discord-example-dialog small{font-size:9px;text-align:left}.discord-example-dialog code{padding:8px 4px;background:#1e1f22;border-radius:3px;font-size:10px;white-space:nowrap}.discord-example-action{background:#4a4d55;padding:7px;border-radius:4px;font-size:10px}.discord-example-action.primary{background:#5865f2}.discord-guide-content section>a{font-size:11px}
+@media(max-width:540px){.join-guide-body .discord-guide-content{grid-template-columns:1fr}.join-guide-body .discord-client-example{display:grid;max-width:260px;justify-self:center;width:100%;box-sizing:border-box}}
+/* Compact paired destinations and a single, aligned Discord invite example. */
+.community-join-cards .community-join-section{min-height:132px;gap:10px}
+.community-join-cards .profile-chat-heading{gap:9px}
+.community-join-cards .profile-chat-heading>span{white-space:nowrap;font-size:10px;gap:5px}
+.community-join-cards .profile-chat-heading>span img{width:19px;height:21px;object-fit:contain}
+.join-guide-body .discord-guide-content{grid-template-columns:225px minmax(0,1fr);align-items:start;gap:24px}
+.discord-client-example{padding:16px;gap:12px;box-sizing:border-box}
+.discord-example-title{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px}
+.discord-example-title .discord-mark{width:23px;height:auto}
+.discord-client-example>p{margin:0;text-align:center;color:#b5bac1;line-height:1.5}
+.discord-client-example .discord-example-dialog{padding:0;background:none;gap:9px}
+.discord-client-example figcaption{border-top:1px solid #ffffff15;padding-top:10px;text-align:center;font-size:9px}
+.discord-guide-content h3{display:flex;align-items:center;gap:8px}
+.discord-guide-content h3 .discord-mark{width:23px;height:auto}
+.discord-invite-copy{display:flex;align-items:center;gap:8px;padding:7px 8px;border:1px solid var(--line-2);background:var(--sunk);border-radius:4px;flex-wrap:wrap}
+.discord-invite-copy code{flex:1;font-size:11px;white-space:nowrap}
+.discord-invite-copy .btn{margin:0;min-height:30px}
+.community-join-dialog .discord-guide-join{background:#4c52b8;border-color:#8189eb;color:white}
+@media(max-width:540px){.join-guide-body .discord-guide-content{grid-template-columns:minmax(0,1fr)}.join-guide-body .discord-client-example{width:100%;max-width:300px;justify-self:center}.community-join-cards .community-join-section{min-height:142px}}
+
+.community-join-cards .community-discord{gap:9px}.community-join-cards .community-discord .discord-community-caption{margin:0;color:var(--muted);font-size:10px;line-height:21px;white-space:nowrap;max-width:none}.community-join-cards .community-discord .profile-chat-heading{margin:0}.community-join-cards .community-join-section{justify-content:flex-start}.community-join-cards .community-join-actions{margin-top:auto}@media(max-width:360px){.community-join-cards .community-discord .discord-community-caption{font-size:9px;white-space:normal}}

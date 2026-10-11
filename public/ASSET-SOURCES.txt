@@ -1,0 +1,83 @@
+Catalogue: https://github.com/ReinhardtR/runeprofile/blob/main/packages/runescape/src/collection-log.ts
+Icon pipeline: https://github.com/ReinhardtR/runeprofile/blob/main/scripts/ts-scripts/sync-item-icons.ts
+Icons: https://cdn.runeprofile.com/item/{itemId}.png
+Retrieved tree SHA: 6f317673398112c26799076046fde4f5a33f5d27
+All 71 item icons downloaded and verified PNG signature. Inventory icons are 36x32 according to source pipeline.
+Source catalogue contains 71 pets, including Maggot marquess and Mr McGroot in addition to workbook-described 69. Match the workbook names explicitly rather than silently changing its total.
+Font: RuneScape Bold (heading use)
+Local file: runescape-bold.woff2
+Source: https://github.com/ReinhardtR/runeprofile/blob/main/apps/web/src/core/assets/fonts/runescape-bold.woff2
+Raw download: https://raw.githubusercontent.com/ReinhardtR/runeprofile/main/apps/web/src/core/assets/fonts/runescape-bold.woff2
+Verified: WOFF2 signature wOF2; 4140 bytes.
+License review: GitHub repository metadata reports no license; repository tree has no LICENSE file, and README has no font/license/copyright attribution. No explicit font redistribution license was found. Do not describe this asset as openly licensed or official Jagex distribution.
+Suggested CSS: @font-face { font-family: RuneScape; src: url(/fonts/runescape-bold.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+Use on headings and prominent counters only; retain readable sans-serif body text.
+
+Asset sources (retrieved 2026-10-04)
+
+Collection catalogue and account data:
+https://api.runeprofile.com/v1/accounts/Obifloat/collection-log
+Saved unchanged as collection-log.json. Contains 1,717 unique item IDs across collection-log pages.
+This is an account snapshot, not a universal completion state. Do not overwrite user tracking data with it.
+
+Collection item PNGs:
+https://cdn.runeprofile.com/clog-atlas.json
+https://cdn.runeprofile.com/clog-atlas.f056a23f52696de4.png
+All 1,717 icons were losslessly extracted into items/{id}.png at original 36x32 resolution using atlas coordinates. Zero missing items.
+Original item endpoints are https://cdn.runeprofile.com/item/{id}.png.
+RuneProfile source pipeline documents that these are rendered from the OSRS cache with RuneLite's rasterizer:
+https://github.com/ReinhardtR/runeprofile/blob/main/scripts/ts-scripts/sync-item-icons.ts
+No generated artwork, upscaling or visual alteration was applied.
+
+Boss/activity icons:
+https://raw.githubusercontent.com/ReinhardtR/runeprofile/main/apps/web/src/core/assets/hiscore-icons.json
+https://github.com/ReinhardtR/runeprofile/blob/main/apps/web/src/core/assets/hiscore-icons.json
+106 original embedded PNGs decoded to bosses/{slug}.png; includes skills, activities, and 71 boss/hiscore entries.
+Original pixels retained. These are small in-game hiscore icons, not large boss portraits.
+boss-map.json maps original source names to filenames.
+collection-page-icon-map.json maps collection page names to matching source icons, with named aliases where appropriate.
+
+Game imagery belongs to Jagex. RuneProfile project: https://github.com/ReinhardtR/runeprofile
+
+Logo and favicon: Rocky item 20663, from the bundled RuneProfile item artwork.
+Cursor: Dragon sword item 21009, cropped to 32x32 at original pixel scale from the same artwork.
+
+Connections tab cog: OSRS Wiki File:Settings.png (23×23).
+https://oldschool.runescape.wiki/images/Settings.png?99265
+Saved as public/ui/settings-icon.png. Wiki imagery is CC BY-NC-SA, same as the other wiki assets.
+
+Friends Chat / Clan Chat UI artwork: see /ui/chat-artwork-sources.json. Files downloaded unmodified from the OSRS Wiki; game artwork Jagex, Wiki CC BY-NC-SA.
+Site staff pixel spoon badges are original vector UI symbols and are not Jagex moderator ranks.
+
+Diary requirement item icons (2026-10-06)
+104 additional original PNGs downloaded from https://cdn.runeprofile.com/item/{id}.png.
+Mappings in lib/diary-requirement-items.json use the existing quest item catalogue and named OSRS cache items; quantities and alternatives are preserved in the diary text. All 181 referenced item PNGs passed signature checks. No artwork was generated or altered.
+
+Guide editor item icons (2026-10-07)
+The guide editor offers every wearable, every Grand Exchange item and the collection log, quest and diary items, plus a short list of untradeable utility items and raid supplies (rune pouch, looting bag, raid potions). Names come from the OSRS cache (rev 241, https://github.com/abextm/osrs-cache, read with a local script following RuneLite's ItemLoader opcodes).
+4,805 new inventory icons were added as items/{id}.png, one per item name:
+- 4,517 from osrsreboxed-db (https://github.com/0xNeffarion/osrsreboxed-db, docs/items-icons/{id}.png, commit 37322fed3abb2d58236c59dfc6babb37a27a50ea, January 2025). These are 36x32 icons rendered from the game cache, like the RuneProfile icons above. The project README lists OSRS content as Jagex material outside its GPL code licence.
+- 288 newer equipment icons from the OSRS Wiki team's DPS calculator (https://github.com/weirdgloop/osrs-dps-calc, cdn/equipment/*.png, matched by item id or, for the cargo crates and a few variants, by exact item name). These are the OSRS Wiki inventory images (CC BY-NC-SA).
+All files passed PNG signature checks; none was generated, redrawn or resized. Items whose names repeat (for example the unobtainable Torva copies) share the icon of the variant that has one, through lib/guide-item-images.json, which also lists the six wearables with no icon anywhere (they are not offered in the editor). Newer non-equipment items without any published icon are left out of the editor.
+Guide emojis reuse the site's Discord emoji pack sources (artwork/discord/emojis/manifest.json); no new files.
+
+Empty equipment slot silhouettes (2026-10-07)
+public/ui/slots/{head,cape,neck,weapon,ring,body,shield,legs,hands,feet,ammo}.png are the game's own empty worn-equipment slot sprites, decoded unchanged (32x32, transparent) from the OSRS cache (https://github.com/abextm/osrs-cache, commit ffb0cb0a343c1d6b9360595bb78314f60f923d03, "Cache version 2026-09-30-rev241"), index 8 (sprites), with a local script following RuneLite's SpriteLoader.
+Sprite groups (RuneLite SpriteID names): 156 EQUIPMENT_SLOT_HEAD = head, 157 EQUIPMENT_SLOT_CAPE = cape, 158 EQUIPMENT_SLOT_NECK = neck, 159 EQUIPMENT_SLOT_WEAPON = weapon, 160 EQUIPMENT_SLOT_RING = ring, 161 EQUIPMENT_SLOT_TORSO = body, 162 EQUIPMENT_SLOT_SHIELD = shield, 163 EQUIPMENT_SLOT_LEGS = legs, 164 EQUIPMENT_SLOT_HANDS = hands, 165 EQUIPMENT_SLOT_FEET = feet, 166 EQUIPMENT_SLOT_AMMUNITION = ammo. Identified visually from a contact sheet of groups 150-180.
+They replace earlier copies whose transparency was inverted (a black square with the outline cut out). The game draws them dark on its stone slot; the site lifts them to grey with a CSS filter (.slot-silhouette) on its darker slots. Game artwork belongs to Jagex.
+
+Helper rank scimitar (2026-10-07)
+public/items/1331.png is the Adamant scimitar (item 1331) inventory icon from osrsreboxed-db (https://github.com/0xNeffarion/osrsreboxed-db, docs/items-icons/1331.png, commit 37322fed3abb2d58236c59dfc6babb37a27a50ea), the same cache-rendered 36x32 set as the other guide item icons; unchanged. It replaces the white scimitar as the Helper rank icon (lib/staff-appearance.ts) and the rank_helper emoji (artwork/discord/emojis). Game artwork belongs to Jagex.
+
+Character scene thumbnails: public/ui/scenes/{none,castle,riverside,mine,woodland}.webp (480x300).
+Rendered from this site's own three.js character scene (app/Look.tsx with lib/profile-scene.ts) using the default OSRS base character, captured in headless Chromium from the profile settings preview and saved as WebP. Re-capture them whenever lib/profile-scene.ts changes so the picker matches the 3D preview.
+
+Site icon: public/brand/rocky-icon.png (256x256) is public/brand/rocky-mascot.webp centred on a transparent square, for the favicon and share images.
+
+Account-type chat badges (retrieved 2026-10-07):
+public/ui/account-modes/{mode}.png are the in-game chat badges from OSRS cache sprite group 423 ("mod icons"):
+frame 2 ironman, 3 ultimate_ironman, 10 hardcore_ironman, 41 group_ironman, 42 hardcore_group_ironman, 43 unranked_group_ironman
+(the same numbering as RuneLite's IconID).
+Cache mirror: https://github.com/abextm/osrs-cache (master ffb0cb0a343c1d6b9360595bb78314f60f923d03, index 8).
+Decoded with RuneLite's sprite format and trimmed to the visible pixels (all 13 px tall). Original pixels, no scaling or edits.
+Game imagery belongs to Jagex.

@@ -1,0 +1,223 @@
+{
+  "source": "Local RuneLite OSRS LIVE cache identity-kit definitions",
+  "reader": "osrscachereader 1.1.4",
+  "geometry": "Original cache coordinates; Y and Z axes inverted for glTF, no body scaling",
+  "files": [
+    {
+      "file": "kits/5.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "kits/14.gltf",
+      "kit": 14,
+      "models": [
+        246
+      ],
+      "vertices": 30,
+      "geometrySha256": "f1475104ed7ae93c2492bd810ef0963531e6708b9f1ca39b126e31bf8e3a1424"
+    },
+    {
+      "file": "kits/18.gltf",
+      "kit": 18,
+      "models": [
+        28515
+      ],
+      "vertices": 162,
+      "geometrySha256": "3e0f8ca71d3b1ae52d7946b815b5a169288199951c8dd7b2d278fe82b646fdbb"
+    },
+    {
+      "file": "kits/26.gltf",
+      "kit": 26,
+      "models": [
+        26632
+      ],
+      "vertices": 216,
+      "geometrySha256": "b64c06a49afe4d9996e8b97a35fbfd7291ee93b64c5b5b9ae06444e52f9d1d1f"
+    },
+    {
+      "file": "kits/33.gltf",
+      "kit": 33,
+      "models": [
+        176
+      ],
+      "vertices": 180,
+      "geometrySha256": "9b5d3275349ff064795067a8a3c8e1e4295d13038ab057fd7e885b8fb168b85c"
+    },
+    {
+      "file": "kits/36.gltf",
+      "kit": 36,
+      "models": [
+        28285
+      ],
+      "vertices": 216,
+      "geometrySha256": "6fa16c9989ed448c61c21f9e0620ec462714c2abde34b6d8748255e4a607008a"
+    },
+    {
+      "file": "kits/42.gltf",
+      "kit": 42,
+      "models": [
+        181
+      ],
+      "vertices": 207,
+      "geometrySha256": "b61abcc5e52afb21e2469be1fbc801ff34ed8b25f1d535be73bae2e945dad3b1"
+    },
+    {
+      "file": "female/kits/46.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    },
+    {
+      "file": "female/kits/296.gltf",
+      "kit": 296,
+      "models": [
+        437
+      ],
+      "vertices": 30,
+      "geometrySha256": "71302899308985617158848308bab10998ceefeceb8cd4ffe7c791ad5ccc1ad6"
+    },
+    {
+      "file": "female/kits/56.gltf",
+      "kit": 56,
+      "models": [
+        18554
+      ],
+      "vertices": 195,
+      "geometrySha256": "ec05eaaf7f084968313289bfc62412efe59da6522a1921bb346a0aaa3933a18b"
+    },
+    {
+      "file": "female/kits/61.gltf",
+      "kit": 61,
+      "models": [
+        3476
+      ],
+      "vertices": 216,
+      "geometrySha256": "bf994c6c664e7a818a0a3534daf88b86aac301c188655a91764923bb105d7ce9"
+    },
+    {
+      "file": "female/kits/67.gltf",
+      "kit": 67,
+      "models": [
+        353
+      ],
+      "vertices": 180,
+      "geometrySha256": "c846e5293770331b280776729ee05bfbfdeec849a49247f48c8bccf387f1d4d2"
+    },
+    {
+      "file": "female/kits/70.gltf",
+      "kit": 70,
+      "models": [
+        14423
+      ],
+      "vertices": 216,
+      "geometrySha256": "7966a87257329b3c5bcbd95c57349c1353858fa2a547f3ae262947a75265eb04"
+    },
+    {
+      "file": "female/kits/79.gltf",
+      "kit": 79,
+      "models": [
+        358
+      ],
+      "vertices": 183,
+      "geometrySha256": "358205f2ca4f6cb762e203e66a9236239ed2c552b0cd5b128119db0fc4e7c356"
+    },
+    {
+      "file": "appearance/male-brown.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "appearance/male-blonde.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "appearance/male-black.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "appearance/male-red.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "appearance/male-grey.gltf",
+      "kit": 5,
+      "models": [
+        215
+      ],
+      "vertices": 447,
+      "geometrySha256": "0ce8fc19de99335b3e8d01848ef299c9ed9b61bd35d12850124c163e75a89b24"
+    },
+    {
+      "file": "appearance/female-brown.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    },
+    {
+      "file": "appearance/female-blonde.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    },
+    {
+      "file": "appearance/female-black.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    },
+    {
+      "file": "appearance/female-red.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    },
+    {
+      "file": "appearance/female-grey.gltf",
+      "kit": 46,
+      "models": [
+        378
+      ],
+      "vertices": 531,
+      "geometrySha256": "5b54a1b1742d87b72aa74d6b333684c393ff81c7235e1569e2f5bda0eea4ddab"
+    }
+  ]
+}

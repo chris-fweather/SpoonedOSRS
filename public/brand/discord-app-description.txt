@@ -1,0 +1,11 @@
+App name: SpoonedOSRS
+
+Description:
+Your Old School RuneScape collection, all in one place. Track pets, collection logs and achievements, compare progress with other players, and show off your earned rewards. Join our Friends Chat and clan chat in game: SpoonedOSRS.
+
+Website: https://spoonedosrs.com
+In-game account: SpoonedOSRS
+Friends Chat: SpoonedOSRS
+Clan chat: SpoonedOSRS
+
+Icon: spoonedosrs-discord.png (1024 x 1024 PNG). Uses the existing site's Rocky mascot, enlarged with crisp pixels and square padding for Discord's circular crop. Original game artwork belongs to Jagex; this export is not an independently owned logo design.

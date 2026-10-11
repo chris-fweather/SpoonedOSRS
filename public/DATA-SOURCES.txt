@@ -1,0 +1,31 @@
+OSRS Wiki drop-reference snapshot
+Fetched 4 October 2026 (Australia/Sydney).
+Source: https://oldschool.runescape.wiki/api.php
+Each reference retains its article URL, Wiki revision ID and fetch timestamp.
+Rates, quantities, acquisition tables and source-table sections are served from the site's bundled snapshot. The browser requests only the selected item or table.
+Wiki content is attributed to OSRS Wiki contributors and licensed CC BY-NC-SA 3.0: https://creativecommons.org/licenses/by-nc-sa/3.0/
+Reference extracts and table formatting have been adapted for this journal. Check the linked current Wiki article for updates and full conditions.
+
+Calculation corrections
+- Rocky: https://oldschool.runescape.wiki/w/Rocky
+  Chance per eligible action is 1 / (base chance - 25 * Thieving level). Knight base 257211; seed-stall base 36490.
+  New example paces: 2000 successful knight pickpockets/hour or 1200 seed-stall thefts/hour. These are editable planning scenarios, not measured historical performance.
+- TzRek-Jad: https://oldschool.runescape.wiki/w/TzRek-Jad
+  Off-task completion 1/200; on-task completion 1/100; fire-cape exchange 1/200. Independent completion/cape probabilities are combined as 1 - product of failure probabilities.
+  Obifloat's selected full-run pace: user-stated 30 minutes. Other account example: 45 minutes. Include failures, setup and task acquisition in pace as applicable.
+- Lil' creator: https://oldschool.runescape.wiki/w/Spoils_of_war
+  One pet roll at 1/400 per crate, purchased for 30 Zeal. Editable example 150 Zeal/hour = 5 crates/hour = 80-hour mean.
+- Other directly matched pet rates retain their checked Wiki source date in the method. Unreviewed imported paces are excluded from totals; no legacy reference-hour fallback is used.
+- Phoenix: https://oldschool.runescape.wiki/w/Phoenix 1/5,000 per reward roll. Hiscores Wintertodt score is subdues, not rolls. At 200 million Firemaking XP the pet is 15 times more common.
+- Olmlet: https://oldschool.runescape.wiki/w/Olmlet 1/53 when a unique is received. Unique chance is 1% per 8,676 team points. Hiscores raid count is not a unique count.
+- Lifetime skill XP comes from OSRS hiscores. Historical hours require measured hours or an explicit average XP/hour. Lifetime XP is not automatically treated as eligible pet effort.
+- 95% chance budgets assume independent constant-probability attempts at the selected pace. They are not guarantees.
+
+Reference snapshots added 4 October 2026
+- Skill pet rates: https://oldschool.runescape.wiki/w/Module:Skill_pet_calc plus XP stated on each linked method page. Stored in lib/skill-pet-rates.json.
+  Per action the denominator is base − 25×level. Minnow and Fishing Trawler keep the base figure. Expected actions are that denominator, floored to two decimal places. Expected XP is expected actions × XP per action, and only when that XP is on the linked page. The skilling-outfit divisor is not applied.
+  A stored spreadsheet XP figure is an unverified planning number unless it is replaced by this formula. There is no player-base average XP for pets in this app.
+- Quest requirements: Bucket:Quest and Module:Questreq/data, stored in lib/quest-reference.json. official_length is a category (Very Short through Very Long). The wiki pages do not publish one clock time.
+- Achievement diary tasks: the twelve diary pages linked from https://oldschool.runescape.wiki/w/Achievement_Diary , stored in lib/diary-tasks.json. Area completion totals still come from the RuneProfile sync. The task text is the wiki list, not per-account ticks.
+- Combat achievement combos: Bucket:Combat_achievement descriptions that name other catalogue tasks, stored in lib/ca-combos.json. Points shown on the combat tab are tier totals × points per task, because individual ticks are not in the sync.
+Wiki content is CC BY-NC-SA 3.0. Refresh with scripts/fetch-reference.py.

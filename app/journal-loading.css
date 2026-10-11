@@ -1,0 +1,14 @@
+/* The skeleton reuses the loaded profile's frame (columns, tabs, overview), so only placeholder fills live here. */
+.site>.journal-loading{display:block;width:auto;max-width:none;margin:0;padding:0;min-height:75vh}
+.journal-failed{width:min(560px,calc(100% - 32px));margin:40px auto;padding:20px}
+.journal-skeleton .skeleton-stage{display:grid;place-items:center;background:var(--sunk)}
+.journal-skeleton .char-name>b{display:block;width:100%;text-align:center}
+.journal-skeleton .skeleton-block{display:block;background:linear-gradient(180deg,#26221c,#1e1b16);cursor:default}
+.journal-skeleton .skeleton-dot{display:block;border-radius:50%;background:#2a2620;opacity:.55}
+.journal-skeleton .activity-rank-icon.skeleton-dot{border-radius:3px;height:20px}
+.journal-skeleton .petlog-grid .skeleton-dot{width:22px;height:22px;justify-self:center;align-self:center}
+.journal-skeleton .wtabs button{cursor:default}.journal-skeleton .wtabs img{opacity:.6}.journal-skeleton .prog-row{cursor:default}.journal-skeleton .prog-row img{opacity:.55}
+.journal-skeleton .skeleton-line{display:block;width:70%;height:8px;border-radius:4px;background:#2a2620}
+.journal-skeleton .skeleton-block,.journal-skeleton .skeleton-dot,.journal-skeleton .skeleton-line{animation:skeleton-pulse 1.6s ease-in-out infinite}
+@keyframes skeleton-pulse{50%{opacity:.3}}
+@media(prefers-reduced-motion:reduce){.journal-skeleton .skeleton-block,.journal-skeleton .skeleton-dot,.journal-skeleton .skeleton-line{animation:none}}

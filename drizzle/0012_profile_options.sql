@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS profile_options (rsn TEXT PRIMARY KEY NOT NULL, details TEXT NOT NULL DEFAULT '{}', skin TEXT NOT NULL DEFAULT 'default');

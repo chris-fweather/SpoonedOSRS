@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS profile_appearance (rsn TEXT PRIMARY KEY NOT NULL, body_type TEXT NOT NULL DEFAULT 'auto' CHECK(body_type IN ('auto','male','female')), hair_color TEXT NOT NULL DEFAULT 'brown' CHECK(hair_color IN ('brown','blonde','black','red','grey')));

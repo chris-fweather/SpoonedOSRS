@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791037840095,
+      "tag": "0000_wooden_white_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791132324157,
+      "tag": "0001_concerned_wonder_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791230000000,
+      "tag": "0002_profile_flair",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791330000000,
+      "tag": "0003_equipped_look",
+      "breakpoints": true
+    }
+  ]
+}
