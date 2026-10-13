@@ -14,4 +14,4 @@ export async function shareAsset(path:string,origin:string){
  }
  return pending;
 }
-export async function shareDataUrl(path:string,origin:string){const data=await shareAsset(path,origin);return 'data:'+ (path.endsWith('.svg')?'image/svg+xml':'image/png')+';base64,'+Buffer.from(data).toString('base64');}
+export async function shareDataUrl(path:string,origin:string){const data=await shareAsset(path,origin);return 'data:'+(path.endsWith('.svg')?'image/svg+xml':/\.jpe?g$/.test(path)?'image/jpeg':'image/png')+';base64,'+Buffer.from(data).toString('base64');}

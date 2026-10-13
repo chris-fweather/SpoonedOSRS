@@ -9,7 +9,7 @@ const branch=process.env.WORKERS_CI_BRANCH,target=deployEnvironment();
 // main deploys only the live Worker; dev deploys only the dev Worker and its own database.
 if(branch!==target.branch)throw Error(`The ${target.name} environment deploys only from Cloudflare Workers Builds on ${target.branch}.`);
 const config=JSON.parse(readFileSync('dist/server/wrangler.json','utf8'));
-const {d1DatabaseId}=deploymentConfig();
+const {d1DatabaseId}=deploymentConfig({examples:false});
 if(config.name!==target.worker || !config.d1_databases?.some(binding=>binding.binding==='DB' && binding.database_id===d1DatabaseId && binding.database_name===target.database))throw Error(`The ${target.name} Worker/database configuration is missing.`);
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 // Failure stops the process; never upload code after a failed migration.

@@ -8,11 +8,11 @@ Use Node.js 24 (see `.node-version`).
 
 ```sh
 npm ci
-cp .env.example .dev.vars   # then fill in your own values
+npm run setup   # creates .dev.vars with a random session secret and builds the local database
 npm run dev
 ```
 
-The dev server prints its URL (usually `http://127.0.0.1:5173`). Local D1 data lives in the ignored `.wrangler/state/`.
+The dev server prints its URL (usually `http://localhost:5173`). Pages, leaderboards and guides work straight away; local D1 data lives in the ignored `.wrangler/state/`. Run `npm run setup` again after pulling new migrations.
 
 To sign in locally, create your own Discord application and put its secrets in **`.dev.vars`** (never in source):
 
@@ -24,6 +24,8 @@ To sign in locally, create your own Discord application and put its secrets in *
 [.env.example](../.env.example) lists every setting.
 
 ## Checks
+
+These need no setup or accounts. Outside Cloudflare's own builds, a build without deployment identifiers uses the example ones from `.env.example`, which point at nothing.
 
 ```sh
 npm run release:verify     # release metadata, TypeScript, unit tests, migrations, production build

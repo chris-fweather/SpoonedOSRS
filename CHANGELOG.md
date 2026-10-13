@@ -5,6 +5,9 @@
 Changes after the latest version belong here until the next version and its
 release notes are prepared.
 
+- Link previews: shared links show the castle scene with the site header. Profile previews show the player's name in their rank colour with their scimitar or coin and account-type badge, Sir when they use it, their achievement title in its rarity colour under the username, their character in the gear saved on their profile, their chosen scene, and their rank on the pets, collection log and total level boards.
+- Running your own copy: `npm run setup` prepares a fresh clone, and the checks run without any configuration.
+
 ## 0.2.0-beta.1 — 2026-10-13
 
 - Staff: corrections take notes, and approvals or rejections can carry a reason; both show in the timeline. Ownership requests show the admin notice first, and the evidence shows who added it and when. Players shows how many players there are and each player's donations (amounts a player hides are marked hidden). Latest activity uses the same rows as Access history, and on phones the section tabs scroll instead of cutting off.

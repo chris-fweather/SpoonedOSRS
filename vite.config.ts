@@ -11,6 +11,7 @@ const isBuild = process.argv.includes("build");
 // Database, Discord and owner identifiers come from Workers Builds variables (or the private
 // repository's config/deployment.private.json). A production build fails if any is missing.
 const deployment = deploymentConfig({ required: isBuild });
+if (deployment.example && isBuild) console.warn("Building with example deployment identifiers (see .env.example). Fine for local checks; this build can't be deployed.");
 const target = deployEnvironment();
 const isDev = target.name === "dev";
 const PRODUCTION_DATABASE_ID = deployment.d1DatabaseId;

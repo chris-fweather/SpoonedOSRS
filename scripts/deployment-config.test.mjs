@@ -17,7 +17,10 @@ test('Cloudflare build variables override the private fallback file',()=>{
  assert.deepEqual(config.ownerDiscordIds,['100000000000000003','100000000000000004']);
 });
 test('a public build without configuration fails instead of guessing a database',()=>{
- assert.throws(()=>deploymentConfig({env:{},file:missing}),/Set D1_DATABASE_ID/);
+ assert.throws(()=>deploymentConfig({env:{WORKERS_CI:'1'},file:missing}),/Set D1_DATABASE_ID/);
+ assert.throws(()=>deploymentConfig({env:{},file:missing,examples:false}),/Set D1_DATABASE_ID/);
+ // A fresh clone builds and checks with the example identifiers; Cloudflare builds never do.
+ const local=deploymentConfig({env:{},file:missing});assert.equal(local.example,true);assert.equal(local.d1DatabaseId,'00000000-0000-4000-8000-000000000000');assert.deepEqual(local.ownerDiscordIds,['100000000000000003','100000000000000004']);
  assert.deepEqual(deploymentConfig({env:{},file:missing,required:false}).ownerDiscordIds,[]);
 });
 test('malformed identifiers are rejected',()=>{

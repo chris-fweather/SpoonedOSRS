@@ -1,7 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {DISCORD_COMMANDS} from '../lib/discord-config.ts';
 import {deploymentConfig} from './deployment-config.mjs';
-const {applicationId:DISCORD_APPLICATION_ID,guildId:DISCORD_GUILD_ID,publicKey:DISCORD_PUBLIC_KEY}=deploymentConfig().discord;
+const {applicationId:DISCORD_APPLICATION_ID,guildId:DISCORD_GUILD_ID,publicKey:DISCORD_PUBLIC_KEY}=deploymentConfig({examples:false}).discord;
 // Read only the app-specific secret; never print tokens, credentials or raw OAuth responses.
 const vars=(()=>{try{return readFileSync('.dev.vars','utf8');}catch{return '';}})();
 const clientSecret=process.env.DISCORD_CLIENT_SECRET??vars.match(/^DISCORD_CLIENT_SECRET\s*=\s*["']?([^\r\n"']+)/m)?.[1];
