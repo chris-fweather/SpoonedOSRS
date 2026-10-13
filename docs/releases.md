@@ -87,6 +87,23 @@ production. A failed publication can be rerun; an existing release is left
 unchanged. If a stable tag runs before Cloudflare finishes, wait for deployment
 and rerun the workflow. GitHub release publication itself does not deploy code.
 
+## Dev environment
+
+Changes are reviewed on the dev environment before they go live.
+
+| | Live | Dev |
+| --- | --- | --- |
+| Worker | `spoonedosrs` | `spoonedosrs-dev` |
+| Database | `spoonedosrs-db` | `spoonedosrs-dev-db` |
+| Branch | `main` | `dev` |
+| Address | spoonedosrs.com | dev.spoonedosrs.com |
+
+The dev Worker's Workers Builds trigger runs the same build and deploy commands, with the
+variables `SPOONED_ENV=dev` and `D1_DATABASE_ID` set to the dev database. The dev build refuses
+to run without its own database ID, so it can never point at live data. Dev pages carry a yellow
+banner and are kept out of search engines; dev has no background refresh. Work merges into `dev`
+for review, and `dev` merges into `main` once approved.
+
 ## Public source releases
 
 Development happens in a private repository. Each approved version is published

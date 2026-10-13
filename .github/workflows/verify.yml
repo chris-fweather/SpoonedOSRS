@@ -31,6 +31,8 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npm ci --include=dev --include=optional
+      # Lint errors fail the check; warnings are reported only.
+      - run: npm run lint
       - run: npm run release:verify
       # Discord login and all-source sync against the built Worker, with upstreams mocked.
       - run: npm run test:beta

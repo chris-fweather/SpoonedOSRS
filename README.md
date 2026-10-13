@@ -26,7 +26,7 @@ Track your pets and collection log, see how dry you really are, and compare with
 </tr>
 <tr>
 <td align="center" width="50%" valign="top"><img src="public/icons/navigation/quest-list-icon.png" height="40"><br><b>Guides</b><br><sub>Boss and activity guides with gear setups for every&nbsp;budget.</sub></td>
-<td align="center" width="50%" valign="top"><img src="public/icons/community/discord.png" height="40"><br><b>Discord</b><br><sub>Sign in with Discord and sync your site roles to the community&nbsp;server.</sub></td>
+<td align="center" width="50%" valign="top"><img src="public/icons/community/discord.png" height="40"><br><b>Discord</b><br><sub>Sign in with Discord, and share profiles in our server with&nbsp;<code>/profile</code>.</sub></td>
 </tr>
 </table>
 

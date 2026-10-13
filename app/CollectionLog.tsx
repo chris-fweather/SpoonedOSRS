@@ -17,6 +17,7 @@ import {Meter, Count} from './Meter';
 import {PopHead, Stats, type PopApi} from './Pop';
 import './collection-date-editor.css';
 import {chanceAfter, chanceTone, loadPageDrops, num, pageKc, pct, wiki, wikiSearch, type PageDrops} from '@/lib/ui';
+import {GuideLink} from './GuideLink';
 
 export function CollectionLog({journal, log, onConnect, pop, canEdit=false, busy=false, onSaveDate}: {journal: Journal; log: Log | null; onConnect: () => void; pop: PopApi; canEdit?:boolean; busy?:boolean; onSaveDate?:(itemId:number,date:string)=>Promise<boolean>}) {
   const [tab, setTab] = useState(log?.tabs[0]?.name ?? 'Bosses');
@@ -89,6 +90,7 @@ export function CollectionLog({journal, log, onConnect, pop, canEdit=false, busy
             <button type="button" aria-pressed={sub === 'items'} onClick={() => setSub('items')}>Items</button>
             <button type="button" aria-pressed={sub === 'drops'} onClick={() => setSub('drops')}>Drop table</button>
           </div>
+          <GuideLink activity={page.name} compact/>
           <a className="icon-btn" aria-label={`${page.name} on the OSRS Wiki`} href={wikiSearch(page.name)} target="_blank" rel="noreferrer"><ExternalLink size={16}/></a>
         </div>
 

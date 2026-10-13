@@ -1,8 +1,12 @@
 import type { StaffRole } from "./staff-policy";
 export const STAFF_AREAS = {
-  guides: "Guide workshop",
-  corrections: "Corrections & review",
-  planning: "Planning & observations",
+  guides: "Write guides",
+  publish: "Publish guides",
+  corrections: "Propose drop rates & records",
+  planning: "Propose kill rates & XP",
+  review: "Approve corrections",
+  ownership: "Approve ownership requests",
+  holds: "Put names on hold",
 } as const;
 export type StaffArea = keyof typeof STAFF_AREAS;
 export type StaffPermissions = Record<StaffArea, boolean>;
@@ -12,9 +16,9 @@ export const EDITABLE_STAFF_ROLES = ["helper", "moderator", "admin"] as const;
 export type EditableStaffRole = (typeof EDITABLE_STAFF_ROLES)[number];
 /** Shipped defaults: used until the owner saves a rank, and whenever the role table is unavailable. */
 export const DEFAULT_ROLE_PERMISSIONS: Record<EditableStaffRole, StaffPermissions> = {
-  helper: { guides: true, corrections: false, planning: false },
-  moderator: { guides: true, corrections: true, planning: true },
-  admin: { guides: true, corrections: true, planning: true },
+  helper: { guides: true, publish: false, corrections: true, planning: true, review: false, ownership: false, holds: false },
+  moderator: { guides: true, publish: true, corrections: true, planning: true, review: true, ownership: true, holds: true },
+  admin: { guides: true, publish: true, corrections: true, planning: true, review: true, ownership: true, holds: true },
 };
 const pick = (row: PermissionRow, key: StaffArea) => row?.[key] === undefined || row[key] === null ? undefined : !!row[key];
 /** A member override wins, then the rank's saved default, then the shipped default. Owners always have every area. */
@@ -40,7 +44,11 @@ export function parseStaffPermissions(value: unknown): StaffPermissions {
     throw Error("Choose valid staff workspace permissions.");
   return {
     guides: v.guides as boolean,
+    publish: v.publish as boolean,
     corrections: v.corrections as boolean,
     planning: v.planning as boolean,
+    review: v.review as boolean,
+    ownership: v.ownership as boolean,
+    holds: v.holds as boolean,
   };
 }

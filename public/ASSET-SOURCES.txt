@@ -81,3 +81,9 @@ frame 2 ironman, 3 ultimate_ironman, 10 hardcore_ironman, 41 group_ironman, 42 h
 Cache mirror: https://github.com/abextm/osrs-cache (master ffb0cb0a343c1d6b9360595bb78314f60f923d03, index 8).
 Decoded with RuneLite's sprite format and trimmed to the visible pixels (all 13 px tall). Original pixels, no scaling or edits.
 Game imagery belongs to Jagex.
+
+Prayer icons: public/icons/prayers/*.png (29 prayer-book icons, one per prayer)
+Source: https://github.com/osrsbox/osrsbox-db/blob/master/docs/prayers-complete.json (base64 "icon" field per prayer; the repository's numbered prayers-icons files do not match prayer IDs, so the embedded icons are used).
+Artwork © Jagex Ltd; see docs/third-party-content.md.
+icons/ranks/silver-scimitar.png: recoloured from icons/ranks/gilded-scimitar.png (Spooned OSRS icon set).
+icons/community/sponsor-coin.png: Spooned OSRS supporter coin, supplied by the site owner; also the Discord Supporter role icon (artwork/discord/emojis/02_more_icons/rank_supporter_silver.png).

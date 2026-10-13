@@ -1,6 +1,5 @@
 // Local fixture only. Validate persistence and writer boundaries without changing a real account.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {mixedFarmingMethod} from '../lib/estimates.ts';
 import {initial,likelihood} from '../lib/model.ts';
 import {seal,SESSION_COOKIE} from '../lib/session.ts';

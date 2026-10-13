@@ -1,6 +1,5 @@
 // Local, disposable staff fixtures; never run against production.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {seal,SESSION_COOKIE} from '../lib/session.ts';
 import {emptyGuide,newGuideSetup,guideQuests,guideDiaryAreas,searchGuideItems,guideSlotChoices} from '../lib/guides.ts';
 import {startWorker} from './worker-harness.mjs';

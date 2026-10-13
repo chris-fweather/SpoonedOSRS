@@ -5,7 +5,7 @@
 import {spawn} from 'node:child_process';
 
 const checks=['staff-roles','staff-profile','staff-workspace','staff-guides','moderation-cases','discord-preferences','profile-privacy','account-menu',
- 'guest-commendations','pet-records','launch-controls','discovery-accounts','share-previews'];
+ 'guest-commendations','pet-records','launch-controls','discovery-accounts','share-previews','sessions','guide-uploads'];
 const filter=process.argv.slice(2),selected=checks.filter(name=>!filter.length||filter.some(f=>name.includes(f)));
 if(!selected.length)throw Error(`No check matches ${filter.join(' ')}. Checks: ${checks.join(', ')}`);
 

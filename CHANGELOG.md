@@ -5,6 +5,67 @@
 Changes after the latest version belong here until the next version and its
 release notes are prepared.
 
+## 0.2.0-beta.1 — 2026-10-13
+
+- Staff: corrections take notes, and approvals or rejections can carry a reason; both show in the timeline. Ownership requests show the admin notice first, and the evidence shows who added it and when. Players shows how many players there are and each player's donations (amounts a player hides are marked hidden). Latest activity uses the same rows as Access history, and on phones the section tabs scroll instead of cutting off.
+- Guide editor: every insert is an icon on an Insert bar, grouped (In the text, Text, Gear, Boss info, Magic, Media), with its name on hover. Type @ in the text to search items, prayers, spells, skills and quests; type an s straight after a term to make it plural.
+- Staff: a moderator can no longer approve an admin's correction or ownership request; the proposer's rank or higher decides. Access history reads as one line per change, and adding staff opens the person's card under the search.
+- Guide editor: upload an image or GIF (PNG, JPG, WebP or GIF, up to 3 MB) straight into a guide, as well as pasting a link.
+- Guide editor: gear tiers are edited in one place: rename a tier, edit its gear or inventory, or add your own tier. Gear sections show an "Edit" button right under them.
+- Guide editor: Insert adds Prayers, Spells, and Images or GIFs by link. Spells can be linked inline like prayers and items. "Items & terms" (the book) is labelled, and can add a plural ("Sharks"). The text-style menu is readable on the dark theme.
+- Profiles: scroll (or pinch) on the character to zoom in and out of the scene. Turning the character is gentler: it eases into place and a flick slows to a stop.
+- Staff portal: names show the scimitar and rank colour only, without Sir or the donor title.
+- Staff portal: RuneScape names carry the friends-list icon and Discord accounts the Discord icon, so requests read "Lucky Lad: from Lucky Lad → Dry Guy" with a one-line summary of what changes. "Needs admin" shows only while a request waits; decided requests note it in the timeline.
+- Hold names: a new permission (moderators and up by default) puts an unprotected name on hold straight away, without a second reviewer. Releasing or linking a held name still needs one.
+- Corrections: kill-rate rows lead with the boss ("Kraken · kills per hour · Pet kraken"), dry-streak records use a flame icon, state and time sit on one line, and every row opens to a timeline of who proposed and who decided.
+- Players: rows show pets, collection log slots and quest points; opening one shows the account type, link date, last full sync and other names. Fix progress now covers the collection log, quests and diaries as well as pets.
+- Permissions: picking someone to add shows their Discord name, handle and RuneScape names.
+- Boss and activity pages show a "Read our guide" button when a published guide covers them.
+- Staff portal: names sit on the same line as the sentence around them. Corrections show the item's or pet's own icon, and kill-rate rows lead with the pet. Dry-streak records read as "Dry Streaker went 14,250 kills without Pet kraken".
+- Kill rates & XP: a proposal can set a pet's rate (for example 1 in 1,000 master clues for Bloodhound) as well as, or instead of, its pace.
+- Ownership: requests name the Discord account a name moves to (with the Discord icon) rather than its main RuneScape name; protected requests show a Needs admin flag; reviewers are always named.
+- Access history starts with who acted: "Mira Vale promoted Bramble Pk", "Mira Vale updated Corvid Hc's access".
+- Guides page tiles are compact: the icon beside a one-line title and topic, the byline underneath.
+- Staff portal: Ownership and Corrections share one layout: section tabs with their own Awaiting review tab, compact rows that open in place, and step-by-step forms. A new ownership request shows who owns the name now before you choose what should happen.
+- Corrections: the drop search groups results by item and lists every boss or activity that drops it with its own rate; History is a compact list instead of large cards.
+- Overview: Latest activity reads as plain sentences, such as "Bramble Pk proposed a rate of 1/400 for Kraken tentacle".
+- Permissions: access is grouped into Guides, Corrections and Ownership. Team rows show the Discord @username with the Discord icon, every row opens (your own read-only), new staff are found by searching a Discord account or RuneScape name, and rank changes in the history read Helper → Moderator.
+- Players: each player shows their name as their profile does, with actions to view the profile, open an ownership request, manage staff access, search correction history or fix progress. The staff tabs read Overview, Ownership, Corrections, Players, Permissions, Guides, Discord bot.
+- Ownership: accounts in the top 25 on the pet or collection log boards also need an admin to approve a request.
+- Guides: a new guide starts from a layout (Blank, Bossing, Quest or Diary), suggested from its topic, instead of fixed templates. Quests show their difficulty, and diaries and combat achievement tiers can be guide topics. The workshop has a search, guide titles stay on one line, and requirements stay on one line.
+- Account settings: Log out everywhere ends every signed-in session for your Discord account, on all devices.
+- The footer credits every data source (OSRS Hiscores, RuneProfile, TempleOSRS and Wise Old Man), and the RuneProfile card's description fits on one line.
+- Staff portal, Ownership: each request reads like a report, with a header, the from and to accounts, the evidence, a decision panel and a timeline. Staff can now hold a name and release the hold; while a name is held they can link it to its owner's Discord ID from the request.
+- Staff portal: people show as they appear on the site everywhere (main name in rank colour, scimitar or supporter coin, Sir and "the Generous"), including the Team list and Access history.
+- Staff portal, Overview: Latest activity lists corrections and ownership requests (moves, holds and releases) together, with who proposed and who decided.
+- Staff portal, Corrections: section tabs with waiting counts, step-by-step proposal forms, a review queue per section, and cards that show the proposed value up front.
+- Every supporter gets a silver coin beside their name on the site, and the same coin is the Supporter role icon on Discord. Gilded supporters show the gilded scimitar instead.
+- The site owner's name is red, like admins', with the owner's inferno scimitar.
+- The Guides banner shows how many guides are published. The Leaderboard banner shows the live community totals (public journals, pets collected and log slots unlocked), which moved there from the home page.
+
+- The Guides page is open: a search bar, published guides as tiles that open the full guide, and a banner inviting helpers to join the Discord and write guides. The Leaderboard and Guides titles show their navigation icons.
+
+- Guides: gear setups for each budget sit side by side as tiers, each with a short note. Requirements show skill, quest, diary and item icons, plus custom requirements. Game terms such as Protect from Magic or a Dramen staff show their own icon and open their OSRS Wiki page. Staff add requirements from one search across skills, quests, diaries and items.
+- The footer shows the site's version, linked to its published source code.
+- The home page shows one full-width note when there are no public journals yet, instead of a box inside the Pet collectors panel. Both home boards always show their page controls.
+- Connections: the RuneLite guide and Your data sit directly under the source cards instead of at the bottom of the panel, and are always open.
+- Guides show who wrote them, when they were published and when they were last updated, on the guide and on its tile. Guide tiles are a little larger with a bigger boss icon.
+- Guides: the trip inventory sits beside the gear tiers as one more card; drop tables show on their own without a filter bar; odds charts pick a drop or pet straight from the boss's table; custom requirements use a task icon by default.
+- Pets tab tiles look like collection log tiles: icon, name, progress bar, then kills and the estimated time left.
+- Quests show how many are left; quest difficulty orbs are smaller. Collection timeline filters use the same pills as the rest of the site.
+- Guides and Support use the same gaps between sections as the home page.
+- Staff portal: six tabs. Players holds the directory and progress corrections; Ownership has a clearer request form; Corrections brings drop rates, kill rates and XP, dry-streak records and history together, with searches that show results as you type; Permissions history reads as plain sentences with icons.
+- Guides, Leaderboard and Support open with the same banner: the castle art, the page title and Rocky. Donor hovers read Supporter instead of Sponsor.
+- Support: where the money goes as four cards, and questions that open one at a time.
+- Staff names show in their rank colour everywhere a name appears: boards, profiles, search suggestions and the account menu.
+- Support page rebuilt: Supporter and Gilded supporter side by side, each showing how your name looks on the site and in Discord, where the money goes, the top supporters and common questions.
+- Guides: item and diary requirements keep their amount on the same line; [[XP]] shows the experience icon.
+- Names: the achievement title starts under the username everywhere, as in the account menu. The Helper title is now green (uncommon) to match the helper rank.
+- Profiles: Sir sits right beside the name, however long the title underneath. Character scenes are framed wider so more of the scene shows, and the Mine's tunnel has depth and a lantern instead of a black panel.
+- Collection timeline: before anything is dated, a faded example timeline built from your pets shows what it will look like.
+- Connections: the RuneLite section explains that TempleOSRS collection logs import too, and what Refresh all sources pulls.
+- Staff portal: approving corrections is its own permission. Helpers can now propose drop rates, records and kill rates by default; moderators and up approve. Admins can set helpers' and moderators' own access. Ownership requests show the from and to Discord accounts with avatars, a clear Relink or Unlink tag, and staff names with their rank scimitar.
+
 ## 0.1.0-beta.3 — 2026-10-08
 
 First public source release (MIT). See [release notes](releases/0.1.0-beta.3.md).

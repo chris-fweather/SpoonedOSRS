@@ -17,6 +17,7 @@ import {DriestRecord} from './DriestRecord';
 import {Meter} from './Meter';
 import {OddsMini} from './ProgressCharts';
 import {PopHead, Stats} from './Pop';
+import {GuideLink} from './GuideLink';
 
 /** Rate basis for the open pet: wiki XP at your level, or the stored drop rate with its source. */
 export function RateBasis({journal, pet}: {journal: Journal; pet: Pet}) {
@@ -83,6 +84,7 @@ export function PetPanel({journal, pet, busy, canEdit, onEdit, onFull, onHunt}: 
       <button type="button" className="btn primary sm" onClick={onFull}><Maximize2 size={13}/> Drop table &amp; details</button>
       {canEdit&&<button type="button" className="btn primary sm" disabled={busy} onClick={onEdit}><Pencil size={13}/>Edit progress &amp; rates</button>}
       {canEdit&&!pet.obtained && <button type="button" className={`btn sm ${pet.priority ? 'on' : 'ghost'}`} disabled={busy} onClick={onHunt}><Target size={13}/> {pet.priority ? 'On hunt list' : 'Add to hunt list'}</button>}
+      <GuideLink activity={m?.activity || page?.name}/>
       <a className="btn ghost sm" href={wiki(pet.name)} target="_blank" rel="noreferrer">Wiki <ExternalLink size={13}/></a>
     </div>
   </>;

@@ -3,21 +3,27 @@ import {useEffect, useRef, type KeyboardEvent} from 'react';
 
 export const STAFF_TABS = [
   {id:'overview',label:'Overview',icon:'/icons/navigation/stats-icon.png',title:'Overview',description:'What needs attention, recent review activity and quick links to your areas.'},
-  {id:'requests',label:'Requests',icon:'/icons/navigation/quest-list-icon.png',title:'Account requests',description:'Ownership requests, evidence and account history.'},
-  {id:'corrections',label:'Corrections',icon:'/items/2347.png',title:'Corrections',description:'Propose changes and review community submissions.'},
-  {id:'history',label:'History',icon:'/icons/navigation/collection-log-icon.png',title:'Correction history',description:'Search past submissions and review decisions.'},
-  {id:'planning',label:'Planning',icon:'/icons/navigation/combat-achievements-icon.png',title:'Planning references',description:'Acquisition records and shared planning references.'},
-  {id:'guides',label:'Guides',icon:'/icons/navigation/quest-point-icon.png',title:'Guide workshop',description:'Write guides, insert requirements and build loadouts. Drafts stay separate from the published guide.'},
-  {id:'players',label:'Players',icon:'/icons/community/friends-list.png',title:'Player directory',description:'Find players and inspect linked accounts.'},
-  {id:'progress',label:'Progress',icon:'/icons/navigation/skills-icon.png',title:'Correct progress',description:'Admin corrections with evidence and account history.'},
-  {id:'staff',label:'Permissions',icon:'/icons/community/settings-icon.png',title:'Permissions',description:'Ranks, custom access and what each rank can open.'},
+  {id:'ownership',label:'Ownership',icon:'/items/983.png',title:'Account ownership',description:'Move, hold and release RuneScape names, with evidence and a full timeline.'},
+  {id:'corrections',label:'Corrections',icon:'/items/2347.png',title:'Corrections',description:'Drop rates, kill rates and XP, and dry-streak records. Every change is reviewed by someone else.'},
+  {id:'players',label:'Players',icon:'/icons/community/friends-list.png',title:'Players',description:'Find players, see how their name shows, and open their profile or an ownership request.'},
+  {id:'permissions',label:'Permissions',icon:'/icons/community/settings-icon.png',title:'Permissions',description:'Ranks, custom access and what each rank can open.'},
+  {id:'guides',label:'Guides',icon:'/icons/navigation/collection-log-icon.png',title:'Guide workshop',description:'Write guides, insert requirements and build loadouts. Drafts stay separate from the published guide.'},
   {id:'discord',label:'Discord bot',icon:'/icons/community/clan-chat.png',title:'Discord bot',description:'Manage community bot commands and connections.'},
 ] as const;
 export type StaffTabId = (typeof STAFF_TABS)[number]['id'];
-/** Accepts tab ids and the older `?tab=Progress` style labels. */
+/** Sections inside the Corrections tab. */
+export type CorrectionSection = 'queue'|'drops'|'paces'|'records'|'history';
+/** Older addresses still open the right place: Requests became Ownership, Progress joined Players, Planning and History joined Corrections. */
+const LEGACY:Record<string,StaffTabId>={requests:'ownership','account requests':'ownership',progress:'players','correct progress':'players','player directory':'players',planning:'corrections','planning references':'corrections',history:'corrections','correction history':'corrections',staff:'permissions','staff access':'permissions','staff & permissions':'permissions','guide workshop':'guides'};
+/** Accepts tab ids, labels and the older tab names. */
 export function staffTabFrom(value:string|null|undefined):StaffTabId|null {
-  const v=value?.trim().toLowerCase();
-  return STAFF_TABS.find(t=>t.id===v||t.label.toLowerCase()===v||t.title.toLowerCase()===v)?.id??(v==='staff access'||v==='staff & permissions'?'staff':v==='guide workshop'?'guides':null);
+  const v=value?.trim().toLowerCase()??'';
+  return STAFF_TABS.find(t=>t.id===v||t.label.toLowerCase()===v||t.title.toLowerCase()===v)?.id??LEGACY[v]??null;
+}
+/** The Corrections section an older address points at. */
+export function correctionSectionFrom(value:string|null|undefined):CorrectionSection|null {
+  const v=value?.trim().toLowerCase()??'';
+  return v==='queue'||v==='review'?'queue':v==='planning'||v==='paces'?'paces':v==='history'?'history':v==='records'?'records':v==='drops'?'drops':null;
 }
 
 /** Horizontal section tabs, styled like the profile and leaderboard tabs. Scrolls sideways on phones. */

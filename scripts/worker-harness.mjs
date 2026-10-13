@@ -30,7 +30,7 @@ async function assets(request){
 }
 
 /** Starts one isolated Worker. `outbound` receives every upstream Request; by default they get a 503. */
-export async function startWorker({outbound,bindings={}}={}){
+export async function startWorker({outbound,bindings={},r2=false}={}){
  const config=JSON.parse(readFileSync('dist/server/wrangler.json','utf8'));
  const secret=randomBytes(32).toString('base64'),upstream=[];
  const mf=new Miniflare(convertV4MiniflareOptions({
@@ -39,6 +39,8 @@ export async function startWorker({outbound,bindings={}}={}){
    .map(f=>({type:f.endsWith('.wasm')?'CompiledWasm':'ESModule',path:f,contents:readFileSync(path.join('dist/server',f))})),
   compatibilityDate:config.compatibility_date,compatibilityFlags:config.compatibility_flags,
   d1Databases:['DB'],serviceBindings:{ASSETS:assets},
+  // Guide uploads: an in-memory R2 bucket when a check asks for one (deploys bind it only once the bucket exists).
+  ...(r2?{r2Buckets:['UPLOADS']}:{}),
   bindings:{...config.vars,SESSION_SECRET:secret,...bindings},
   outboundService:async request=>{upstream.push(request.url);return outbound?await outbound(request):new Response('Upstream requests are blocked in tests.',{status:503});},
  }));

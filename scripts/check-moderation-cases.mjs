@@ -5,7 +5,7 @@ import {seal,SESSION_COOKIE} from '../lib/session.ts';
 import {startWorker} from './worker-harness.mjs';
 const {origin:base,secret,fetch,rows:sql,dispose}=await startWorker();
 const stamp=Date.now(),ids=['11','12','13','14','15','16'].map(p=>p+'00'+stamp),[helper,mod,admin,source,target,outsider]=ids;
-const rsn=('mq'+String(stamp).slice(-8)).toLowerCase();
+const rsn=('mq'+String(stamp).slice(-8)).toLowerCase(),rsn2=('mh'+String(stamp).slice(-8)).toLowerCase();
 async function headers(id){return {'Content-Type':'application/json',Origin:base,Cookie:`${SESSION_COOKIE}=${await seal(secret,{id,username:'Moderation QA',globalName:null,avatar:null,exp:Math.floor(Date.now()/1000)+600})}`};}
 async function call(path,h,body,status=200){const r=await fetch(base+path,{headers:h,...(body?{method:'POST',body:JSON.stringify(body)}:{})});const raw=await r.text();let d;try{d=JSON.parse(raw);}catch{d={error:raw};}assert.equal(r.status,status,path+' '+JSON.stringify(d));return d;}
 const reason='Verified ownership evidence in this isolated test.';
@@ -50,11 +50,28 @@ try{
  assert.equal(JSON.parse((await sql('SELECT data FROM journals WHERE id=?',[rsn]))[0].data).pets[0].notes,'');
  const c2=await call('/api/staff/cases',m,{...create,operation:'unlink'});await call('/api/staff/cases',a,{...approve,id:c2.id});
  assert.equal((await sql('SELECT * FROM claimed_names WHERE rsn=?',[rsn])).length,0);assert.match((await sql('SELECT discord_id FROM profile_link_owners WHERE rsn=?',[rsn]))[0].discord_id,/^moderation-hold:/);
+ // A held name cannot be held twice; releasing the hold frees it, and the released case still opens.
+ await call('/api/staff/cases',m,{...create,operation:'unlink'},400);
+ const c3=await call('/api/staff/cases',m,{action:'create',username:rsn,operation:'release',reason});
+ await call('/api/staff/cases',m,{...approve,id:c3.id},403);await call('/api/staff/cases',a,{...approve,id:c3.id});
+ assert.equal((await sql('SELECT * FROM profile_link_owners WHERE rsn=?',[rsn])).length,0);assert.equal((await sql('SELECT * FROM profile_visibility WHERE rsn=?',[rsn])).length,0);
+ assert.equal((await call('/api/staff/cases?id='+c3.id,a)).item.action,'release');assert.ok((await call('/api/staff/cases?q='+rsn,a)).items.some(item=>item.id===c3.id));
+ await call('/api/staff/cases',a,{action:'create',username:rsn,operation:'release',reason},404);
  assert.ok((await sql("SELECT 1 FROM account_actions WHERE rsn=? AND action='progress corrected'",[rsn])).length);
- console.log('PASS: CSRF/auth, helper and moderator limits, changed protection thresholds, unknown destination ID, no self-approval, atomic transfer, private-note isolation, old-owner revocation, admin progress confirmation/revision/audit, unlink hold.');
+ // Hold names: a moderator holds an unprotected name straight away; a helper (no permission) only opens a request.
+ await sql('INSERT INTO journals(id,data,revision) VALUES(?,?,1)',[rsn2,JSON.stringify({...journal,username:rsn2,pets:journal.pets.map(p=>({...p,obtained:false})),log:{obtained:0,total:1717,tabs:[]}})]);
+ await sql('INSERT INTO claimed_names(rsn,display_name,discord_id,claimed_at) VALUES(?,?,?,0)',[rsn2,rsn2,source]);
+ await sql('INSERT INTO profile_link_owners(rsn,discord_id,linked_at) VALUES(?,?,0)',[rsn2,source]);
+ const pendingHold=await call('/api/staff/cases',h,{action:'create',username:rsn2,operation:'unlink',reason});
+ assert.equal((await sql('SELECT state FROM staff_cases WHERE id=?',[pendingHold.id]))[0].state,'pending');
+ await call('/api/staff/cases',a,{...approve,id:pendingHold.id,decision:'rejected'});
+ const held=await call('/api/staff/cases',m,{action:'create',username:rsn2,operation:'unlink',reason});
+ const row=(await sql('SELECT state,reviewer_id FROM staff_cases WHERE id=?',[held.id]))[0];assert.equal(row.state,'approved');assert.equal(row.reviewer_id,mod);
+ assert.equal((await sql('SELECT * FROM claimed_names WHERE rsn=?',[rsn2])).length,0);assert.match((await sql('SELECT discord_id FROM profile_link_owners WHERE rsn=?',[rsn2]))[0].discord_id,/^moderation-hold:/);
+ console.log('PASS: CSRF/auth, helper and moderator limits, changed protection thresholds, unknown destination ID, no self-approval, atomic transfer, private-note isolation, old-owner revocation, admin progress confirmation/revision/audit, unlink hold, hold release and immediate holds under the Hold names permission.');
 }finally{
  for(const table of ['transfer_private_archives'])await sql(`DELETE FROM ${table} WHERE case_id IN (SELECT id FROM staff_cases WHERE rsn=?)`,[rsn]);
- for(const table of ['claimed_names','profile_link_owners','profile_visibility','profile_presentation','profile_supporter_totals','account_actions','staff_cases'])await sql(`DELETE FROM ${table} WHERE rsn=?`,[rsn]);
+ for(const name of [rsn,rsn2])for(const table of ['claimed_names','profile_link_owners','profile_visibility','profile_presentation','profile_supporter_totals','account_actions','staff_cases'])await sql(`DELETE FROM ${table} WHERE rsn=?`,[name]);await sql('DELETE FROM journals WHERE id=?',[rsn2]);
  await sql('DELETE FROM journals WHERE id=?',[rsn]);for(const id of ids){await sql('DELETE FROM staff_members WHERE discord_id=?',[id]);await sql('DELETE FROM users WHERE discord_id=?',[id]);}
 }
 await dispose();

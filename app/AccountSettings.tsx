@@ -85,11 +85,30 @@ export function AccountSettings() {
                 <p>Use the account menu above to link your RuneScape name.</p>
               )}
             </div>
+            <SignOutEverywhere />
           </>
         )}
       </main>
     </div>
   );
+}
+/** Log out everywhere: ends every signed-in session for this Discord account, on all devices including this one. */
+function SignOutEverywhere() {
+  const [confirming, setConfirming] = useState(false), [busy, setBusy] = useState(false), [error, setError] = useState("");
+  async function run() {
+    setBusy(true);setError("");
+    try {
+      const r = await fetch("/api/auth/logout-everywhere", {method: "POST"});
+      if (!r.ok) throw Error(((await r.json().catch(() => ({}))) as {error?: string}).error || "Could not log out everywhere.");
+      window.location.assign("/");
+    } catch (e) {setError((e as Error).message);setBusy(false);}
+  }
+  return <section className="community-panel account-signout">
+    <div><h2>Log out everywhere</h2><p>Ends every signed-in session for this Discord account, on all your devices, including this one. Sign in again with Discord afterwards.</p></div>
+    {error && <p role="alert" className="community-notice">{error}</p>}
+    {confirming ? <div className="row gap"><button type="button" className="btn danger" disabled={busy} onClick={() => void run()}>Log out on every device</button><button type="button" className="btn ghost" disabled={busy} onClick={() => setConfirming(false)}>Cancel</button></div>
+      : <button type="button" className="btn" onClick={() => setConfirming(true)}>Log out everywhere</button>}
+  </section>;
 }
 type Privacy = Pick<Account, "visibility" | "details" | "showDonation">;
 function samePrivacy(a: Privacy, b: Privacy) {

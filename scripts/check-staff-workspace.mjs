@@ -1,6 +1,5 @@
 // Disposable local fixtures only; no production requests or upstream imports.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {seal,SESSION_COOKIE} from '../lib/session.ts';
 import {initial} from '../lib/model.ts';
 import {emptyGuide} from '../lib/guides.ts';
@@ -34,14 +33,14 @@ try{
  await api('/api/collection-date',helper,dateBody,409);
  const cleared=await api('/api/collection-date',helper,{...dateBody,date:'',revision:dated.revision});assert.equal(cleared.collectionDates['4151'],undefined);
  const controls=await api('/api/staff/profile?username='+names[1],owner);assert.equal(controls.linkedNames.length,2);
- await api('/api/staff',owner,{action:'permissions',username:names[0],permissions:{guides:true,corrections:false,planning:false}});
+ await api('/api/staff',owner,{action:'permissions',username:names[0],permissions:{guides:true,publish:false,corrections:false,planning:false,review:false,ownership:false,holds:false}});
  const dashboard=await api('/api/staff',helper);assert.equal(dashboard.viewer.permissions.guides,true);assert.equal(dashboard.changes.length,0);assert.equal(dashboard.players.length,0);assert.equal(dashboard.observations.length,0);
  await api('/api/staff',helper,{action:'propose',kind:'rate'},403);
- await api('/api/staff',helper,{action:'permissions',username:names[0],permissions:{guides:true,corrections:true,planning:true}},403);
+ await api('/api/staff',helper,{action:'permissions',username:names[0],permissions:{guides:true,publish:true,corrections:true,planning:true,review:true,ownership:true,holds:true}},403);
  const guide={...emptyGuide(),title:'Workspace QA',activity:'Kraken',summary:'Disposable local integration fixture.',strategy:'Prepare the supplied equipment before starting this activity.',requiredItems:[{id:'385',quantity:2,privateField:'discard'}]};
  guideIds.push((await api('/api/staff/guides',helper,{action:'save',guide})).id);
  assert.ok(!(await api('/api/staff/guides',helper)).guides.find(g=>g.id===guideIds[0]).guide.requiredItems[0].privateField);
- await api('/api/staff',owner,{action:'permissions',username:names[1],permissions:{guides:false,corrections:false,planning:false}});
+ await api('/api/staff',owner,{action:'permissions',username:names[1],permissions:{guides:false,publish:false,corrections:false,planning:false,review:false,ownership:false,holds:false}});
  await api('/api/staff/guides',helper,null,403);
  await api('/api/staff/guides',helper,{action:'save',guide},403);
  console.log('PASS: collection date persistence/clear/validation/stale revision and access checks; account-scoped privacy, cross-user/origin rejection, wallpaper preservation, linked-name staff scope, guide-only permissions and denied workspace reads/writes.');

@@ -31,3 +31,7 @@
 /* The achievement title centres under the username (and any donation title), never under the icons. */
 .char-name .profile-name-lines{text-align:center}.char-name .profile-name-lines>b,.profile-studio .studio-identity .profile-name-lines>b{justify-content:center}
 .char-name .profile-name-lines .achievement-title,.char-name .profile-name-lines .preview-title,.profile-studio .studio-identity .profile-name-lines .achievement-title{justify-content:center}
+/* Name and achievement title start at the same edge, like the account menu; the scimitar and Sir sit in front. */
+.char-name .profile-name-lines,.profile-studio .studio-identity .profile-name-lines{text-align:left}
+.char-name .profile-name-lines>b,.profile-studio .studio-identity .profile-name-lines>b{justify-content:flex-start}
+.char-name .profile-name-lines .achievement-title,.char-name .profile-name-lines .preview-title,.profile-studio .studio-identity .profile-name-lines .achievement-title{justify-content:flex-start;text-align:left}

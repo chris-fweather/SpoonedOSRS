@@ -20,10 +20,10 @@ test('earned title selection is independent of emblem and unknown titles cannot 
  assert.equal(selectedTitle(j,'none','pets-1'),null);
 });
 test('donation labels distinguish unknown, zero and hidden totals',()=>{
- assert.equal(donationLabel(),'Sponsor · ?');
- assert.equal(donationLabel({amountMinor:0,currency:'USD',hidden:false}),'Sponsor · $0.00');
- assert.equal(donationLabel({amountMinor:500,currency:'USD',hidden:false}),'Sponsor · $5.00');
- assert.equal(donationLabel({amountMinor:500,currency:'USD',hidden:true}),'Sponsor');
+ assert.equal(donationLabel(),'Supporter · ?');
+ assert.equal(donationLabel({amountMinor:0,currency:'USD',hidden:false}),'Supporter · $0.00');
+ assert.equal(donationLabel({amountMinor:500,currency:'USD',hidden:false}),'Supporter · $5.00');
+ assert.equal(donationLabel({amountMinor:500,currency:'USD',hidden:true}),'Supporter');
 });
 
 test('Sir is available to staff without granting badge overrides',()=>{

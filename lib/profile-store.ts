@@ -25,8 +25,12 @@ type ClaimRow = {
 
 
 type StyleRow={staff_badge:Presentation['staffBadge'];staff_prefix:Presentation['staffPrefix'];title_choice:string;show_donation:number;amount_minor:number|null;currency:string|null};
-function presentation(row:Partial<StyleRow>|null):Presentation{return {staffBadge:row?.staff_badge??null,staffPrefix:row?.staff_prefix??null,titleChoice:row?.title_choice??'auto',showDonation:row?.show_donation!==0};}
-function donation(row:Partial<StyleRow>|null){return {amountMinor:row?.show_donation===0?null:row?.amount_minor??null,currency:row?.currency??'USD',hidden:row?.show_donation===0,badge:row?.staff_badge==='gilded'?'gilded' as const:null};}
+/** Only known values reach the page: anything else stored in a style row (a bad import, a test fixture) reads as unset. */
+const BADGES=['helper','moderator','admin','owner','gilded'];
+const cleanBadge=(v:unknown):Presentation['staffBadge']=>BADGES.includes(v as string)?v as Presentation['staffBadge']:null;
+const cleanPrefix=(v:unknown):Presentation['staffPrefix']=>v==='Sir'?'Sir':null;
+function presentation(row:Partial<StyleRow>|null):Presentation{return {staffBadge:cleanBadge(row?.staff_badge),staffPrefix:cleanPrefix(row?.staff_prefix),titleChoice:row?.title_choice??'auto',showDonation:row?.show_donation!==0};}
+function donation(row:Partial<StyleRow>|null){return {amountMinor:row?.show_donation===0?null:row?.amount_minor??null,currency:row?.currency??'USD',hidden:row?.show_donation===0,badge:row?.staff_badge==='gilded'?'gilded' as const:null,supporter:(row?.amount_minor??0)>0};}
 
 type OptionsRow={details:string;skin:string;background:Appearance['background']};
 async function profileOptions(name:string){const row=await db().prepare('SELECT details,skin,background FROM profile_options WHERE rsn=?').bind(name.toLowerCase()).first<OptionsRow>();return {background:row?.background??'none',details:row?parseDetails(JSON.parse(row.details)):DEFAULT_DETAILS,skin:row?.skin&&Object.hasOwn(SKIN_TONES,row.skin)?row.skin:'default'};}
@@ -152,7 +156,7 @@ export async function leaderboard(names?:string[]): Promise<BoardRow[]> {
       } catch { /* Missing or invalid public totals remain unranked. */ }
     }
     const rank=staff.get(row.discord_id);
-    return {accountMode,supporter:supporters.has(row.name),supporterRank:supporterRanks.get(row.name)??null, donation:donation(row), name: row.name, title: displayTitle(row.name, row.title === DONATOR_TITLE ? DONATOR_TITLE : null), pets, log, hasJournal: !!stats, stats, staff:rank?{...rank,displayRole:rank.role==='owner'&&row.staff_badge!=='gilded'?row.staff_badge:null,displayPrefix:row.staff_prefix}:null, achievementTitle: earnedTitle, featuredPet};
+    return {accountMode,supporter:supporters.has(row.name),supporterRank:supporterRanks.get(row.name)??null, donation:donation(row), name: row.name, title: displayTitle(row.name, row.title === DONATOR_TITLE ? DONATOR_TITLE : null), pets, log, hasJournal: !!stats, stats, staff:rank?{...rank,displayRole:((b)=>rank.role==='owner'&&b&&b!=='gilded'?b:null)(cleanBadge(row.staff_badge)),displayPrefix:cleanPrefix(row.staff_prefix)}:null, achievementTitle: earnedTitle, featuredPet};
   }));
   return rankClaims(rows);
 }

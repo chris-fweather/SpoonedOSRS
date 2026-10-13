@@ -1,12 +1,11 @@
-.connections-bottom-sections>details.connection-guide{padding:12px 15px}
-.connections-bottom-sections>details.connection-guide>summary{font-size:18px;line-height:1.3}
-.connections-bottom-sections>details.connection-guide[open]>summary{margin-bottom:12px}
+.connections-bottom-sections>.connection-guide{padding:12px 15px}
+.connections-bottom-sections>.connection-guide>.connection-heading{font-size:18px;line-height:1.3;margin:0 0 12px}
 .connections-bottom-sections>.connection-data .ph{margin-bottom:8px}
 .connections-bottom-sections>.connection-data .ph>.row{flex-wrap:wrap;gap:8px}
 .connections-bottom-sections>.connection-data>p{font-size:12px;line-height:1.6;margin:0}
 .connections-bottom-sections>.connection-data .sources{margin-top:10px;padding-top:10px}
 
-.connections-content>.connections-bottom-sections{display:grid;gap:12px;margin-top:auto;flex:none}
+.connections-content>.connections-bottom-sections{display:grid;gap:12px;margin-top:0;flex:none}
 @media(min-width:821px){
  .frame.profile-banner-layout>.window>.wbody:has(>.profile-sizing-pane:not([hidden])>.connections-content){display:flex;flex-direction:column;overflow:auto}
  .frame.profile-banner-layout>.window>.wbody>.profile-sizing-pane:not([hidden]):has(>.connections-content){display:flex;flex-direction:column;flex:1 0 auto}

@@ -18,7 +18,7 @@ export function hasGildedSupporter(donation?:Donation):boolean {
 /** Public hover text describes the chosen cosmetic, never a different underlying role. */
 export function displayedBadgeLabel(staff?:PublicStaff|null,donation?:Donation):string {
  if(donation?.badge==='gilded'&&hasGildedSupporter(donation))return 'Gilded supporter';
- return staff?'Site '+STAFF_LABEL[staff.displayRole??staff.role]:'';
+ return staff?'Site '+STAFF_LABEL[staff.displayRole??staff.role]:donation?.supporter?'Supporter':'';
 }
 
 /** Server-side eligibility; do not send hidden totals to the browser. */

@@ -87,7 +87,13 @@ export function buildProfileScene(scene:THREE.Scene,kind:SceneKind,height:number
   const timber=0x6b4f33;
   for(const side of [-1,1]){box(.13,1.45,.13,timber,side*.75,.72,-1.95);}
   box(1.75,.14,.16,timber,0,1.46,-1.95);
-  box(1.3,1.2,.08,0x14110f,0,.62,-2.1);
+  // The tunnel runs back into the rock: warm dark stone, receding timber frames and a lantern deep inside, never a flat black panel.
+  box(1.3,1.2,.08,0x3a3028,0,.62,-2.9);
+  for(const side of [-1,1])box(.08,1.2,.95,0x433830,side*.62,.62,-2.42);
+  box(1.3,.08,.95,0x2f2720,0,1.2,-2.42);
+  for(const [z,s] of [[-2.25,.9],[-2.6,.8]] as const){for(const side of [-1,1])box(.09,1.3*s,.09,timber,side*.6*s,.65*s,z);box(1.3*s,.1,.1,timber,0,1.3*s,z);}
+  const deep=new THREE.PointLight(0xff9a3c,.45,height*1.1);deep.position.set(0,.7,-2.6);root.add(deep);
+  mesh(new THREE.BoxGeometry(.07,.09,.07),0xffc163,0,.95,-2.75);
   // Lanterns hang from the frame and flicker.
   for(const side of [-1,1]){
    box(.02,.14,.02,0x2c2622,side*.62,1.32,-1.86);

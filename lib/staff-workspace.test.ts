@@ -6,16 +6,20 @@ import { emptyGuide, parseGuide } from "./guides";
 test("staff workspace grants preserve defaults and support guide-only access", () => {
   assert.deepEqual(staffPermissions("helper"), {
     guides: true,
-    corrections: false,
-    planning: false,
+    publish: false,
+    corrections: true,
+    planning: true,
+    review: false,
+    ownership: false,
+    holds: false,
   });
   assert.deepEqual(
     staffPermissions("helper", { guides: 1, corrections: 0, planning: 0 }),
-    { guides: true, corrections: false, planning: false },
+    { guides: true, publish: false, corrections: false, planning: false, review: false, ownership: false, holds: false },
   );
   assert.deepEqual(
-    staffPermissions("owner", { guides: 0, corrections: 0, planning: 0 }),
-    { guides: true, corrections: true, planning: true },
+    staffPermissions("owner", { guides: 0, corrections: 0, planning: 0, review: 0 }),
+    { guides: true, publish: true, corrections: true, planning: true, review: true, ownership: true, holds: true },
   );
   assert.throws(() =>
     parseStaffPermissions({

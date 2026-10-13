@@ -86,7 +86,7 @@ function StaffDialog({initial,identity,onClose}:{initial:Panel;identity:Identity
    </section>}
    <section aria-labelledby="psc-account">
     <h3 id="psc-account">Account</h3>
-    {a.hold?<p className="psc-note">On moderation hold. <a className="link" href="/staff?tab=requests">Open requests →</a></p>
+    {a.hold?<p className="psc-note">On moderation hold. <a className="link" href="/staff?tab=ownership">Open requests →</a></p>
      :<div className="psc-row psc-account"><DiscordMark/><span className="psc-discord"><b>{a.linked?a.discordName:'Not linked'}</b>{a.username&&<small>{a.linked?'@':'Reserved to @'}{a.username}</small>}</span>
       <span className="psc-actions">{a.canUnlink&&<button type="button" className="btn sm ghost" disabled={busy} onClick={()=>setConfirm('unlink')}>Unlink</button>}{a.canRelink&&<button type="button" className="btn sm ghost" disabled={busy} onClick={()=>setConfirm('relink')}>Relink</button>}{(a.linked||a.canRelink)&&<a className="btn sm ghost" href={'/staff?tab=requests&player='+encodeURIComponent(data.name)}>Move to another account</a>}</span>
      </div>}
@@ -94,6 +94,6 @@ function StaffDialog({initial,identity,onClose}:{initial:Panel;identity:Identity
    </section>
    {error&&<p className="psc-status is-bad" role="alert">{error}</p>}{notice&&<p className="psc-status" role="status">{notice}</p>}
   </div>
-  <footer>{data.journal&&<a className="link" href={'/staff?tab=progress&player='+encodeURIComponent(data.name)}>Edit progress →</a>}<a className="link" href="/staff">Open staff portal →</a><button type="button" className="btn" disabled={busy} onClick={close}>{changed?'Close and refresh':'Close'}</button></footer>
+  <footer>{data.journal&&<a className="link" href={'/staff?tab=players&player='+encodeURIComponent(data.name)}>Edit progress →</a>}<a className="link" href="/staff">Open staff portal →</a><button type="button" className="btn" disabled={busy} onClick={close}>{changed?'Close and refresh':'Close'}</button></footer>
  </dialog>,document.body);
 }

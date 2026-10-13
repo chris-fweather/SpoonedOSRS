@@ -1,10 +1,11 @@
 "use client";
+import {PageHero} from './PageHero';
 import {useEffect, useState} from 'react';
 import {Check, ChevronDown, Search} from 'lucide-react';
 import './leaderboard-controls.css';
 import {Select} from 'radix-ui';
 import {BOARD_METRICS, BOARD_SKILLS, type BoardMetric} from '@/lib/community';
-import {CollectorList, CommunityChat, CommunityStatus, PublicHeader, SupporterList, useCommunity} from './Community';
+import {CollectorList, CommunityChat, CommunityStatus, HeroTotals, PublicHeader, SupporterList, useCommunity} from './Community';
 
 const CATEGORIES=[...BOARD_METRICS,{id:'supporters' as const,label:'Supporters',icon:'/icons/community/supporters-heart.png'}];
 const XP_OPTIONS=[{name:'Overall',icon:'/icons/navigation/stats-icon.png'},...BOARD_SKILLS];
@@ -26,7 +27,7 @@ export function Leaderboard() {
   function chooseCategory(next:typeof category){setCategory(next);const url=new URL(location.href);url.searchParams.set('view',next);if(next!=='xp')url.searchParams.delete('skill');else url.searchParams.set('skill',skill);history.replaceState(null,'',url.pathname+url.search);}
   function chooseSkill(next:string){setSkill(next);const url=new URL(location.href);url.searchParams.set('view','xp');url.searchParams.set('skill',next);history.replaceState(null,'',url.pathname+url.search);}
   return <div className="site"><PublicHeader page="leaderboard" onError={setError}/><main className="community-page leaderboard-page">
-    <div className="page-intro board-intro"><div><span className="kicker">The community’s collection</span><h1>Leaderboard</h1><p>Explore collectors. Compare milestones. Find your next goal.</p></div><div className="board-count"><b>{totals?.journals??'—'}</b><span>public journals</span></div></div>
+    <PageHero kicker="The community’s collection" icon="/icons/navigation/stats-icon.png" title="Leaderboard" text="Explore collectors. Compare milestones. Find your next goal." actions={<HeroTotals totals={totals}/>}/>
     {(error||rows)&&<CommunityStatus rows={rows} error={error} retry={retry}/>}
     <div className="leaderboard-window osrs-panel">
       <nav className="wtabs board-profile-tabs" aria-label="Leaderboard categories">{CATEGORIES.map(c=><button key={c.id} aria-pressed={category===c.id} onClick={()=>chooseCategory(c.id)}><img src={c.icon} alt=""/><span>{c.label}</span></button>)}</nav>

@@ -2,8 +2,9 @@ export type StaffRole = 'helper' | 'moderator' | 'admin' | 'owner';
 export type PublicStaff = {role: StaffRole; prefix: 'Sir' | null; displayRole?:StaffRole|null; displayPrefix?:'Sir'|null};
 export const STAFF_LABEL: Record<StaffRole,string> = {helper:'Helper',moderator:'Moderator',admin:'Admin',owner:'Owner'};
 /** Rank colour class: helper green, moderator blue, admin red, owner gold (colours in app/globals.css, --rank-*). */
+/** The username in the rank's colour wherever a staff member's name shows (the rank they display, if the owner picked another). */
+export function rankNameClass(staff?:PublicStaff|null){return staff?'player-username rank-name-'+(staff.displayRole??staff.role):'player-username';}
 export const STAFF_TONE: Record<StaffRole,string> = {helper:'rank-text-helper',moderator:'rank-text-moderator',admin:'rank-text-admin',owner:'rank-text-owner'};
-export function mayReview(role:StaffRole,kind:'rate'|'record') {return role==='owner'||role==='admin'||role==='moderator';}
 export function mayGrant(actor:{id:string;role:StaffRole}, target:{id:string;role:StaffRole|null}, next:StaffRole|null) {
   if(actor.id===target.id || target.role==='owner' || next==='owner') return false;
   if(actor.role==='owner') return true;
@@ -23,3 +24,6 @@ export function evidenceUrl(value:unknown, wikiOnly=false):string {
   if(wikiOnly && (url.hostname!=='oldschool.runescape.wiki'||!url.pathname.startsWith('/w/'))) throw Error('Rate corrections need the relevant OSRS Wiki page.');
   return url.href;
 }
+const RANK_ORDER:Record<StaffRole,number>={helper:0,moderator:1,admin:2,owner:3};
+/** A reviewer decides proposals from their own rank or below: a moderator never signs off an admin's change. */
+export function mayReviewProposal(reviewer:StaffRole,proposer:StaffRole|null|undefined){return !proposer||RANK_ORDER[reviewer]>=RANK_ORDER[proposer];}

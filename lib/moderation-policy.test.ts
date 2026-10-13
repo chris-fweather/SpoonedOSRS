@@ -4,7 +4,7 @@ import {protectionReasons,canSubmitCase,canReviewCase,validDiscordId} from './mo
 const low={pets:49,log:499,recordHolder:false,staffOwned:false,unknown:false};
 test('protection boundaries include records, staff and unverified progress',()=>{
  assert.deepEqual(protectionReasons(low),[]);
- for(const risk of [{pets:50},{log:500},{recordHolder:true},{staffOwned:true},{unknown:true}])assert.ok(protectionReasons({...low,...risk}).length);
+ for(const risk of [{pets:50},{log:500},{recordHolder:true},{boardTop:true},{staffOwned:true},{unknown:true}])assert.ok(protectionReasons({...low,...risk}).length);
 });
 test('helpers cannot submit protected cases and moderators cannot approve them',()=>{
  assert.equal(canSubmitCase('helper',true),false);assert.equal(canSubmitCase('helper',false),true);assert.equal(canSubmitCase('moderator',true),true);

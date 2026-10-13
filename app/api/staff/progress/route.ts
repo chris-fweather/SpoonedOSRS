@@ -4,6 +4,7 @@ import {db,readJournal,accountName} from '@/lib/storage';
 import {requestJson,RequestError,publicMessage} from '@/lib/request-body';
 import {takeBudget} from '@/lib/request-controls';
 import {applyPetEdit} from '@/lib/pet-edit';
+import {applyProgressEdit,parseProgressEdit} from '@/lib/progress-edit';
 import {normalizeRates} from '@/lib/estimates';
 import type {Pet} from '@/lib/model';
 const headers={'Cache-Control':'private, no-store'};
@@ -23,13 +24,20 @@ export async function POST(req:Request){try{
  if(body.confirmed!==true||typeof body.reason!=='string'||body.reason.trim().length<10||body.reason.length>2000)throw new HttpError(400,'Confirm the change and provide a reason of 10–2,000 characters.');
  const name=accountName(body.username),j=await readJournal(name);
  if(!Number.isInteger(body.revision)||body.revision!==j.revision)throw new HttpError(409,'Progress changed. Reload before editing.');
- const pet=body.pet as Pet,prior=j.pets.find(p=>p.id===pet?.id);if(!prior)throw new HttpError(400,'Choose a known pet.');
- const before=publicPet(prior);
- try{applyPetEdit(j,{...pet,notes:prior.notes,priority:prior.priority});}catch(e){throw new HttpError(400,publicMessage(e,'Check the pet fields and try again.'));}
- const updated=normalizeRates(j),after=publicPet(updated.pets.find(p=>p.id===prior.id)!);
- const token=crypto.randomUUID(),detail=JSON.stringify({reason:body.reason.trim(),pet:prior.name,before,after,revision:body.revision,token});
+ let updated:typeof j,detail:Record<string,unknown>;
+ if(body.edit!==undefined){
+  // Collection log, quests and diaries: one slot, quest or tier per correction.
+  try{const change=applyProgressEdit(j,parseProgressEdit(body.edit));updated=j;detail={kind:body.edit.kind,item:change.label,before:change.before,after:change.after};}
+  catch(e){throw new HttpError(400,publicMessage(e,'Check the correction and try again.'));}
+ }else{
+  const pet=body.pet as Pet,prior=j.pets.find(p=>p.id===pet?.id);if(!prior)throw new HttpError(400,'Choose a known pet.');
+  const before=publicPet(prior);
+  try{applyPetEdit(j,{...pet,notes:prior.notes,priority:prior.priority});}catch(e){throw new HttpError(400,publicMessage(e,'Check the pet fields and try again.'));}
+  updated=normalizeRates(j);detail={kind:'pet',pet:prior.name,before,after:publicPet(updated.pets.find(p=>p.id===prior.id)!)};
+ }
+ const token=crypto.randomUUID();const audit=JSON.stringify({reason:body.reason.trim(),...detail,revision:body.revision,token});
  const result=await db().batch([
-  db().prepare(`INSERT INTO account_actions(rsn,actor_id,actor_name,action,detail,created_at) SELECT ?,?,?,'progress corrected',?,? WHERE EXISTS(SELECT 1 FROM journals WHERE id=? AND revision=?) AND EXISTS(SELECT 1 FROM staff_members WHERE discord_id=? AND role IN ('admin','owner'))`).bind(name.toLowerCase(),a.id,a.globalName||a.username,detail,new Date().toISOString(),name.toLowerCase(),body.revision,a.id),
+  db().prepare(`INSERT INTO account_actions(rsn,actor_id,actor_name,action,detail,created_at) SELECT ?,?,?,'progress corrected',?,? WHERE EXISTS(SELECT 1 FROM journals WHERE id=? AND revision=?) AND EXISTS(SELECT 1 FROM staff_members WHERE discord_id=? AND role IN ('admin','owner'))`).bind(name.toLowerCase(),a.id,a.globalName||a.username,audit,new Date().toISOString(),name.toLowerCase(),body.revision,a.id),
   db().prepare(`UPDATE journals SET data=?,revision=revision+1 WHERE id=? AND revision=? AND EXISTS(SELECT 1 FROM account_actions WHERE rsn=? AND actor_id=? AND json_extract(detail,'$.token')=?)`).bind(JSON.stringify(updated),name.toLowerCase(),body.revision,name.toLowerCase(),a.id,token)
  ]);if(!result[0].meta.changes||!result[1].meta.changes)throw new HttpError(409,'Progress or staff access changed. Reload and review again.');
  return Response.json({ok:true},{headers});

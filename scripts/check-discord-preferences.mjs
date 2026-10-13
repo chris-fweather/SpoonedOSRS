@@ -1,9 +1,7 @@
 // Local, disposable staff fixtures; never run against production.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {seal,SESSION_COOKIE} from '../lib/session.ts';
 import {deploymentConfig} from './deployment-config.mjs';
-import {emptyGuide,newGuideSetup,guideQuests,guideDiaryAreas} from '../lib/guides.ts';
 import {startWorker} from './worker-harness.mjs';
 const {origin:base,secret,fetch,sql,dispose}=await startWorker();
 const suffix=Date.now(), helper='981'+suffix, moderator='982'+suffix, stranger='983'+suffix;

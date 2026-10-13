@@ -98,3 +98,8 @@
 @media(max-width:420px){
  .account-disclosure>span{display:none}
 }
+/* Log out everywhere. */
+.account-settings-page .account-signout{display:grid;gap:12px;margin-top:8px}
+.account-settings-page .account-signout h2{margin:0 0 4px;font-size:18px}
+.account-settings-page .account-signout p{margin:0;font-size:13px;color:var(--muted);line-height:1.55}
+.account-settings-page .account-signout>.btn{justify-self:start}

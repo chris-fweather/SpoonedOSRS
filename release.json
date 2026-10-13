@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0-beta.3",
+  "version": "0.2.0-beta.1",
   "channel": "beta",
-  "notes": "releases/0.1.0-beta.3.md",
-  "minimumMigration": "0024_board_account_mode.sql"
+  "notes": "releases/0.2.0-beta.1.md",
+  "minimumMigration": "0030_guide_uploads.sql"
 }

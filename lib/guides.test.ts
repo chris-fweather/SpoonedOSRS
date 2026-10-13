@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {emptyGuide,parseGuide,mayEditGuide,mayPublishGuide,guideItems,guideSetups,newGuideSetup,guideQuests,guideDiaryAreas,guideTextBlocks} from './guides.ts';
+import {emptyGuide,parseGuide,mayEditGuide,guideItems,guideSetups,newGuideSetup,guideQuests,guideDiaryAreas,guideTextBlocks} from './guides.ts';
 import {wearables} from './flair.ts';
 import {planningCatalogue,parsePlanning,applyPlanning} from './planning-catalogue.ts';
 import {initial} from './model.ts';
 const valid=()=>({...emptyGuide(),title:'Kraken setup',activity:'Kraken',summary:'A sample inventory and equipment setup.',strategy:'Use this strategy with your preferred combat setup.'});
-test('guide permissions separate drafting from publication',()=>{assert.equal(mayPublishGuide('helper'),false);assert.equal(mayPublishGuide('moderator'),true);assert.equal(mayEditGuide('helper','a','a'),true);assert.equal(mayEditGuide('moderator','b','a'),false);assert.equal(mayEditGuide('admin','b','a'),true);});
+test('guide authors edit their own drafts; admins maintain others',()=>{assert.equal(mayEditGuide('helper','a','a'),true);assert.equal(mayEditGuide('moderator','b','a'),false);assert.equal(mayEditGuide('admin','b','a'),true);});
 test('guide payloads validate gear slots and inventory IDs, retain text as text',()=>{const g=valid();g.strategy='<script>alert(1)</script> is rendered as plain text.';g.inventory[0]=Object.keys(guideItems)[0];assert.equal(parseGuide(g).strategy,g.strategy);assert.throws(()=>parseGuide({...g,inventory:Array(29).fill(null)}));assert.throws(()=>parseGuide({...g,inventory:['javascript:bad',...Array(27).fill(null)]}));const item=Object.entries(wearables.items).find(([,i])=>i.slot!=='head')!;assert.throws(()=>parseGuide({...g,equipment:{...g.equipment,head:item[0]}}));});
 test('planning edits never turn observed XP into odds or overwrite custom pace',()=>{const target=planningCatalogue().find(t=>t.pace!==null)!;assert.throws(()=>parsePlanning(target.key,NaN,null));assert.throws(()=>parsePlanning('unknown',20,null));const p=parsePlanning(target.key,37,2000000);const j=structuredClone(initial),pet=j.pets.find(x=>x.name===target.pet)!,m=pet.methods.find(x=>x.name===target.method)!,rate=m.rate;applyPlanning(j,target.key,p,'https://example.com',1);assert.equal(m.kph,37);assert.equal(m.rate,rate);m.kph=38;m.source='Personal pace';applyPlanning(j,target.key,p,'https://example.com',2);assert.equal(m.kph,38);});
 
@@ -32,4 +32,15 @@ test('document sections are allowlisted, bounded and reference validated loadout
  for(const bad of [{...blocks[0],tone:'javascript:red'},{...blocks[0],style:'script'},{...blocks[1],setupId:'missing'},{...blocks[2],rate:0},{...blocks[2],count:1.5},{...blocks[2],unit:'HTML'},{...blocks[0],text:'x'.repeat(16001)}])assert.throws(()=>parseGuide({...input,blocks:[bad]}));
  assert.throws(()=>parseGuide({...input,blocks:[blocks[0],blocks[0]]}));
  assert.throws(()=>parseGuide({...input,blocks:Array.from({length:101},(_,i)=>({id:'section'+i,kind:'divider'}))}));
+});
+test('drop tables show on their own, tiers can carry an inventory card, and custom requirements take a plain icon',()=>{
+ const input={...emptyGuide(),title:'Document guide',activity:'Kraken',summary:'A document test with safe structured sections.',strategy:'This document explains a safe and repeatable strategy.'};
+ const drops=parseGuide({...input,blocks:[{id:'d',kind:'drops',page:' Kraken ',highlight:['pet kraken']}]}).blocks![0];
+ assert.deepEqual(drops,{id:'d',kind:'drops',page:'Kraken'});
+ const tiers=parseGuide({...input,blocks:[{id:'t',kind:'loadouts',setupIds:['recommended'],inventoryId:'recommended'}]}).blocks![0];
+ assert.deepEqual(tiers,{id:'t',kind:'loadouts',setupIds:['recommended'],inventoryId:'recommended'});
+ assert.throws(()=>parseGuide({...input,blocks:[{id:'t',kind:'loadouts',setupIds:['recommended'],inventoryId:'missing'}]}));
+ const other=parseGuide({...input,requiredOther:[{label:'Slayer task',itemId:null,icon:'slayer'},{label:'Anything else',itemId:null,icon:'task'}]}).requiredOther;
+ assert.deepEqual(other,[{label:'Slayer task',itemId:null,icon:'slayer'},{label:'Anything else',itemId:null}]);
+ assert.throws(()=>parseGuide({...input,requiredOther:[{label:'Bad icon',itemId:null,icon:'javascript:'}]}));
 });

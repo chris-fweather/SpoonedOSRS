@@ -26,6 +26,13 @@ async function page(title:string):Promise<WikiDrops>{
 }
 export async function GET(req:Request){try{
  const url=new URL(req.url);
+ // Source search for the guide editor: boss and activity pages by name, then pages holding a matching drop or pet.
+ if(url.searchParams.has('search')){const q=(url.searchParams.get('search')??'').trim().toLowerCase().slice(0,60);const ix=index as unknown as Index;if(q.length<2)return Response.json({results:[]});
+  const rank=(n:string)=>{const l=n.toLowerCase();return l===q?0:l.startsWith(q)?1:l.includes(q)?2:9;};
+  const pages=Object.keys(ix.pages).map(page=>({page,r:rank(page)})).filter(x=>x.r<9).sort((a,b)=>a.r-b.r||a.page.localeCompare(b.page)).slice(0,12).map(({page})=>({page}));
+  const seen=new Set(pages.map(p=>p.page)),drops:{page:string;match:string;img:string}[]=[];
+  for(const [page,sources] of Object.entries(ix.pages)){if(seen.has(page)||drops.length>=12)continue;for(const row of sources.flatMap(s=>s.tabs.flatMap(t=>t.r))){if(rank(row[0])<2){drops.push({page,match:row[0],img:row[4]});break;}}}
+  return Response.json({results:[...pages,...drops].slice(0,20)},{headers:{'Cache-Control':'public, max-age=3600'}});}
  if(url.searchParams.has('page')){const name=url.searchParams.get('page')??'';const ids=(url.searchParams.get('items')??'').split(',').filter(Boolean).slice(0,400);const ix=index as unknown as Index;const sources=applyTableRates(refreshActivityRates(ix.pages[name]??[],names,acquisition as Record<string,CollectionReference>),await reviewedRates());const items=collectionItemRates(sources,ids,names,acquisition as Record<string,CollectionReference>);return Response.json({sources,items},{headers:{'Cache-Control':'private, max-age=60'}});}
  if(url.searchParams.has('ids')){const ids=(url.searchParams.get('ids')??'').split(',').slice(0,200);const rates=collectionItemRates([],ids,names,acquisition as Record<string,CollectionReference>);return Response.json(Object.fromEntries(Object.entries(rates).map(([id,rate])=>[id,rate.r])),{headers:{'Cache-Control':'private, max-age=86400'}});}
  const id=url.searchParams.get('id')??'',name=(names as Record<string,string>)[id];if(!name)return Response.json({error:'Unknown collection item.'},{status:400});

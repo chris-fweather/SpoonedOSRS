@@ -1,7 +1,7 @@
 'use client';
 import {useEffect, useRef, useState} from 'react';
 import {ChevronDown, EyeOff, Plus, LogOut, Unlink, X} from 'lucide-react';
-import {type PublicStaff} from '@/lib/staff-policy';
+import {rankNameClass,type PublicStaff} from '@/lib/staff-policy';
 import {AchievementTitle} from './AchievementTitle';
 import type {LinkedMenuAccount} from '@/lib/account-menu';
 import {HoverTip} from './HoverTip';
@@ -70,7 +70,7 @@ export function DiscordLogin({user, names, viewing, disabled, onSelect, onClaim,
           <div className={'acct-row'+(linked.toLowerCase()===viewing.toLowerCase()?' is-viewing':'')} key={linked}>
             <button type="button" className="acct-profile" disabled={disabled} aria-current={linked.toLowerCase()===viewing.toLowerCase()?'page':undefined} onClick={() => { onSelect(linked); close(); }}>
               <img className="acct-portrait" src={account?.portrait??'/portraits/male-brown-default.svg'} alt=""/>
-              <span className="acct-identity"><b className="acct-name">{linked}{account?.title&&<span className="linked-supporter-title"> {account.title}</span>}</b>{(account?.achievementTitle||donated!==null&&donated!==undefined||account?.donation.hidden)&&<span className="linked-title-line">{account?.achievementTitle&&<AchievementTitle label={account.achievementTitle} showHelp={false}/>} {donated!==null&&donated!==undefined&&<small className="linked-donation">{new Intl.NumberFormat('en-US',{style:'currency',currency:account?.donation.currency??'USD',maximumFractionDigits:0}).format(donated/100)}<span> {account?.donation.currency}</span></small>}{account?.donation.hidden&&<small className="linked-donation is-hidden" title="Your donation amount is hidden on your profile"><EyeOff size={11} aria-hidden="true"/> Hidden</small>}</span>}</span>
+              <span className="acct-identity"><b className="acct-name"><span className={rankNameClass(staff)}>{linked}</span>{account?.title&&<span className="linked-supporter-title"> {account.title}</span>}</b>{(account?.achievementTitle||donated!==null&&donated!==undefined||account?.donation.hidden)&&<span className="linked-title-line">{account?.achievementTitle&&<AchievementTitle label={account.achievementTitle} showHelp={false}/>} {donated!==null&&donated!==undefined&&<small className="linked-donation">{new Intl.NumberFormat('en-US',{style:'currency',currency:account?.donation.currency??'USD',maximumFractionDigits:0}).format(donated/100)}<span> {account?.donation.currency}</span></small>}{account?.donation.hidden&&<small className="linked-donation is-hidden" title="Your donation amount is hidden on your profile"><EyeOff size={11} aria-hidden="true"/> Hidden</small>}</span>}</span>
             </button>
             <a className="acct-action" href={'/player/'+encodeURIComponent(linked)+'?settings=profile'} aria-label={`Profile settings for ${linked}`} title={`Settings for ${linked}`}><img src="/icons/community/settings-icon.png" alt="" width={23} height={23}/></a>
             <button type="button" className="acct-action" aria-label={`Unlink ${linked}`} title={`Unlink ${linked}`} disabled={disabled} onClick={() => setUnlinkName(linked)}><Unlink size={16}/></button>

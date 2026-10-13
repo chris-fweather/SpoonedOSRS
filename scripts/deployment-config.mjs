@@ -14,6 +14,17 @@ const fields={
 };
 export const PRIVATE_DEPLOYMENT_FILE=new URL('../config/deployment.private.json',import.meta.url);
 
+/** Which environment a build targets: the live site, or the dev environment (Worker spoonedosrs-dev, database
+ * spoonedosrs-dev-db, built from the dev branch). Set SPOONED_ENV=dev as a Workers Builds variable on the dev Worker. */
+export const ENVIRONMENTS={
+ production:{worker:'spoonedosrs',database:'spoonedosrs-db',branch:'main'},
+ dev:{worker:'spoonedosrs-dev',database:'spoonedosrs-dev-db',branch:'dev'},
+};
+export function deployEnvironment(env=process.env){
+ const name=env.SPOONED_ENV||'production';
+ if(!Object.hasOwn(ENVIRONMENTS,name))throw Error('SPOONED_ENV must be production or dev.');
+ return {name,...ENVIRONMENTS[name]};
+}
 export function deploymentConfig({env=process.env,file=PRIVATE_DEPLOYMENT_FILE,required=true}={}){
  const fallback=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};
  const values={};

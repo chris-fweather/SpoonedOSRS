@@ -11,3 +11,6 @@
 .leaderboard-page .board-controls .board-filter{width:100%;min-width:220px}
 .leaderboard-page .board-filter input{font-size:12px;text-overflow:ellipsis}
 @media(max-width:820px){.leaderboard-page .board-controls{flex:1 1 100%;width:100%}.leaderboard-page .board-controls .board-filter{min-width:0}}
+/* Match the home page panels: heading to list, and panel padding on phones. */
+.leaderboard-page .leaderboard-tools{margin-bottom:17px}
+@media(max-width:800px){.leaderboard-page .rankings-panel{padding:18px}}

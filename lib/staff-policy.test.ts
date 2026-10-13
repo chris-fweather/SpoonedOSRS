@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {mayGrant, mayManageProfile, mayReview, evidenceUrl} from './staff-policy.ts';
+import {mayGrant, mayManageProfile, evidenceUrl} from './staff-policy.ts';
 import {rateCatalogue, applyTableRates, applyPetRates, type RateOverride} from './rate-catalogue.ts';
 import {achievementTitle, assertFlair, badgeCatalogue} from './flair.ts';
 import {initial} from './model.ts';
@@ -17,9 +17,6 @@ test('staff grants cannot escalate to owner, change self, or let admins manage a
   assert.equal(mayGrant({id:'a',role:'admin'},{id:'b',role:'helper'},'moderator'),true);
   assert.equal(mayGrant({id:'a',role:'helper'},{id:'b',role:null},'helper'),false);
   assert.equal(mayGrant({id:'a',role:'owner'},{id:'b',role:null},'admin'),true);
-  assert.equal(mayReview('moderator','rate'),true);
-  assert.equal(mayReview('moderator','record'),true);
-  assert.equal(mayReview('helper','record'),false);
 });
 
 test('profile staff controls: admins and the owner, never their own account, the owner or (for admins) another admin', () => {

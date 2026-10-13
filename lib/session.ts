@@ -1,14 +1,19 @@
+import {IS_DEV_ENVIRONMENT} from './environment';
+
 export const APEX_ORIGIN = 'https://spoonedosrs.com';
+export const DEV_ORIGIN = 'https://dev.spoonedosrs.com';
 export const LOCAL_ORIGIN = 'http://127.0.0.1:5173';
 export const APEX_REDIRECT = `${APEX_ORIGIN}/api/auth/discord/callback`;
 export const LOCAL_REDIRECT = `${LOCAL_ORIGIN}/api/auth/discord/callback`;
-export const SESSION_COOKIE = 'spooned_session';
-export const STATE_COOKIE = 'spooned_oauth';
+export const DEV_REDIRECT = `${DEV_ORIGIN}/api/auth/discord/callback`;
+// Live cookies are shared across spoonedosrs.com, which includes dev.; dev uses its own names so the two never collide.
+export const SESSION_COOKIE = IS_DEV_ENVIRONMENT ? 'spooned_dev_session' : 'spooned_session';
+export const STATE_COOKIE = IS_DEV_ENVIRONMENT ? 'spooned_dev_oauth' : 'spooned_oauth';
 export const SESSION_SECONDS = 60 * 60 * 24 * 30;
 export const STATE_SECONDS = 60 * 10;
 export const IDENTIFY_SCOPE = 'identify';
 
-export type LoginHost = 'apex' | 'www' | 'local' | 'reject';
+export type LoginHost = 'apex' | 'www' | 'local' | 'dev' | 'reject';
 
 export type SessionUser = {
   id: string;
@@ -16,18 +21,23 @@ export type SessionUser = {
   globalName: string | null;
   avatar: string | null;
   exp: number;
+  /** The account's session version when this session began; Log out everywhere raises it. Older cookies have none (version 0). */
+  v?: number;
 };
 
 export function loginHost(url: URL): LoginHost {
   if (url.protocol === 'https:' && url.hostname === 'spoonedosrs.com') return 'apex';
   if (url.protocol === 'https:' && url.hostname === 'www.spoonedosrs.com') return 'www';
   if (url.protocol === 'http:' && url.hostname === '127.0.0.1' && url.port === '5173') return 'local';
+  // Sign-in on dev.spoonedosrs.com only works on the dev Worker, which is the only one serving that address.
+  if (IS_DEV_ENVIRONMENT && url.protocol === 'https:' && url.hostname === 'dev.spoonedosrs.com') return 'dev';
   return 'reject';
 }
 
 export function redirectUriFor(host: LoginHost): string | null {
   if (host === 'local') return LOCAL_REDIRECT;
   if (host === 'apex') return APEX_REDIRECT;
+  if (host === 'dev') return DEV_REDIRECT;
   return null;
 }
 
@@ -114,12 +124,14 @@ export function validSession(data: unknown, now = Math.floor(Date.now() / 1000))
   if (!(session.globalName === null || displayText(session.globalName))) return null;
   if (!(session.avatar === null || (typeof session.avatar === 'string' && /^[A-Za-z0-9_]{2,64}$/.test(session.avatar)))) return null;
   if (typeof session.exp !== 'number' || !Number.isFinite(session.exp) || session.exp < now) return null;
+  if (session.v !== undefined && !(Number.isSafeInteger(session.v) && session.v >= 0)) return null;
   return {
     id: session.id,
     username: session.username,
     globalName: session.globalName ?? null,
     avatar: session.avatar ?? null,
     exp: session.exp,
+    v: session.v ?? 0,
   };
 }
 

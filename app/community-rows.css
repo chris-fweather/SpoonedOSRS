@@ -44,6 +44,6 @@
 .site .collector-list .identity-prefix,.site .collector-list .identity-mode{display:flex;align-items:center;flex:none;align-self:flex-start;height:20px}
 .site .collector-list .identity-mode:empty{display:none}
 .collector-list .account-mode-badge{cursor:default}
-.site .collector-list .identity-text{justify-items:center;text-align:center}
-.site .collector-list .identity-text>b{justify-content:center}
-.site .collector-list .identity-text>.achievement-title{text-align:center}
+.site .collector-list .identity-text{justify-items:start;text-align:left}
+.site .collector-list .identity-text>b{justify-content:flex-start}
+.site .collector-list .identity-text>.achievement-title{text-align:left}

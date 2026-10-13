@@ -86,4 +86,6 @@ Deployment identifiers are Workers Builds variables. They aren't secrets, but ke
 
 Secrets are Worker secrets (`npx wrangler secret put NAME`): `DISCORD_CLIENT_SECRET`, `SESSION_SECRET`, `DEPLOY_CHECK_SECRET` and the optional `DISCORD_ROLE_SYNC_SECRET`.
 
+Guide image uploads use an R2 bucket bound as `UPLOADS` (`spoonedosrs-uploads`, dev `spoonedosrs-dev-uploads`). `vite.config.ts` binds it only where `UPLOAD_BUCKETS_CREATED` says the bucket exists; without it the editor offers image links only. `lib/guide-upload-rules.ts` caps each file at 3 MB, each person at 25 images (40 MB) a day and all uploads at 1 GB, checked before anything is stored, and accepts only PNG, JPEG, GIF and WebP (read from the file itself).
+
 To run your own copy, create your own Worker, D1 database and Discord application, and set these values for them. Never run migrations or deploys against ours.

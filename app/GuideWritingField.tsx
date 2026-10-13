@@ -1,11 +1,13 @@
 "use client";
-import { useEffect, useRef, useId } from "react";
+import { useEffect, useRef, useId, useState } from "react";
 import { guideInline, guideTextBlocks, type GuideInline, type GuideTone } from "@/lib/guides";
 import { GUIDE_EMOJIS, guideEmojiLabel } from "@/lib/guide-emojis";
+import { guideReference, searchGuideReferences } from "@/lib/guide-references";
 export type GuideWritingCommand =
   | { kind: "bold" | "heading" | "list"; id: number }
   | { kind: "tone"; tone: GuideTone; id: number }
-  | { kind: "emoji"; name: string; id: number };
+  | { kind: "emoji"; name: string; id: number }
+  | { kind: "ref"; name: string; suffix?: string; id: number };
 /** Text colours the colour dots apply. The browser writes them as <font color>; they are stored as {tone}…{/tone}. */
 export const GUIDE_INK: Record<GuideTone, string> = { default: "#e6dfcd", gold: "#e5c375", orange: "#f1a14b", green: "#9ac47c" };
 function emojiNode(name: string) {
@@ -17,6 +19,23 @@ function emojiNode(name: string) {
   img.dataset.emoji = name;
   img.contentEditable = "false";
   return img;
+}
+/** A [[game term]] as one uneditable chip; it saves back as [[Name]]. */
+function refNode(name: string, suffix = "") {
+  const r = guideReference(name);
+  const span = document.createElement("span");
+  span.className = "guide-ref ref-" + r.kind;
+  span.dataset.ref = r.name;
+  if (suffix) span.dataset.suffix = suffix;
+  span.contentEditable = "false";
+  if (r.icon) {
+    const img = document.createElement("img");
+    img.src = r.icon;
+    img.alt = "";
+    span.appendChild(img);
+  }
+  span.appendChild(document.createTextNode(r.name + suffix));
+  return span;
 }
 function toneNode(tone: string) {
   const span = document.createElement("span");
@@ -39,6 +58,7 @@ function fill(target: Node, nodes: GuideInline[]) {
   for (const n of nodes) {
     if (typeof n === "string") target.appendChild(document.createTextNode(n));
     else if (n.kind === "emoji") target.appendChild(emojiNode(n.name));
+    else if (n.kind === "ref") target.appendChild(refNode(n.name, n.suffix));
     else {
       const el = n.kind === "bold" ? document.createElement("strong") : toneNode(n.tone);
       fill(el, n.children);
@@ -75,6 +95,8 @@ export function GuideWritingField({
   const ref = useRef<HTMLDivElement>(null);
   // The last selection inside this field, so toolbar menus can act on it after taking focus.
   const lastRange = useRef<Range | null>(null);
+  // Typing @ opens a search at the cursor: the text from @ to the cursor is the query.
+  const [mention, setMention] = useState<{ node: Text; start: number; end: number; query: string; x: number; y: number; pick: number } | null>(null);
   useEffect(() => {
     const root = ref.current;
     if (!root || document.activeElement === root) return;
@@ -94,6 +116,12 @@ export function GuideWritingField({
     }
   }, [value]);
   useEffect(() => {
+    if (!mention) return;
+    const close = () => setMention(null);
+    window.addEventListener("scroll", close, true);
+    return () => window.removeEventListener("scroll", close, true);
+  }, [mention]);
+  useEffect(() => {
     const remember = () => {
       const selection = window.getSelection();
       if (selection?.rangeCount && ref.current?.contains(selection.getRangeAt(0).commonAncestorContainer))
@@ -107,6 +135,7 @@ export function GuideWritingField({
     if (node.nodeType === Node.TEXT_NODE) return node.textContent ?? "";
     const el = node as HTMLElement;
     if (el.dataset?.emoji && Object.hasOwn(GUIDE_EMOJIS, el.dataset.emoji)) return `:${el.dataset.emoji}:`;
+    if (el.dataset?.ref) return `[[${el.dataset.ref}]]${el.dataset.suffix ?? ""}`;
     const ink = inkOf(el),
       content = Array.from(el.childNodes).map((child) => serialise(child, ink ?? inherited)).join("");
     if (ink && ink !== inherited && content) return `{${ink}}${content}{/${ink}}`;
@@ -202,12 +231,14 @@ export function GuideWritingField({
     sync();
   }
   function emoji(name: string) {
+    if (Object.hasOwn(GUIDE_EMOJIS, name)) insertNode(emojiNode(name));
+  }
+  function insertNode(img: HTMLElement, at?: Range) {
     const root = ref.current,
       selection = window.getSelection();
-    if (!root || !Object.hasOwn(GUIDE_EMOJIS, name)) return;
-    const range = selectionRange(root);
+    if (!root) return;
+    const range = at ?? selectionRange(root);
     range.deleteContents();
-    const img = emojiNode(name);
     // An empty field has no paragraph yet: give the emoji one so it saves as its own line.
     if (!root.firstChild || range.startContainer === root) {
       const p = document.createElement("p");
@@ -219,6 +250,87 @@ export function GuideWritingField({
     selection?.removeAllRanges();
     selection?.addRange(range);
     sync();
+  }
+  /** The term chip just before a node, skipping empty text the editor leaves behind. */
+  function chipBefore(node: Node | null | undefined, self = false): HTMLElement | null {
+    let at: Node | null | undefined = self ? node : node?.previousSibling;
+    while (at && at.nodeType === Node.TEXT_NODE && !(at as Text).length) at = at.previousSibling;
+    return at && (at as HTMLElement).dataset?.ref ? (at as HTMLElement) : null;
+  }
+  /** Letters typed straight after a term join it: Shark then "s" reads Sharks and saves as [[Shark]]s. */
+  function joinSuffix() {
+    const selection = window.getSelection(),
+      node = selection?.anchorNode;
+    if (!node || node.nodeType !== Node.TEXT_NODE || !selection?.isCollapsed) return;
+    const chip = chipBefore(node);
+    if (!chip) return;
+    const text = (node as Text).data,
+      typed = text.slice(0, selection.anchorOffset).match(/^[a-z']+$/)?.[0],
+      suffix = (chip.dataset.suffix ?? "") + (typed ?? "");
+    if (!typed || /^[a-z']/.test(text.slice(typed.length)) || suffix.length > 3) return;
+    chip.dataset.suffix = suffix;
+    chip.lastChild!.textContent = chip.dataset.ref + suffix;
+    (node as Text).deleteData(0, typed.length);
+    const range = document.createRange();
+    if ((node as Text).length) range.setStart(node, 0);
+    else {
+      range.setStartAfter(chip);
+      node.parentNode?.removeChild(node);
+    }
+    range.collapse(true);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+  /** Backspace right after a term's added letters removes one letter, not the whole term. */
+  function trimSuffix(event: React.KeyboardEvent<HTMLDivElement>) {
+    const selection = window.getSelection();
+    if (!selection?.isCollapsed || !selection.anchorNode) return false;
+    const { anchorNode: node, anchorOffset: offset } = selection;
+    const chip = node.nodeType === Node.TEXT_NODE ? (offset === 0 ? chipBefore(node) : null) : offset > 0 ? chipBefore(node.childNodes[offset - 1], true) : null;
+    if (!chip?.dataset.suffix) return false;
+    event.preventDefault();
+    const suffix = chip.dataset.suffix.slice(0, -1);
+    if (suffix) chip.dataset.suffix = suffix;
+    else delete chip.dataset.suffix;
+    chip.lastChild!.textContent = chip.dataset.ref + suffix;
+    sync();
+    return true;
+  }
+  function findMention() {
+    const selection = window.getSelection(),
+      node = selection?.anchorNode,
+      root = ref.current;
+    if (!root || !node || node.nodeType !== Node.TEXT_NODE || !selection?.isCollapsed || !root.contains(node)) return setMention(null);
+    const before = (node as Text).data.slice(0, selection.anchorOffset),
+      m = before.match(/(?:^|\s)@([^\s@]{0,30})$/);
+    if (!m) return setMention(null);
+    const range = selection.getRangeAt(0).cloneRange(),
+      box = range.getClientRects()[0] ?? (node.parentElement as HTMLElement).getBoundingClientRect();
+    // Fixed to the window so no section edge clips it; kept on screen near the right edge.
+    setMention((prior) => ({ node: node as Text, start: selection.anchorOffset - m[1].length - 1, end: selection.anchorOffset, query: m[1], x: Math.min(box.left, window.innerWidth - 290), y: box.bottom + 6, pick: prior?.query === m[1] ? prior.pick : 0 }));
+  }
+  const mentionResults = mention ? searchGuideReferences(mention.query, 8) : [];
+  function chooseMention(name: string) {
+    if (!mention) return;
+    const range = document.createRange();
+    range.setStart(mention.node, Math.max(0, mention.start));
+    range.setEnd(mention.node, Math.min(mention.node.length, mention.end));
+    setMention(null);
+    ref.current?.focus();
+    insertNode(refNode(name), range);
+  }
+  function keys(event: React.KeyboardEvent<HTMLDivElement>) {
+    if (mention) {
+      const count = mentionResults.length;
+      if (event.key === "Escape") { event.preventDefault(); setMention(null); return; }
+      if (count && (event.key === "ArrowDown" || event.key === "ArrowUp")) {
+        event.preventDefault();
+        setMention({ ...mention, pick: (mention.pick + (event.key === "ArrowDown" ? 1 : count - 1)) % count });
+        return;
+      }
+      if (count && (event.key === "Enter" || event.key === "Tab")) { event.preventDefault(); chooseMention(mentionResults[mention.pick]?.name ?? mentionResults[0].name); return; }
+    }
+    if (event.key === "Backspace") trimSuffix(event);
   }
   function paste(event: React.ClipboardEvent<HTMLDivElement>) {
     event.preventDefault();
@@ -242,6 +354,7 @@ export function GuideWritingField({
     if (!command || disabled) return;
     if (command.kind === "tone") colour(command.tone);
     else if (command.kind === "emoji") emoji(command.name);
+    else if (command.kind === "ref") insertNode(refNode(command.name, command.suffix));
     else format(command.kind);
   }, [command?.id]);
   return (
@@ -277,12 +390,18 @@ export function GuideWritingField({
         aria-disabled={disabled}
         aria-invalid={value.length > maxLength}
         suppressContentEditableWarning
-        onInput={sync}
+        onInput={() => { joinSuffix(); sync(); findMention(); }}
+        onKeyDown={keys}
+        onBlur={() => setMention(null)}
         onPaste={paste}
         onDrop={(e) => e.preventDefault()}
         data-placeholder={placeholder}
         style={{ minHeight: rows * 22 }}
       />
+      {mention && <div className="guide-mention" role="listbox" aria-label="Insert a game term" style={{ left: mention.x, top: mention.y }} onMouseDown={(e) => e.preventDefault()}>
+        {mentionResults.length ? mentionResults.map((r, i) => <button type="button" role="option" aria-selected={i === mention.pick} key={r.kind + r.name} onClick={() => chooseMention(r.name)}>{r.icon ? <img src={r.icon} alt="" /> : <span className="guide-term-blank" />}<span>{r.name}<small>{r.kind}</small></span></button>)
+          : <p className="fine">{mention.query ? "No matches." : "Type an item, prayer, spell, skill or quest."}</p>}
+      </div>}
       <small data-near={value.length > maxLength * 0.9 || undefined}>
         {value.length.toLocaleString()} / {maxLength.toLocaleString()}{value.length > maxLength ? " · Shorten this section before saving." : ""}
       </small>

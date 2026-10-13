@@ -1,0 +1,15 @@
+/* Community page banner: castle art behind the title, Rocky on the right; one line of text. */
+.page-hero{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:30px 32px;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:linear-gradient(90deg,#161611f2 0%,#161611c4 55%,#15152255),url('/brand/community-castle.webp') center/cover}
+.page-hero-text{display:grid;gap:10px;min-width:0}
+.page-hero h1{display:flex;align-items:center;gap:12px;margin:0}
+.page-hero p{margin:0;color:#d3cbbb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 3px #000}
+.page-hero-art{width:150px;height:130px;object-fit:contain;filter:drop-shadow(0 8px 18px #000a);flex:none}
+.page-hero-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.page-hero-actions .btn{gap:7px}.page-hero-actions .discord-mark{width:18px;height:auto}
+.page-hero-stat{display:inline-flex;align-items:center;gap:8px;align-self:stretch;min-height:36px;padding:0 14px;line-height:1;text-decoration:none;border:1px solid var(--line-2);border-radius:6px;background:#11100cb3;font-size:12px;color:var(--muted)}
+.page-hero-totals{display:flex;gap:8px;flex-wrap:wrap}
+.page-hero-stat img{width:18px;height:18px;object-fit:contain}
+.page-hero-stat b{font:20px/1 var(--rs);color:var(--gold);transform:translateY(1px)}
+@media(max-width:520px){.page-hero-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.page-hero-totals .page-hero-stat{flex-direction:column;justify-content:center;gap:3px;padding:9px 4px;font-size:10.5px;white-space:nowrap;text-align:center}.page-hero-totals .page-hero-totals{display:flex;gap:8px;flex-wrap:wrap}
+.page-hero-stat img{display:none}}
+@media(max-width:800px){.page-hero{padding:22px 18px}.page-hero-art{display:none}.page-hero p{white-space:normal}}

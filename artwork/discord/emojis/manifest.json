@@ -264,5 +264,13 @@
     "bytes": 104171,
     "frames": 50,
     "durationMs": 5000
+  },
+  {
+    "name": "rank_supporter_silver",
+    "file": "02_more_icons/rank_supporter_silver.png",
+    "source": "icons/community/sponsor-coin.png",
+    "width": 256,
+    "height": 256,
+    "bytes": 64095
   }
 ]

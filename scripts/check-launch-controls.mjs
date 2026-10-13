@@ -1,6 +1,5 @@
 // Local only. Synthetic journals, no upstream traffic; remove only our fixture records.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {seal,SESSION_COOKIE} from '../lib/session.ts';
 import {startWorker} from './worker-harness.mjs';
 const {origin:base,secret,fetch,sql,dispose}=await startWorker();

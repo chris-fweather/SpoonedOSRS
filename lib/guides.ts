@@ -1,18 +1,28 @@
 import questReference from './quest-reference.json' with {type:'json'};
 import diaryReference from './diary-tasks.json' with {type:'json'};
 import names from './guide-item-catalogue.json' with {type:'json'};
+import {isUploadUrl} from './guide-upload-rules';
 import itemImages from './guide-item-images.json' with {type:'json'};
 import {GUIDE_EMOJIS} from './guide-emojis';
 import {EQUIP_SLOTS,emptyEquipped,wearables,type EquipSlot,type Equipped} from './flair';
 import type {StaffRole} from './staff-policy';
-export type GuideSetupProfile={id:string;name:string;equipment:Equipped;inventory:(string|null)[]};
+export type GuideSetupProfile={id:string;name:string;equipment:Equipped;inventory:(string|null)[];note?:string};
+export const GUIDE_SKILLS=['Attack','Strength','Defence','Ranged','Prayer','Magic','Runecraft','Construction','Hitpoints','Agility','Herblore','Thieving','Crafting','Fletching','Slayer','Hunter','Mining','Smithing','Fishing','Cooking','Firemaking','Woodcutting','Farming','Sailing'];
+export type GuideSkill={skill:string;level:number};
+/** A requirement the catalogues don't cover, such as a Slayer unlock or fairy ring access; it can borrow any item's icon. */
+export type GuideOtherRequirement={label:string;itemId:string|null;icon?:GuideIconKey};
+/** Plain icons for a custom requirement that no item fits; a task icon is the default. */
+export const GUIDE_OTHER_ICONS={task:['Task','/icons/navigation/combat-achievements-icon.png'],slayer:['Slayer','/icons/skills/slayer.png'],list:['List','/icons/navigation/quest-list-icon.png'],settings:['Settings','/icons/community/settings-icon.png']} as const;
+export type GuideIconKey=keyof typeof GUIDE_OTHER_ICONS;
 export type GuideDiary={area:string;tier:string};
 export const GUIDE_TONES=['default','gold','orange','green'] as const;
 export type GuideTone=(typeof GUIDE_TONES)[number];
 export const GUIDE_TEXT_STYLES=['body','heading','subheading','list','numbered'] as const;
 export type GuideTextStyle=(typeof GUIDE_TEXT_STYLES)[number];
-export type GuideBlock={id:string;kind:'text';text:string;style:GuideTextStyle;tone:GuideTone}|{id:string;kind:'gear'|'inventory';setupId:string}|{id:string;kind:'requirements'|'divider'}|{id:string;kind:'odds';name:string;rate:number;count:number;unit:string};
-export type Guide={blocks?:GuideBlock[];title:string;activity:string;summary:string;requirements:string;strategy:string;equipment:Equipped;inventory:(string|null)[];setups?:GuideSetupProfile[];requiredItems?:{id:string;quantity:number}[];requiredQuests?:string[];requiredDiaries?:GuideDiary[]};
+export type GuideBlock={id:string;kind:'text';text:string;style:GuideTextStyle;tone:GuideTone}|{id:string;kind:'gear'|'inventory';setupId:string}|{id:string;kind:'requirements'|'divider'}|{id:string;kind:'odds';name:string;rate:number;count:number;unit:string}|{id:string;kind:'loadouts';setupIds:string[];inventoryId?:string}|{id:string;kind:'costs';title:string;rows:GuideCostRow[]}|{id:string;kind:'drops';page:string}|{id:string;kind:'prayers'|'spells';names:string[]}|{id:string;kind:'image';url:string;caption:string};
+/** One row of a cost table: an item and what one use of it consumes (for example a staff and its runes per charge). */
+export type GuideCostRow={itemId:string;parts:{itemId:string;quantity:number}[]};
+export type Guide={blocks?:GuideBlock[];title:string;activity:string;summary:string;requirements:string;strategy:string;equipment:Equipped;inventory:(string|null)[];setups?:GuideSetupProfile[];requiredItems?:{id:string;quantity:number}[];requiredQuests?:string[];requiredDiaries?:GuideDiary[];requiredSkills?:GuideSkill[];requiredOther?:GuideOtherRequirement[]};
 export const guideItems:Record<string,string>={...names,...Object.fromEntries(Object.entries(wearables.items).map(([id,item])=>[id,item.name]))};
 const images=itemImages as Record<string,string|null>;
 /** Official inventory icon for a guide item: /items/{id}.png unless the image map points elsewhere (null when the game has no icon we can use). */
@@ -32,7 +42,6 @@ export const guideDiaryTiers=['Easy','Medium','Hard','Elite'];
 export function newGuideSetup(name='Recommended',id='recommended'):GuideSetupProfile{return {id,name,equipment:emptyEquipped(),inventory:Array(28).fill(null)};}
 export function guideSetups(g:Guide):GuideSetupProfile[]{return g.setups?.length?g.setups:[{id:'recommended',name:'Recommended',equipment:g.equipment,inventory:g.inventory}];}
 export function emptyGuide():Guide{return {title:'',activity:'',summary:'',requirements:'',strategy:'',equipment:emptyEquipped(),inventory:Array(28).fill(null),requiredQuests:[],requiredDiaries:[]};}
-export function mayPublishGuide(role:StaffRole){return role==='owner'||role==='admin'||role==='moderator';}
 export function mayEditGuide(role:StaffRole,actor:string,author:string){return actor===author||role==='owner'||role==='admin';}
 function parseSetup(v:Record<string,unknown>):GuideSetupProfile{
  if(typeof v.id!=='string'||!/^[a-zA-Z0-9_-]{1,64}$/.test(v.id)||typeof v.name!=='string'||!v.name.trim()||v.name.length>60)throw Error('Name every setup using 1 to 60 characters.');
@@ -42,7 +51,9 @@ function parseSetup(v:Record<string,unknown>):GuideSetupProfile{
  for(const slot of EQUIP_SLOTS){const id=gear[slot];if(id!==null&&(typeof id!=='string'||wearables.items[id]?.slot!==slot))throw Error('Unsupported equipment or slot.');g.equipment[slot]=id as string|null;}
  for(const slot of EQUIP_SLOTS){const id=g.equipment[slot];if(id&&wearables.items[id].blocks.some(block=>g.equipment[block]))throw Error('Equipment slots conflict.');}
  if(!Array.isArray(v.inventory)||v.inventory.length!==28||v.inventory.some(id=>id!==null&&(typeof id!=='string'||!Object.hasOwn(guideItems,id))))throw Error('Use 28 inventory slots with recognised items.');
- g.inventory=[...v.inventory] as (string|null)[];return g;
+ g.inventory=[...v.inventory] as (string|null)[];
+ if(v.note!==undefined&&v.note!==''){if(typeof v.note!=='string'||v.note.length>400)throw Error('Keep each setup note to 400 characters.');g.note=v.note.trim();}
+ return g;
 }
 export function parseGuide(value:unknown):Guide {
  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Enter a guide.');
@@ -55,6 +66,8 @@ export function parseGuide(value:unknown):Guide {
  const items=v.requiredItems??[];if(!Array.isArray(items)||items.length>40||items.some(i=>!i||typeof i!=='object'||typeof i.id!=='string'||!Object.hasOwn(guideItems,i.id)||!Number.isSafeInteger(i.quantity)||i.quantity<1||i.quantity>1000000)||new Set(items.map(i=>i.id)).size!==items.length)throw Error('Choose up to 40 known required items with valid quantities.');g.requiredItems=items.map(i=>({id:i.id,quantity:i.quantity}));
  const quests=v.requiredQuests??[];if(!Array.isArray(quests)||quests.length>40||quests.some(q=>typeof q!=='string'||!guideQuests.includes(q))||new Set(quests).size!==quests.length)throw Error('Choose up to 40 distinct quests from the catalogue.');g.requiredQuests=quests;
  const diaries=v.requiredDiaries??[];if(!Array.isArray(diaries)||diaries.length>48||diaries.some(d=>!d||typeof d!=='object'||!guideDiaryAreas.includes(d.area)||!guideDiaryTiers.includes(d.tier))||new Set(diaries.map(d=>d.area+'|'+d.tier)).size!==diaries.length)throw Error('Choose distinct diary areas and tiers from the catalogue.');g.requiredDiaries=diaries.map(d=>({area:d.area,tier:d.tier}));
+ const skills=v.requiredSkills??[];if(!Array.isArray(skills)||skills.length>GUIDE_SKILLS.length||skills.some(r=>!r||typeof r!=='object'||!GUIDE_SKILLS.includes(r.skill)||!Number.isSafeInteger(r.level)||r.level<1||r.level>99)||new Set(skills.map(r=>r.skill)).size!==skills.length)throw Error('Choose each skill once, with a level from 1 to 99.');g.requiredSkills=skills.map(r=>({skill:r.skill,level:r.level}));
+ const other=v.requiredOther??[];if(!Array.isArray(other)||other.length>20||other.some(r=>!r||typeof r!=='object'||typeof r.label!=='string'||r.label.trim().length<2||r.label.length>100||(r.itemId!==null&&(typeof r.itemId!=='string'||!Object.hasOwn(guideItems,r.itemId)))))throw Error('Use up to 20 other requirements of 2 to 100 characters.');if(other.some(r=>r.icon!==undefined&&!Object.hasOwn(GUIDE_OTHER_ICONS,r.icon)))throw Error('Choose a supported requirement icon.');g.requiredOther=other.map(r=>({label:r.label.trim(),itemId:r.itemId,...(!r.itemId&&r.icon&&r.icon!=='task'?{icon:r.icon as GuideIconKey}:{})}));
  if(v.blocks!==undefined){
   if(!Array.isArray(v.blocks)||!v.blocks.length||v.blocks.length>100)throw Error('Use 1 to 100 document sections.');
   const ids=new Set<string>();let length=0;
@@ -64,14 +77,23 @@ export function parseGuide(value:unknown):Guide {
    if(b.kind==='text'){if(typeof b.text!=='string'||(length+=b.text.length)>16000||!(GUIDE_TEXT_STYLES as readonly string[]).includes(String(b.style))||!(GUIDE_TONES as readonly string[]).includes(String(b.tone)))throw Error('Use the supported document styles and up to 16,000 text characters.');return {id,kind:'text',text:b.text,style:b.style as GuideTextStyle,tone:b.tone as GuideTone};}
    if(b.kind==='gear'||b.kind==='inventory'){if(typeof b.setupId!=='string'||!g.setups?.some(s=>s.id===b.setupId))throw Error('Choose a saved loadout for this section.');return {id,kind:b.kind,setupId:b.setupId};}
    if(b.kind==='requirements'||b.kind==='divider')return {id,kind:b.kind};
+   // Older drafts carried a highlight list; the table now shows on its own, so it is dropped.
+   if(b.kind==='drops'){if(typeof b.page!=='string'||!b.page.trim()||b.page.length>100)throw Error('Choose the boss or activity whose drop table to show.');return {id,kind:'drops',page:b.page.trim()};}
+   if(b.kind==='costs'){const rows=b.rows;if(typeof b.title!=='string'||b.title.length>80||!Array.isArray(rows)||!rows.length||rows.length>12||rows.some(r=>!r||typeof r!=='object'||typeof r.itemId!=='string'||!Object.hasOwn(guideItems,r.itemId)||!Array.isArray(r.parts)||!r.parts.length||r.parts.length>8||r.parts.some((x:{itemId:unknown;quantity:unknown})=>!x||typeof x.itemId!=='string'||!Object.hasOwn(guideItems,x.itemId)||typeof x.quantity!=='number'||!Number.isFinite(x.quantity)||x.quantity<=0||x.quantity>100000)))throw Error('Use 1 to 12 cost rows, each with known items and positive quantities.');return {id,kind:'costs',title:b.title.trim(),rows:rows.map((r:GuideCostRow)=>({itemId:r.itemId,parts:r.parts.map(x=>({itemId:x.itemId,quantity:x.quantity}))}))};}
+   if(b.kind==='loadouts'){const list=b.setupIds;if(!Array.isArray(list)||!list.length||list.length>8||list.some(x=>typeof x!=='string'||!g.setups?.some(s=>s.id===x))||new Set(list).size!==list.length)throw Error('Choose the saved loadouts to show side by side.');if(b.inventoryId!==undefined&&(typeof b.inventoryId!=='string'||!g.setups?.some(s=>s.id===b.inventoryId)))throw Error('Choose a saved loadout for the inventory.');return {id,kind:'loadouts',setupIds:[...list] as string[],...(b.inventoryId?{inventoryId:b.inventoryId as string}:{})};}
    if(b.kind==='odds'){if(typeof b.name!=='string'||b.name.length<1||b.name.length>100||typeof b.rate!=='number'||!Number.isFinite(b.rate)||b.rate<1||b.rate>1e12||!Number.isSafeInteger(b.count)||Number(b.count)<0||Number(b.count)>1e12||!['kills','searches','rolls','runs','catches','actions'].includes(String(b.unit)))throw Error('Use a valid per-action rate and whole attempt count.');return {id,kind:'odds',name:b.name,rate:b.rate,count:Number(b.count),unit:String(b.unit)};}
+   // Prayers and spells to use, shown as a row with their icons.
+   if(b.kind==='prayers'||b.kind==='spells'){const names=b.names;if(!Array.isArray(names)||!names.length||names.length>16||names.some(n=>typeof n!=='string'||!n.trim()||n.length>60)||new Set(names).size!==names.length)throw Error(`Choose up to 16 ${b.kind}.`);return {id,kind:b.kind,names:names.map(n=>n.trim())};}
+   // An uploaded image (served by this site from R2) or one by link: https only, shown lazily with a caption.
+   if(b.kind==='image'){if(typeof b.caption!=='string'||b.caption.length>200)throw Error('Keep the caption to 200 characters.');if(typeof b.url==='string'&&isUploadUrl(b.url))return {id,kind:'image',url:b.url,caption:b.caption.trim()};let url:URL;try{url=new URL(String(b.url));}catch{throw Error('Paste an image link that starts with https://.');}if(url.protocol!=='https:'||String(b.url).length>500)throw Error('Paste an image link that starts with https://.');if(typeof b.caption!=='string'||b.caption.length>200)throw Error('Keep the caption to 200 characters.');return {id,kind:'image',url:url.href,caption:b.caption.trim()};}
    throw Error('Unsupported document section.');
   });
  }
  return g;
 }
+export function guideHasRequirements(g:Guide){return !!(g.requirements||g.requiredItems?.length||g.requiredQuests?.length||g.requiredDiaries?.length||g.requiredSkills?.length||g.requiredOther?.length);}
 export function guideBlocks(g:Guide):GuideBlock[]{return g.blocks??[
- ...(g.requirements||g.requiredItems?.length||g.requiredQuests?.length||g.requiredDiaries?.length?[{id:'requirements',kind:'requirements' as const}]:[]),
+ ...(guideHasRequirements(g)?[{id:'requirements',kind:'requirements' as const}]:[]),
  ...guideSetups(g).flatMap(s=>s.inventory.some(Boolean)||Object.values(s.equipment).some(Boolean)?[{id:'gear-'+s.id,kind:'gear' as const,setupId:s.id},{id:'bag-'+s.id,kind:'inventory' as const,setupId:s.id}]:[]),
  {id:'strategy',kind:'text',text:g.strategy,style:'body',tone:'default'},
  ];}
@@ -81,14 +103,15 @@ export function guideTextBlocks(text:string):GuideTextBlock[]{
  const blocks:GuideTextBlock[]=[];
  for(const line of text.split(/\r?\n/)){if(!line.trim())continue;const heading=line.match(/^#{1,3}\s+(.+)/),bullet=line.match(/^[-*]\s+(.+)/);if(heading)blocks.push({kind:'heading',text:heading[1]});else if(bullet){const last=blocks.at(-1);if(last?.kind==='list')last.items!.push(bullet[1]);else blocks.push({kind:'list',text:'',items:[bullet[1]]});}else blocks.push({kind:'paragraph',text:line});}return blocks;
 }
-export type GuideInline=string|{kind:'bold';children:GuideInline[]}|{kind:'tone';tone:GuideTone;children:GuideInline[]}|{kind:'emoji';name:string};
-const INLINE=/\*\*([^*]+)\*\*|\{(default|gold|orange|green)\}|:([a-z_]+):/;
-/** Inline formatting inside one line: **bold**, {gold}coloured{/gold} and :emoji: names from the site set. Anything else stays text. */
+export type GuideInline=string|{kind:'bold';children:GuideInline[]}|{kind:'tone';tone:GuideTone;children:GuideInline[]}|{kind:'emoji';name:string}|{kind:'ref';name:string;suffix?:string};
+const INLINE=/\*\*([^*]+)\*\*|\{(default|gold|orange|green)\}|:([a-z_]+):|\[\[([^[\]\n]{1,60})\]\]([a-z']{0,3})/;
+/** Inline formatting inside one line: **bold**, {gold}coloured{/gold}, :emoji: names from the site set and [[game terms]]. Anything else stays text. */
 export function guideInline(text:string):GuideInline[]{
  const out:GuideInline[]=[],re=new RegExp(INLINE.source,'g');let at=0;const push=(t:string)=>{if(!t)return;if(typeof out.at(-1)==='string')out[out.length-1]+=t;else out.push(t);};
  for(;;){
   const m=re.exec(text);if(!m)break;
   if(m[1]!==undefined){push(text.slice(at,m.index));out.push({kind:'bold',children:guideInline(m[1])});at=re.lastIndex;continue;}
+  if(m[4]!==undefined){const name=m[4].trim();if(!name){re.lastIndex=m.index+1;continue;}push(text.slice(at,m.index));out.push(m[5]?{kind:'ref',name,suffix:m[5]}:{kind:'ref',name});at=re.lastIndex;continue;}
   if(m[3]!==undefined){if(!Object.hasOwn(GUIDE_EMOJIS,m[3])){re.lastIndex=m.index+1;continue;}push(text.slice(at,m.index));out.push({kind:'emoji',name:m[3]});at=re.lastIndex;continue;}
   // A colour runs to its matching close tag; an unmatched tag is ordinary text.
   const tone=m[2] as GuideTone,open=`{${tone}}`,close=`{/${tone}}`;let depth=1,i=re.lastIndex;
@@ -99,4 +122,4 @@ export function guideInline(text:string):GuideInline[]{
  push(text.slice(at));return out;
 }
 /** Plain words of a line, without formatting marks (for outlines and labels). */
-export function guidePlainText(text:string):string{const walk=(n:GuideInline[]):string=>n.map(x=>typeof x==='string'?x:x.kind==='emoji'?'':walk(x.children)).join('');return walk(guideInline(text));}
+export function guidePlainText(text:string):string{const walk=(n:GuideInline[]):string=>n.map(x=>typeof x==='string'?x:x.kind==='emoji'?'':x.kind==='ref'?x.name+(x.suffix??''):walk(x.children)).join('');return walk(guideInline(text));}

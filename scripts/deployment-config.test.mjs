@@ -24,3 +24,11 @@ test('malformed identifiers are rejected',()=>{
  for(const [name,value] of [['D1_DATABASE_ID','not-a-uuid'],['OWNER_DISCORD_IDS','123,abc'],['DISCORD_PUBLIC_KEY','xyz']])
   assert.throws(()=>deploymentConfig({env:{...values,[name]:value},file:missing}),new RegExp(name));
 });
+
+test('environments: production by default, dev only by name, nothing else',async()=>{
+ const {deployEnvironment}=await import('./deployment-config.mjs');
+ assert.equal(deployEnvironment({}).worker,'spoonedosrs');
+ const dev=deployEnvironment({SPOONED_ENV:'dev'});
+ assert.deepEqual([dev.worker,dev.database,dev.branch],['spoonedosrs-dev','spoonedosrs-dev-db','dev']);
+ assert.throws(()=>deployEnvironment({SPOONED_ENV:'preview'}));
+});

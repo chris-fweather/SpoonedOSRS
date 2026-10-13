@@ -309,17 +309,13 @@ export default function Tracker({username}: {username: string}) {
                   ?? (m?.rate ? m.unit==='XP'?`~${compact(m.rate)} XP estimate`:`1/${num(m.rate, 0)}` : 'Rate unavailable');
                 const phoenix = p.name === 'Phoenix' ? phoenixShownCount(p.crateRolls, j.hiscores.activities.find(a => a.name === 'Wintertodt')?.score) : null;
                 const countText = phoenix ? `${num(phoenix.value, 0)} ${phoenix.unit}` : m?.kc != null ? `${num(m.kc, 0)} ${m.unit}` : null;
-                return <button className={`pet ${p.obtained ? 'owned' : ''} ${pop?.key === 'pet:' + p.id ? 'sel' : ''}`} onClick={() => openPet(p)} key={p.id}>
+                const left = p.obtained ? 'Collected' : shownHours !== null ? `~${num(shownHours, 0)} h left` : null;
+                // Laid out like a collection-log activity tile: icon, name, progress, then one small line of kills and time left.
+                return <button className={`pet cl-activity pet-tile ${p.obtained ? 'owned' : ''} ${pop?.key === 'pet:' + p.id ? 'sel' : ''}`} onClick={() => openPet(p)} key={p.id} title={`${p.name} · ${sub} · ${rateText}${p.obtained&&p.obtainedCount!=null?` · Obtained: ${acquisitionLabel(p)}`:''}`}>
                   <IconBox src={`/pets/${p.id}.png`} alt=""/>
-
-                  <span className="pet-info"><b>{p.name}</b><small>{p.obtained?'Collected · ':''}{sub}</small></span>
-                  <span className="pet-stats">
-                    {countText && <span className="pet-kc">{countText}</span>}
-                    <span className="pet-kc">{rateText}</span>
-                    {p.obtained&&p.obtainedCount!=null&&<small className="muted">Obtained: {acquisitionLabel(p)}</small>}
-                    {!p.obtained && shownHours !== null && <small className="muted">~{num(shownHours, 0)} h</small>}
-                  </span>
+                  <b>{p.name}</b>
                   <Meter done={p.obtained ? 1 : (shownChance ?? 0)} total={1}/>
+                  <small className="tile-progress-count">{[countText, left].filter(Boolean).join(' · ') || rateText}</small>
                 </button>;
               })}</div>
               {!pets.length && <div className="empty"><Target size={32}/><h3>{hunt ? 'Your hunt list is empty' : 'No matching pets'}</h3><p className="muted">{hunt ? 'Click a pet and choose “Add to hunt list”.' : 'Try another search or filter.'}</p></div>}
@@ -347,7 +343,7 @@ export default function Tracker({username}: {username: string}) {
     </div>
 
     }
-    {ready&&<footer className="foot">Drop rates and images from the <a href="https://oldschool.runescape.wiki" target="_blank" rel="noreferrer">OSRS Wiki</a> (CC BY-NC-SA). Collection log, quests and character from <a href="https://runeprofile.com" target="_blank" rel="noreferrer">RuneProfile</a>. SpoonedOSRS is a fan project, not affiliated with Jagex.</footer>}
+    {ready&&<footer className="foot">Drop rates and images from the <a href="https://oldschool.runescape.wiki" target="_blank" rel="noreferrer">OSRS Wiki</a> (CC BY-NC-SA). Stats, collection log, quests and character from the <a href="https://secure.runescape.com/m=hiscore_oldschool/" target="_blank" rel="noreferrer">OSRS Hiscores</a>, <a href="https://runeprofile.com" target="_blank" rel="noreferrer">RuneProfile</a>, <a href="https://templeosrs.com" target="_blank" rel="noreferrer">TempleOSRS</a> and <a href="https://wiseoldman.net" target="_blank" rel="noreferrer">Wise Old Man</a>. SpoonedOSRS is a fan project, not affiliated with Jagex.</footer>}
 
     <PetDialog journal={j} pet={j.restricted ? null : pet} setPet={p=>setPet(p?normalizeRates({...j,pets:[p]}).pets[0]:null)} canEdit={ready&&flair.canEdit} editProgress={editPetProgress} busy={busy} error={error} onSave={async () => { if (pet && await action('/api/journal', {pet, revision: j.revision})) setPet(null); }}/>
   </div>;

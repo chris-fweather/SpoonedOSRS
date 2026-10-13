@@ -1,5 +1,6 @@
 import {localPreviewAllowed} from './preview-policy';
 import {accountIdentity,OWNER_DISCORD_IDS} from './account-identity';
+import {IS_DEV_ENVIRONMENT,devAllowsAccount,devAllowsProfile} from './environment';
 import {env} from 'cloudflare:workers';
 import {accountName, addAccount, db, sameOrigin} from './storage';
 import {
@@ -45,8 +46,10 @@ type DiscordIdentity = {id: string; username: string; globalName: string | null;
 export async function beginDiscordLogin(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const host = loginHost(url);
+  // Dev signs the owner in with a password; Discord sign-in is for the live site.
+  if (IS_DEV_ENVIRONMENT) return Response.redirect(new URL('/api/auth/dev-login', url).toString(), 302);
   if (host === 'www') return Response.redirect(`${APEX_ORIGIN}/api/auth/discord`, 302);
-  if (host !== 'apex' && host !== 'local') {
+  if (host !== 'apex' && host !== 'local' && host !== 'dev') {
     if (import.meta.env.DEV && ['localhost','127.0.0.1'].includes(url.hostname)) return Response.redirect(url.origin + '/api/auth/preview', 302);
     return html('Discord login is available at https://spoonedosrs.com. This preview origin is not registered with Discord.', 400);
   }
@@ -71,7 +74,7 @@ export async function beginDiscordLogin(request: Request): Promise<Response> {
 export async function finishDiscordLogin(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const host = loginHost(url);
-  if (host !== 'apex' && host !== 'local') return text('Log in from spoonedosrs.com.', 400);
+  if (host !== 'apex' && host !== 'local' && host !== 'dev') return text('Log in from spoonedosrs.com.', 400);
   const redirectUri = redirectUriFor(host);
   const clientId = configuredClientId();
   const clientSecret = configuredClientSecret();
@@ -86,6 +89,8 @@ export async function finishDiscordLogin(request: Request): Promise<Response> {
   if (!pending || pending.exp < now() || pending.state !== state || !pending.verifier) return failed;
   const identity = await discordIdentity(clientId, clientSecret, code, redirectUri, pending.verifier);
   if (!identity) return failed;
+  // The dev environment signs in the site owner only; no other accounts are created there.
+  if (!devAllowsAccount(identity.id, OWNER_DISCORD_IDS)) return html('The dev environment is for the site owner only.', 403);
   try {
     await ensureAuthTables();
     await db().prepare(
@@ -100,7 +105,7 @@ export async function finishDiscordLogin(request: Request): Promise<Response> {
   } catch {
     return failed;
   }
-  const session: SessionUser = {...identity, exp: now() + SESSION_SECONDS};
+  const session: SessionUser = {...identity, exp: now() + SESSION_SECONDS, v: await sessionVersion(identity.id)};
   const headers = new Headers({Location: '/', 'Cache-Control': 'no-store'});
   headers.append('Set-Cookie', setCookie(SESSION_COOKIE, await seal(secret, session), url, SESSION_SECONDS, '/'));
   headers.append('Set-Cookie', setCookie(STATE_COOKIE, '', url, 0, '/api/auth'));
@@ -114,6 +119,8 @@ export async function readSession(request: Request): Promise<(SessionUser & {dis
   if (!token) return null;
   const verified = validSession(await open<unknown>(secret, token));
   if(!verified)return null;
+  // A session from before the account's last Log out everywhere is over. If the check cannot run, treat the visitor as signed out.
+  try{if((verified.v??0)<await sessionVersion(verified.id))return null;}catch{return null;}
   const id=import.meta.env.DEV&&verified.id==='9999900000'&&localPreviewAllowed(true,env.LOCAL_PREVIEW_LOGIN,new URL(request.url))&&OWNER_DISCORD_IDS[0]?OWNER_DISCORD_IDS[0]:accountIdentity(verified.id);
   return {...verified,discordId:verified.id,id};
 }
@@ -134,6 +141,26 @@ export async function sessionPayload(request: Request): Promise<Response> {
   } catch {
     return Response.json({error: 'Could not load your linked names.'}, {status: 503, headers: {'Cache-Control': 'no-store'}});
   }
+}
+
+/** The account's current session version (0 until Log out everywhere is first used). */
+export async function sessionVersion(discordId: string): Promise<number> {
+  const row = await db().prepare('SELECT session_version FROM users WHERE discord_id = ?').bind(discordId).first<{session_version: number}>();
+  return row?.session_version ?? 0;
+}
+
+/** Ends every session for the signed-in account, on every device including this one, and notes it in each linked name's history. */
+export async function logoutEverywhere(request: Request): Promise<Response> {
+  // Only the site's own Account page may end every session: the request must name this origin.
+  if (request.headers.get('origin') !== new URL(request.url).origin) throw new HttpError(403, 'Use the Account page to log out everywhere.');
+  const session = await readSession(request);
+  if (!session) throw new HttpError(401, 'Sign in first.');
+  const at = new Date().toISOString(), database = db();
+  await database.batch([
+    database.prepare('UPDATE users SET session_version = session_version + 1 WHERE discord_id = ?').bind(session.discordId),
+    database.prepare("INSERT INTO account_actions(rsn,actor_id,actor_name,action,detail,created_at) SELECT rsn,?,?,'signed out everywhere','All sessions ended by the account owner.',? FROM claimed_names WHERE discord_id = ?").bind(session.id, session.globalName || session.username, at, session.id),
+  ]);
+  return logoutResponse(request);
 }
 
 export function logoutResponse(request: Request): Response {
@@ -166,6 +193,7 @@ export async function claimRuneScapeName(request: Request, username: unknown) {
   if (!session) throw new HttpError(401, 'Log in with Discord to claim a RuneScape name.');
   const name = accountName(username);
   const rsn = name.toLowerCase();
+  if (!devAllowsProfile(rsn)) throw new HttpError(403, 'The dev environment only holds Obifloat.');
   await ensureAuthTables();
   // A removed link is not a transfer of the previous owner's private journal.
   await db().batch([

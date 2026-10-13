@@ -4,7 +4,7 @@ import raw from './drops-index.json' with {type:'json'};
 import seed from './catalogue.json' with {type:'json'};
 import type {DropSource} from './ui';
 import type {Journal} from './model';
-export type RateTarget={key:string;source:string;table:string;item:string;rarity:string;probability:number|null;url:string};
+export type RateTarget={key:string;source:string;table:string;item:string;rarity:string;probability:number|null;url:string;img?:string};
 const index=raw as unknown as {pages:Record<string,DropSource[]>};
 export const rateKey=(source:string,table:string,item:string)=>JSON.stringify([source,table,item]);
 // Built only from bundled immutable metadata; no user or database state is cached here.
@@ -29,7 +29,7 @@ export function rateCatalogue():RateTarget[] {
   }
   const old=targets.get(key);
   if(old&&(old.rarity!==r[2]||old.probability!==r[3])) {targets.delete(key); conflicts.add(key); continue;}
-  targets.set(key,{key,source:s.t,table:t.h,item:r[0],rarity:r[2],probability:r[3],url:s.u});
+  targets.set(key,{key,source:s.t,table:t.h,item:r[0],rarity:r[2],probability:r[3],url:s.u,img:r[4]||undefined});
  }
  for(const keys of petTables.values())if(keys.size>1)for(const key of keys)targets.delete(key);
  return catalogue=[...targets.values()];
@@ -53,4 +53,11 @@ export function applyPetRates(j:Journal,overrides:RateOverride[]):Journal {
   for(const method of pet.methods) if(!method.rateOverride&&method.unit==='kills'&&(method.activity??method.name).toLowerCase()===target.source.toLowerCase()) {method.rate=denominator;method.rateConfirmed=true;method.source=`Reviewed OSRS Wiki rate: ${o.source} (review ${o.revision})`;}
  }
  return j;
+}
+
+/** Drop-rate targets for the staff search: item and source names, best matches first. */
+export function searchRateTargets(query:string,limit=40):RateTarget[]{
+ const q=query.trim().toLowerCase();if(q.length<2)return [];
+ const rank=(t:RateTarget)=>{const i=t.item.toLowerCase(),s=t.source.toLowerCase();return i===q||s===q?0:i.startsWith(q)||s.startsWith(q)?1:`${s} ${t.table} ${i}`.toLowerCase().includes(q)?2:9;};
+ return rateCatalogue().map(t=>[t,rank(t)] as const).filter(([,r])=>r<9).sort((a,b)=>a[1]-b[1]||a[0].source.localeCompare(b[0].source)).slice(0,limit).map(([t])=>t);
 }

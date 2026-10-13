@@ -192,14 +192,19 @@ export function LookStage({appearance:bodyLook=DEFAULT_APPEARANCE,equipped, petI
       camera.position.set(mid.x, mid.y, mid.z + distance);
       camera.lookAt(mid.x, mid.y, mid.z);
 
+      // Zoom: 1 is the framed view; the wheel or a pinch moves the camera between 0.55 (close) and 1.5 (wide), eased.
+      const basePos={x:0,y:0,z:0},lookAt={x:0,y:0,z:0};let zoom=1,zoomShown=1;
+      const place=()=>{camera.position.set(lookAt.x+(basePos.x-lookAt.x)*zoomShown,lookAt.y+(basePos.y-lookAt.y)*zoomShown,lookAt.z+(basePos.z-lookAt.z)*zoomShown);camera.lookAt(lookAt.x,lookAt.y,lookAt.z);};
       const resize = () => {
         const w = el.clientWidth || 1;
         const h = el.clientHeight || 1;
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
         const fit=Math.max(size.y,size.x / camera.aspect,80)*2.45;
-        camera.position.set(mid.x,mid.y+(scenic?size.y*.16:0),mid.z+fit*(scenic?1.12:1));
-        camera.lookAt(mid.x,mid.y-(scenic?size.y*.025:0),mid.z);
+        // Scenes are framed wider so the whole setting shows around the character.
+        Object.assign(basePos,{x:mid.x,y:mid.y+(scenic?size.y*.24:0),z:mid.z+fit*(scenic?1.75:1)});
+        Object.assign(lookAt,{x:mid.x,y:mid.y-(scenic?size.y*.025:0),z:mid.z});
+        place();
         camera.updateProjectionMatrix();
       };
       resize();
@@ -207,13 +212,23 @@ export function LookStage({appearance:bodyLook=DEFAULT_APPEARANCE,equipped, petI
       observer.observe(el);
 
       let dragging = false;
-      let lastX = 0;
-      // `facing` is the direction the visitor chose; the idle sway turns the character up to 45° either side of it.
-      let facing = actor.rotation.y, lastInput = -Infinity;
+      let lastX = 0, lastMoveAt = 0, spin = 0;
+      // `facing` is the direction the visitor chose; the shown angle eases towards it, a flick keeps turning and slows
+      // to a stop, and the idle sway turns the character up to 45° either side of it.
+      let facing = actor.rotation.y, shown = facing, lastInput = -Infinity;
       const input = () => { lastInput = performance.now(); };
-      const down = (event: PointerEvent) => { dragging = true; lastX = event.clientX; input(); el.setPointerCapture(event.pointerId); };
-      const move = (event: PointerEvent) => { if (!dragging) return; facing += (event.clientX - lastX) * 0.01; lastX = event.clientX; input(); };
-      const up = () => { dragging = false; input(); };
+      const pointers=new Map<number,number>();let pinch=0;
+      const spread=()=>{const xs=[...pointers.values()];return xs.length>1?Math.abs(xs[0]-xs[1]):0;};
+      const down = (event: PointerEvent) => { pointers.set(event.pointerId,event.clientX);if(pointers.size>1){pinch=spread();dragging=false;return;} dragging = true; spin = 0; lastX = event.clientX; lastMoveAt = performance.now(); input(); el.setPointerCapture(event.pointerId); };
+      const move = (event: PointerEvent) => {
+        if(pointers.has(event.pointerId))pointers.set(event.pointerId,event.clientX);
+        if(pointers.size>1){const d=spread();if(pinch&&d)zoom=Math.min(1.5,Math.max(.55,zoom*pinch/d));pinch=d;input();return;}
+        if (!dragging) return;
+        const now=performance.now(),delta=(event.clientX - lastX) * 0.006;
+        facing += delta; spin = delta / Math.max(16, now - lastMoveAt) * 1000; lastX = event.clientX; lastMoveAt = now; input();
+      };
+      const up = (event?: PointerEvent) => { if(event)pointers.delete(event.pointerId);if(pointers.size<2)pinch=0; if(performance.now()-lastMoveAt>90)spin=0; dragging = false; input(); };
+      const wheel=(event:WheelEvent)=>{event.preventDefault();zoom=Math.min(1.5,Math.max(.55,zoom*Math.exp(event.deltaY*.0012)));input();};
       const turn = (event:KeyboardEvent) => {if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();facing+=(event.key==='ArrowLeft'?-1:1)*.15;input();}else if(event.key==='Home'){event.preventDefault();facing=0;input();}};
       if (interactive) {
         el.addEventListener('keydown',turn);
@@ -221,6 +236,7 @@ export function LookStage({appearance:bodyLook=DEFAULT_APPEARANCE,equipped, petI
         el.addEventListener('pointermove', move);
         el.addEventListener('pointerup', up);
         el.addEventListener('pointercancel', up);
+        el.addEventListener('wheel', wheel, {passive:false});
       }
 
       let frameId = 0;
@@ -243,7 +259,11 @@ export function LookStage({appearance:bodyLook=DEFAULT_APPEARANCE,equipped, petI
         const idle = !dragging && now - lastInput > SWAY_RESUME;
         swayWeight = reducedMotion.matches ? 0 : swayWeight + ((idle ? 1 : 0) - swayWeight) * Math.min(1, dt * 2);
         swayTime += dt * swayWeight;
-        actor.rotation.y = facing + Math.sin(swayTime * 2 * Math.PI / SWAY_PERIOD) * SWAY_ANGLE * swayWeight;
+        // A flick keeps turning and slows down; the shown angle follows the chosen one smoothly instead of snapping.
+        if(!dragging&&Math.abs(spin)>.01){facing+=spin*dt;spin*=Math.exp(-dt*3.5);}
+        shown += (facing - shown) * Math.min(1, dt * 9);
+        actor.rotation.y = shown + Math.sin(swayTime * 2 * Math.PI / SWAY_PERIOD) * SWAY_ANGLE * swayWeight;
+        if(Math.abs(zoom-zoomShown)>.001){zoomShown+=(zoom-zoomShown)*Math.min(1,dt*8);place();}
         renderer.render(scene, camera);
       };
       tick();
@@ -260,6 +280,7 @@ export function LookStage({appearance:bodyLook=DEFAULT_APPEARANCE,equipped, petI
           el.removeEventListener('pointermove', move);
           el.removeEventListener('pointerup', up);
           el.removeEventListener('pointercancel', up);
+          el.removeEventListener('wheel', wheel);
         }
         renderer.domElement.removeEventListener('webglcontextlost',lost);
         release();

@@ -65,9 +65,22 @@ test('production cookie is httpOnly, Secure, and shared by apex and www', () => 
 test('sealed session round-trips and rejects tampering', async () => {
   const session = {id: '100000000000000001', username: 'spoon', globalName: 'Spoon', avatar: null, exp: 4_000_000_000};
   const token = await seal(secret, session);
-  assert.deepEqual(validSession(await open(secret, token), 1_700_000_000), session);
+  // A cookie from before Log out everywhere has no version and reads as version 0.
+  assert.deepEqual(validSession(await open(secret, token), 1_700_000_000), {...session, v: 0});
+  assert.equal(validSession({...session, v: 3}, 1_700_000_000)?.v, 3);
+  assert.equal(validSession({...session, v: -1}, 1_700_000_000), null);
   const [payload, sig] = token.split('.');
   assert.equal(await open(secret, `${payload}.${sig.slice(0, -2)}aa`), null);
   assert.equal(await open('another-session-secret-at-least-32', token), null);
   assert.equal(validSession(session, session.exp + 1), null);
+});
+
+test('dev rules: production allows everything; dev keeps the owner and Obifloat only',async()=>{
+ const {devAllowsAccount,devAllowsProfile}=await import('./environment.ts');
+ assert.equal(devAllowsProfile('Snooked',false),true);
+ assert.equal(devAllowsProfile(' Obifloat ',true),true);
+ assert.equal(devAllowsProfile('Snooked',true),false);
+ assert.equal(devAllowsAccount('1',['2'],false),true);
+ assert.equal(devAllowsAccount('2',['2','3'],true),true);
+ assert.equal(devAllowsAccount('1',['2'],true),false);
 });

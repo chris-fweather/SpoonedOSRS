@@ -1,5 +1,5 @@
 'use client';
-import {useRef, type SyntheticEvent} from 'react';
+import {useRef} from 'react';
 import './connections-sections.css';
 import {RefreshCw, ExternalLink, Check, Download, Upload, Shield, BookOpen} from 'lucide-react';
 import type {SyncedJournal} from '@/lib/sync-journal';
@@ -16,23 +16,9 @@ function date(s: string | null) {
   return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}, ${pad(h12)}:${pad(d.getMinutes())}:${pad(d.getSeconds())} ${hour < 12 ? 'am' : 'pm'}`;
 }
 
-function revealSection(event:SyntheticEvent<HTMLDetailsElement>){
-  const section=event.currentTarget;
-  if(!section.open)return;
-  requestAnimationFrame(()=>{
-    if(!section.isConnected||!section.open)return;
-    const panel=section.closest<HTMLElement>('.wbody');
-    const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
-    if(panel&&['auto','scroll'].includes(getComputedStyle(panel).overflowY)){
-      panel.scrollTo({top:panel.scrollTop+section.getBoundingClientRect().top-panel.getBoundingClientRect().top-10,behavior});
-    }else section.scrollIntoView({block:'nearest',behavior});
-  });
-}
-
 export function Connections({journal: j, busy, ready, onSync, onImport, onError}: {
   journal: SyncedJournal; busy: boolean; ready: boolean; onSync: (source: string) => void; onImport: (data: unknown) => void; onError: (m: string) => void;
 }) {
-  const guideMounted=useRef(false);
   const file = useRef<HTMLInputElement>(null);
   return <div className="connections-content">
     <section className="panel sync-summary"><div><h2>Refresh your journal</h2><p>Update your public stats and collection. Saved entries are kept when a source is unavailable.</p></div><button className="btn primary" disabled={busy||!ready} onClick={()=>onSync('all')}><RefreshCw size={15} className={busy?'spin':''}/> Refresh all sources</button></section>
@@ -44,7 +30,7 @@ export function Connections({journal: j, busy, ready, onSync, onImport, onError}
         <button className="btn primary" disabled={busy || !ready} onClick={() => onSync('hiscores')}><RefreshCw size={16} className={busy ? 'spin' : ''}/> Sync hiscores</button>
       </div>
       <div className="panel conn">
-        <div className="conn-h"><span className="gi"><BookOpen size={20}/></span><div><h2>RuneProfile</h2><small className="muted">Collection log, quests and diaries from RuneLite</small></div><span className={`tag ${j.log ? 'good' : 'warn'}`}>{j.log ? <><Check size={12}/> Imported</> : 'Not set up'}</span></div>
+        <div className="conn-h"><span className="gi"><BookOpen size={20}/></span><div><h2>RuneProfile</h2><small className="muted">Collection log, quests and diaries</small></div><span className={`tag ${j.log ? 'good' : 'warn'}`}>{j.log ? <><Check size={12}/> Imported</> : 'Not set up'}</span></div>
         <div className="conn-stats"><div><b>{j.log ? num(j.log.obtained, 0) : '—'}</b><small>items logged</small></div><div><b>{j.log ? num(j.log.total, 0) : '—'}</b><small>log slots</small></div><div><b className="sm">{date(j.logSyncedAt)}</b><small>last import</small></div></div>
         <button className="btn primary" disabled={busy || !ready} onClick={() => onSync('runeprofile')}><RefreshCw size={16} className={busy ? 'spin' : ''}/> Import from RuneProfile</button>
       </div>
@@ -53,7 +39,7 @@ export function Connections({journal: j, busy, ready, onSync, onImport, onError}
       <div className="panel conn"><div className="ph"><h2>Wise Old Man</h2></div><p>Import tracked skills and boss KC. Newer saved stats are kept.</p><button className="btn" disabled={busy||!ready} onClick={()=>onSync('wom')}>Import Wise Old Man stats</button></div>
     </section>
     <div className="connections-bottom-sections">
-    <details className="panel connection-guide" open onToggle={e=>{if(!guideMounted.current){guideMounted.current=true;return;}revealSection(e);}}><summary>Syncing from RuneLite</summary>
+    <section className="panel connection-guide"><h2 className="connection-heading">Syncing from RuneLite</h2>
       <div className="ph">
         <div className="row gap">
           <a className="btn ghost sm" href="https://runeprofile.com/info/guide" target="_blank" rel="noreferrer">RuneProfile guide <ExternalLink size={13}/></a>
@@ -66,10 +52,10 @@ export function Connections({journal: j, busy, ready, onSync, onImport, onError}
         <li><b>3</b><span>Press the RuneProfile sync button in the top-left of the log.</span></li>
         <li><b>4</b><span>Come back here and press <em>Import from RuneProfile</em>.</span></li>
       </ol>
-      <p className="muted">RuneProfile syncs your collection, quests and diary totals.</p>
-    </details>
+      <p className="muted">RuneProfile syncs your collection log, quests and diaries. Already tracking on <em>TempleOSRS</em>? Sync your collection log there and press <em>Import Temple collection log</em>: unlocks from both are combined, and nothing you have is ever removed. <em>Refresh all sources</em> pulls RuneProfile, TempleOSRS, Wise Old Man and the Hiscores together.</p>
+    </section>
 
-    <details className="panel connection-guide connection-data" onToggle={revealSection}><summary>Your data</summary>
+    <section className="panel connection-guide connection-data"><h2 className="connection-heading">Your data</h2>
       <div className="ph">
         <div className="row gap">
           <button className="btn ghost sm" disabled={!ready || busy} onClick={() => file.current?.click()}><Upload size={15}/> Import log JSON</button>
@@ -84,7 +70,7 @@ export function Connections({journal: j, busy, ready, onSync, onImport, onError}
         <a href="https://oldschool.runescape.wiki" target="_blank" rel="noreferrer">OSRS Wiki (CC BY-NC-SA 3.0)</a>
         <span>Game artwork © Jagex</span>
       </div>
-    </details>
+    </section>
     </div>
   </div>;
 }

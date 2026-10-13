@@ -26,3 +26,8 @@
  .timeline-controls{display:grid;grid-template-columns:1fr;width:100%;margin-left:0}
  .timeline-controls .seg button{padding-inline:4px;font-size:12.5px;white-space:nowrap}
  }
+/* Empty state: a faded example timeline with a note over it, instead of an empty box. */
+.timeline-example{position:relative}
+.timeline-example>*:not(.timeline-example-note){opacity:.35;filter:grayscale(.4);pointer-events:none}
+.timeline-example-note{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);display:grid;gap:3px;margin:0;padding:10px 16px;border:1px solid var(--line-2);border-radius:6px;background:#17150fe6;text-align:center;font-size:12px;color:var(--muted);box-shadow:0 6px 20px #0008;max-width:calc(100% - 32px)}
+.timeline-example-note b{color:var(--text);font-size:13px}

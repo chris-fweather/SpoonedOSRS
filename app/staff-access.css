@@ -24,7 +24,8 @@
 .perm-member{border-bottom:1px solid var(--line)}
 .perm-member:last-child{border-bottom:0}
 .perm-member-row{width:100%;min-height:62px;padding:10px 0;text-align:left;color:var(--text);background:none;border:0}
-button.perm-member-row:hover .perm-member-id b,button.perm-member-row:focus-visible .perm-member-id b{color:var(--orange)}
+button.perm-member-row:hover .perm-member-id b,button.perm-member-row:focus-visible .perm-member-id b{text-decoration:underline;text-underline-offset:3px}
+.perm-member-id .person-name,.perm-member-id .staff-name{justify-self:start;max-width:100%}
 button.perm-member-row:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 .perm-member-id{display:grid;gap:2px;min-width:0}
 .perm-member-id b{font-size:14px;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -91,3 +92,99 @@ button.perm-member-row:focus-visible{outline:2px solid var(--orange);outline-off
  .staff-audit-list>li{grid-template-columns:8px minmax(0,1fr);gap:4px 10px}
  .staff-audit-list time{grid-column:2}
 }
+/* Access history: an icon per change, a headline and who did it. */
+.staff-audit-list>li{grid-template-columns:28px minmax(0,1fr) auto}
+.staff-audit-list>li>img{width:26px;height:26px;object-fit:contain}
+.staff-audit-list>li>div{display:grid;gap:3px;min-width:0}
+.staff-audit-list small{font-size:12px;color:var(--muted);line-height:1.5}
+.staff-audit-list small b{color:var(--text);font-weight:600}
+.audit-areas{display:inline-flex;flex-wrap:wrap;gap:4px;vertical-align:middle}
+.audit-areas>span{display:inline-flex;align-items:center;gap:4px;padding:1px 7px 1px 4px;border:1px solid var(--line-2);border-radius:999px;font-size:11px;color:var(--text)}
+.audit-areas>span.is-off{color:var(--muted);text-decoration:line-through}
+.audit-areas img{width:14px;height:14px;object-fit:contain}
+@media(max-width:560px){.staff-audit-list>li{grid-template-columns:28px minmax(0,1fr)}.staff-audit-list time{grid-column:2}}
+/* Access in three groups: Guides, Corrections, Ownership. */
+.perm-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;min-width:0}
+.perm-group{display:grid;align-content:start;gap:4px;margin:0;padding:10px 12px 12px;border:1px solid var(--line);border-radius:8px;background:var(--sunk);min-width:0}
+.perm-group>legend{display:flex;align-items:center;gap:7px;padding:0 6px;margin-left:-6px;font-size:12px;font-weight:650;color:var(--text)}
+.perm-group>legend img{width:18px;height:18px;object-fit:contain}
+.perm-group>small{font-size:11px;line-height:1.45;color:var(--dim);margin-top:4px}
+.perm-check{display:flex;align-items:center;gap:8px;padding:5px 2px;font-size:12.5px;color:var(--muted);cursor:pointer;min-width:0}
+.perm-check.is-on{color:var(--text)}
+.perm-check input{flex:none;accent-color:var(--orange);width:15px;height:15px}
+.perm-check:has(input:disabled){cursor:default}
+.perm-check span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.perm-ranks-list>li{grid-template-columns:minmax(150px,200px) minmax(0,1fr)}
+.perm-editor.is-readonly{gap:10px}
+/* Add to staff: search an account, then the rank. */
+.perm-add{grid-template-columns:minmax(0,1.3fr) minmax(0,1.4fr) auto;align-items:start}
+.perm-search{display:grid;gap:6px;min-width:0}
+.perm-search .search{display:flex;align-items:center;gap:8px;min-height:40px;padding:0 12px;border:1px solid var(--line-2);border-radius:6px;background:var(--sunk);color:var(--muted)}
+.perm-search .search input{flex:1;min-width:0;border:0;background:none;padding:0;min-height:38px}
+
+.perm-results button:disabled{opacity:.45;cursor:not-allowed}
+.perm-picked{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px;padding:6px 12px;border:1px solid #8a6a2e;border-radius:6px;background:var(--sunk);min-width:0}
+.perm-picked>span{display:grid;min-width:0}.perm-picked b{font-size:13.5px}
+.perm-picked small,.perm-member-id small{display:flex;align-items:center;gap:5px}
+.perm-picked .discord-mark,.perm-member-id .discord-mark,.perm-results .discord-mark{width:15px;height:auto;opacity:.85}
+/* Rank changes: from → to with each rank's scimitar and colour. */
+.rank-shift{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
+.rank-shift>svg{color:var(--muted)}
+.rank-chip{display:inline-flex;align-items:center;gap:4px;padding:1px 8px 1px 5px;border:1px solid var(--line-2);border-radius:999px;font-size:11.5px;font-weight:600;background:#ffffff05}
+.rank-chip .rank-icon{width:13px;height:15px}
+.rank-chip.is-none{color:var(--muted);padding-left:8px}
+.staff-audit-list small{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;margin-top:4px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){.perm-groups{grid-template-columns:1fr}.perm-ranks-list>li{grid-template-columns:1fr}.perm-add{grid-template-columns:1fr}.perm-add .perm-ranks{grid-row:auto}}
+.perm-note{margin:10px 0 0}
+.audit-label{font-size:11.5px;color:var(--dim);margin-right:2px}
+/* Picking an account to add: Discord name and handle, then its RuneScape names. */
+.perm-panel .section-heading{margin-bottom:16px}
+.perm-results{display:grid;gap:4px;padding:6px;border:1px solid var(--line-2);border-radius:8px;background:var(--sunk);max-height:260px;overflow:auto}
+.perm-pick{display:grid;grid-template-columns:34px minmax(0,auto) minmax(0,1fr);align-items:center;gap:10px;width:100%;padding:8px 10px;border:1px solid transparent;border-radius:6px;background:none;color:var(--text);text-align:left}
+button.perm-pick:hover:not(:disabled),button.perm-pick:focus-visible{border-color:var(--gold);background:#e8b34a0a}
+button.perm-pick:disabled{opacity:.45;cursor:not-allowed}
+.perm-pick.is-picked{grid-template-columns:34px minmax(0,auto) minmax(0,1fr) auto;border-color:#8a6a2e;background:var(--sunk);min-height:46px}
+.perm-pick-avatar{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#5865f2;color:#fff;font-weight:700}
+.perm-pick-text{display:grid;gap:1px;min-width:0}
+.perm-pick-text b{display:inline-flex;align-items:center;gap:5px;font-size:13.5px;white-space:nowrap}
+.perm-pick-text .discord-mark{width:14px;height:auto}
+.perm-pick-text small{font-size:11.5px;color:var(--muted)}
+.perm-pick-names{display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:flex-end;min-width:0;font-size:12.5px}
+.perm-pick-names em{font-size:11.5px;color:var(--muted)}
+/* Access history: the same compact rows as Corrections and Ownership. Entries don't open, so no chevron column. */
+.perm-history .ws-row-head{grid-template-columns:32px minmax(0,1fr) auto!important;cursor:default}
+.perm-history-row.tone-up .ws-row-head{--state:#5fae5f}
+.perm-history-row.tone-down .ws-row-head{--state:#d0614f}
+.perm-history-row.tone-edit .ws-row-head{--state:#c9a24a}
+.perm-history-title{font-size:13px;line-height:1.5;color:var(--muted);min-width:0}
+.perm-history-title b{color:var(--text)}
+.perm-history .ws-row-meta{margin-top:4px}
+.perm-history-more{margin-top:10px}
+.perm-panel .ws-head{margin-bottom:14px}
+@media(max-width:700px){.perm-history .ws-row-head{grid-template-columns:32px minmax(0,1fr)!important}.perm-history .ws-row-side{grid-column:2;grid-row:2}}
+/* Add staff: the search, the picked account, the rank buttons and Add share one 44px row. */
+.perm-add{align-items:center!important}
+.perm-add .search input,.perm-add>.btn,.perm-add .perm-ranks .account-choice{min-height:44px;height:44px;box-sizing:border-box}
+.perm-add .perm-pick.is-picked{min-height:44px;height:44px;padding:4px 10px;grid-template-columns:26px minmax(0,auto) minmax(0,1fr) auto;gap:8px}
+.perm-add .is-picked .perm-pick-avatar{width:26px;height:26px;font-size:12px}
+.perm-add .is-picked .perm-pick-text{display:flex;align-items:baseline;gap:6px;white-space:nowrap;overflow:hidden}
+.perm-add .is-picked .perm-pick-text b{font-size:13px}
+.perm-add .is-picked .perm-pick-text small{overflow:hidden;text-overflow:ellipsis}
+.perm-add .is-picked .perm-pick-names{flex-wrap:nowrap;overflow:hidden}
+.perm-panel .staff-filter i{display:none}
+/* Add staff, take two: search on its own row; the picked person's card opens below it with rank and Add. */
+.perm-add{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+.perm-add .perm-search{position:relative}
+.perm-add .perm-results{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:15;max-height:320px;overflow:auto;padding:6px;border:1px solid var(--line-2);border-radius:8px;background:#1d1a14;box-shadow:0 14px 32px #000a}
+.perm-picked-card{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;padding:10px 12px;border:1px solid #8a6a2e;border-radius:8px;background:var(--sunk)}
+.perm-picked-card .perm-pick.is-picked{flex:1 1 320px;height:auto!important;min-height:0;padding:0;border:0;background:none;grid-template-columns:34px minmax(0,auto) minmax(0,1fr)!important;gap:10px}
+.perm-picked-card .is-picked .perm-pick-avatar{width:34px;height:34px;font-size:14px}
+.perm-picked-card .is-picked .perm-pick-text{display:grid;gap:1px}
+.perm-picked-card .is-picked .perm-pick-names{flex-wrap:wrap;justify-content:flex-start}
+.perm-picked-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.perm-picked-actions .perm-ranks .account-choice,.perm-picked-actions .btn{height:40px;min-height:40px}
+@media(max-width:700px){.perm-picked-actions{width:100%}.perm-picked-actions .perm-ranks{flex:1 1 100%}}
+.perm-history-title .rank-chip{vertical-align:middle;margin:0 1px}
+.perm-history-title .audit-areas{margin-left:2px}
+.audit-plain{color:var(--text);font-weight:650}
+.perm-history-title em{font-style:normal;color:var(--dim)}

@@ -1,5 +1,5 @@
 // Disposable local-only fixture for the authenticated linked-account menu.
-import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {seal,SESSION_COOKIE} from '../lib/session.ts';import {initial} from '../lib/model.ts';
+import assert from 'node:assert/strict';import {seal,SESSION_COOKIE} from '../lib/session.ts';import {initial} from '../lib/model.ts';
 import {startWorker} from './worker-harness.mjs';
 const {origin:base,secret,fetch,sql,dispose}=await startWorker();
 const name='AM '+Date.now().toString().slice(-8),rsn=name.toLowerCase(),id='965'+Date.now(),other='966'+Date.now();

@@ -4,7 +4,7 @@ import {achievementTitle, earnedMarks, badgeCatalogue} from './flair';
 import type {Journal} from './model';
 import type {PublicStaff, StaffRole} from './staff-policy';
 export type Presentation = {staffBadge:StaffRole|'gilded'|null;staffPrefix:'Sir'|null;titleChoice:string;showDonation:boolean};
-export type Donation = {amountMinor:number|null;currency:string;hidden:boolean;badge?:'gilded'|null};
+export type Donation = {amountMinor:number|null;currency:string;hidden:boolean;badge?:'gilded'|null;supporter?:boolean};
 export function signatureTitle(name:string){return name.toLowerCase()==='spoonedosrs'?'the One and Only':null;}
 export function titleChoices(j:Journal,supporter=false,role?:StaffRole|null) {
  const marks=new Set(earnedMarks(j).map(m=>m.id));
@@ -61,20 +61,20 @@ export function parsePresentation(input:Partial<Presentation>,prior:Presentation
  return p;
 }
 export function donationLabel(d?:Donation):string {
- if(d?.hidden)return 'Sponsor';
- return 'Sponsor · '+(d?.amountMinor==null?'?':new Intl.NumberFormat('en-US',{style:'currency',currency:d.currency}).format(d.amountMinor/100));
+ if(d?.hidden)return 'Supporter';
+ return 'Supporter · '+(d?.amountMinor==null?'?':new Intl.NumberFormat('en-US',{style:'currency',currency:d.currency}).format(d.amountMinor/100));
 }
 
 /** Visual rarity is shared by the editor, profiles and community rows. */
 export function titleRarity(label:string|null|undefined):'common'|'uncommon'|'rare'|'epic'|'legendary'{
  if(['the One and Only','the Beastmaster','the Completionist'].includes(label??'')||/^the .+ Champion$/.test(label??''))return 'legendary';
  if(['the Zoo Keeper','the Maxed','the Achiever','the Administrator'].includes(label??''))return 'epic';
- if(['the Pet Tamer','the Clogger','the Wise Old Man','the Helper','the Moderator'].includes(label??'')||/^the .+ Elite$/.test(label??''))return 'rare';
- return ['Supporter','the Pet Collector','the Log Collector'].includes(label??'')?'uncommon':'common';
+ if(['the Pet Tamer','the Clogger','the Wise Old Man','the Moderator'].includes(label??'')||/^the .+ Elite$/.test(label??''))return 'rare';
+ return ['Supporter','the Pet Collector','the Log Collector','the Helper'].includes(label??'')?'uncommon':'common';
 }
 export function titleEffect(label:string|null|undefined):string {
  if(/^the .+ Champion$/.test(label??''))return 'title-hiscore-champion';
- const effects:Record<string,string>={'the One and Only':'title-one-only','the Beastmaster':'title-pet-master','the Completionist':'title-log-master','the Maxed':'title-maxed','the Zoo Keeper':'title-epic','the Achiever':'title-epic','the Pet Collector':'title-uncommon','the Pet Tamer':'title-rare','the Log Collector':'title-uncommon','the Clogger':'title-rare','the Wise Old Man':'title-rare','the Combatant':'title-common','Supporter':'title-supporter','the Helper':'title-rare','the Moderator':'title-rare','the Administrator':'title-epic'};
+ const effects:Record<string,string>={'the One and Only':'title-one-only','the Beastmaster':'title-pet-master','the Completionist':'title-log-master','the Maxed':'title-maxed','the Zoo Keeper':'title-epic','the Achiever':'title-epic','the Pet Collector':'title-uncommon','the Pet Tamer':'title-rare','the Log Collector':'title-uncommon','the Clogger':'title-rare','the Wise Old Man':'title-rare','the Combatant':'title-common','Supporter':'title-supporter','the Helper':'title-uncommon','the Moderator':'title-rare','the Administrator':'title-epic'};
  return effects[label??'']??(/^the .+ Elite$/.test(label??'')?'title-rare':'title-common');
 }
 

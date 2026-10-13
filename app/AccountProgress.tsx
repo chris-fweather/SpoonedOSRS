@@ -91,7 +91,7 @@ export function Quests({journal: j, pop, onSync, busy, canEdit=false}: Props) {
     ['Miniquests', shown.filter(isMini)],
   ];
   return <div className="list-panel">
-    <ScoreHead icon="/icons/navigation/quest-point-icon.png" kicker="Quest points" done={qp} total={totalQp} remaining={false} extra={<small className="remaining-count">{rows.filter(r=>!isMini(r)&&r.state!=='finished').length} quests left · {totalQp-qp} QP</small>}/>
+    <ScoreHead icon="/icons/navigation/quest-point-icon.png" kicker="Quest points" done={qp} total={totalQp} remaining={false} extra={<small className="remaining-count">{rows.filter(r=>!isMini(r)&&r.state!=='finished').length} quests left</small>}/>
     <FilterBar>
       <SearchBox label="Search quests" placeholder="Search quests…" value={q} onChange={setQ}/>
       <SortMenu label="Quest status" value={status} onChange={setStatus} options={[{value:"all",label:"All quests"},{value:"todo",label:"To do"},{value:"done",label:"Done"}]}/>

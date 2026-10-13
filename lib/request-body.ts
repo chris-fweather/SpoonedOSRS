@@ -1,4 +1,5 @@
 /** Bound bytes while streaming, before JSON parsing or allocating the full body. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- callers validate every field themselves; the parsed body has no fixed shape.
 export async function requestJson(request:Request,maximum=100_000):Promise<any>{
  if(!request.headers.get('content-type')?.toLowerCase().startsWith('application/json'))throw new RequestError(415,'Send JSON data.');
  if(Number(request.headers.get('content-length'))>maximum)throw new RequestError(413,'Request too large.');

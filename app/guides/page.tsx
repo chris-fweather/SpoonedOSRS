@@ -1,2 +1,2 @@
-import {InDevelopment} from '@/app/InDevelopment';
-export default function Page(){return <InDevelopment feature="Guides"/>;}
+import {Guides} from '@/app/GuideStudio';
+export default function Page(){return <Guides/>;}
